@@ -1,0 +1,36 @@
+@use '../base' as *;
+
+.button-tab-section {
+    margin: 25px 0px;
+
+    .button-tabs { 
+        background-color: transparent;
+        border: none;
+        color: $main-text-color;
+        display: block;
+        font-size: $button-mobile-text;
+        font-family: inherit;
+        margin: 5px 0px;
+        overflow: hidden;
+        text-align: left;
+
+        &:hover {
+            border-left: 4px solid $brand-dark-red;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .button-tab-section {
+        .button-tabs {
+            display: inline-block;
+            
+            &:hover {
+                border-left: none;
+                border-bottom: 4px solid $brand-dark-red;
+            }
+        }
+    }
+}
+
