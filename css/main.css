@@ -655,6 +655,34 @@ ANIMATION STYLING
     right: 0px;
   }
 }
+.button-tab-section {
+  margin: 25px 0px;
+}
+.button-tab-section .button-tabs {
+  background-color: transparent;
+  border: none;
+  color: #505050;
+  display: block;
+  font-size: 16px;
+  font-family: inherit;
+  margin: 5px 0px;
+  overflow: hidden;
+  text-align: left;
+}
+.button-tab-section .button-tabs:hover {
+  border-left: 4px solid #9B2018;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .button-tab-section .button-tabs {
+    display: inline-block;
+  }
+  .button-tab-section .button-tabs:hover {
+    border-left: none;
+    border-bottom: 4px solid #9B2018;
+  }
+}
 .tab-tags {
   width: 342px;
   position: absolute;
