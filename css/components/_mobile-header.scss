@@ -1,0 +1,123 @@
+@use '../base' as *;
+
+.mobile-header { 
+    position: relative;
+    z-index: 10;
+
+    #menu-links { 
+        background-color: $main-text-color;
+        display: none;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        width: $mobile-content-width; 
+        z-index: 1000;
+
+        ul { 
+            padding-left: $padding-reset;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $bgcolor;
+                    display: block;
+                    font-size: 17px;
+                    padding: $padding-md;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: $bgcolor;
+                        color: $brand-dark-red;
+                    }
+                }
+            }
+        }
+    }
+
+    .site-logo { 
+        display: block;
+        margin: 15px 15px;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+
+        @media (min-width: $breakpoint-tablet) {
+            max-width: 300px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            max-width: 350px;
+        }
+    }
+
+    .book-now-button {
+        position: relative;
+        height: 100%;
+    }
+    .book-now { 
+        display: flex;
+        position: absolute;
+        right: 50px;  
+        width: 110px;
+        top: 0px;
+        align-items: center;      
+        justify-content: center;  
+        height: 100%;
+        background-color: $brand-dark-red;
+        color: white;             
+        font-size: $button-mobile-text;
+        padding: 15px;
+        text-decoration: none; 
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #menu-links {
+            display: block;
+            position: static;
+            width: auto;
+            background-color: transparent;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                gap: 5px;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        color: $main-text-color;
+                        padding: 10px 10px;
+                        font-size: 14px; 
+
+                        &:hover {
+                            background-color: transparent;
+                            color: $brand-dark-red;
+                            font-size: 16px;
+                            border-bottom: 1px solid $brand-dark-red;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Hide hamburger icon on tablet and up
+        #menu-icon { 
+            display: none;
+        }
+
+        .book-now {
+            right: 0px;
+        }
+    }
+}
