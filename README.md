@@ -9,10 +9,15 @@ The design follows the established Couples Resort branding, focusing on consiste
 ## Features & Requirements:
 
 ✅ Static CSS Grid layouts for mobile and desktop
+
 ✅ CSS animation for a submit button
+
 ✅ ::after pseudo-element for a completion indicator
+
 ✅ Show/hide functionality (hamburger menu or details/summary)
+
 ✅ Proper Git workflow (branches, pull requests, merges)
+
 ✅ Includes wireframes, high-fidelity prototypes, and supporting assets
 
 ---
