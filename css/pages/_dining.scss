@@ -1,0 +1,26 @@
+@use '../base' as *;
+
+/* ===================================
+Styling specifically for DINING page
+==================================== */
+
+.culinary-image-grid {
+    margin-top: 15px;
+}
+
+.culinary-image-grid img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .culinary-image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        img {
+            margin-bottom: 0px;
+        }
+    }
+}
