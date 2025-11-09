@@ -1,0 +1,59 @@
+@use '../base' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 207px;
+    grid-column: span 1;
+    padding: 20px;
+    text-align: left;
+    color: $bgcolor;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .card {
+        height: 275px;
+    }
+}
+
+.h-flipped {
+    display: none;
+    font-size: 12px;
+}
+
+.p-flipped {
+    display: none;
+    font-size: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.a-flipped {
+    display: none;
+    text-decoration: none;
+    color: $bgcolor;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.unflipped { 
+    text-align: right;
+    font-size: 48px;
+}
+
+@media (min-width: $breakpoint-desktop) { 
+    .h-flipped {
+        font-size: 16px;
+    }
+    .p-flipped {
+        font-size: 12px;
+    }
+    .a-flipped {
+        font-size: 12px;
+    }
+}
