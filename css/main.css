@@ -311,5 +311,53 @@ body {
     width: 100%;
   }
 }
+.mini-contact {
+  background-color: #F4F4F4;
+  margin-top: 15px;
+  padding: 15px 0px;
+}
+.mini-contact div {
+  width: fit-content;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mini-contact div .contact-icon-phone {
+  width: 35px;
+}
+.mini-contact div .contact-icon-map {
+  width: 45px;
+}
+@media (min-width: 1200px) {
+  .mini-contact div .contact-icon-phone {
+    width: 45px;
+  }
+  .mini-contact div .contact-icon-map {
+    width: 60px;
+  }
+}
+
+.paragraph-format-contact {
+  color: #505050;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .mini-contact {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+  }
+  .mini-contact div {
+    margin: 40px 10px;
+  }
+  .paragraph-format-contact {
+    font-size: 14px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,58 @@
+@use '../base' as *;
+
+.mini-contact {
+    background-color: $bgcolor;
+    margin-top: 15px;
+    padding: 15px 0px;
+
+    div {
+        width: fit-content;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contact-icon-phone {
+            width: 35px;
+        }
+
+        .contact-icon-map {
+            width: 45px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            .contact-icon-phone {
+                width: 45px;
+            }
+
+            .contact-icon-map {
+                width: 60px;
+            }
+        }
+    }
+}
+
+.paragraph-format-contact {
+    color: $main-text-color;
+    display: inline-block;
+    font-size: $paragraph-mobile-normal;
+    line-height: 18px;
+    padding-left: $padding-md;
+}
+
+@media (min-width: $breakpoint-tablet) { 
+    .mini-contact {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+
+        div {
+            margin: 40px 10px;
+        }
+    }
+
+    .paragraph-format-contact {
+        font-size: 14px;
+    }
+}
+
