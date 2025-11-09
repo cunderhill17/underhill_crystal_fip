@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -233,6 +234,81 @@ body {
   }
   .a-flipped {
     font-size: 12px;
+  }
+}
+.form-grid {
+  margin-top: 25px;
+}
+.form-grid h2 {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form-grid form {
+  margin: 15px 0px;
+  width: 342px;
+}
+.form-grid form > * {
+  display: block;
+  font-family: inherit;
+  color: #505050;
+}
+.form-grid form input, .form-grid form textarea {
+  margin: 6px 0px;
+  padding: 10px;
+  width: 342px;
+}
+.form-grid form input {
+  height: 45px;
+}
+.form-grid form textarea {
+  height: 215px;
+  resize: none;
+}
+.form-grid form button {
+  background-color: #9B2018;
+  border: none;
+  color: #D9D9D9;
+  font-size: 16px;
+  font-family: inherit;
+  height: 45px;
+  width: 180px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 100%;
+}
+.input-wrapper::after {
+  content: "✔";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: green;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+.input-wrapper.filled::after {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .form-grid form {
+    margin: 0px 0px;
+    width: 100%;
+  }
+  .form-grid form input, .form-grid form textarea {
+    width: 100%;
   }
 }
 
