@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Resort Rooms</title>
+    <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <h1 class="hidden">Couples Resort Website</h1>
+    
+    <header class="body-grid-item mobile-header">
+
+        <a href="#" class="icon" id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo" class="site-logo">
+
+        <nav id="menu-links">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Spa Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+
+        <div class="book-now-button">
+            <a href="#" class="book-now">Book Now</a>
+        </div>
+
+    </header>
+
+
+    <main class="body-grid-item">
+
+        <section>
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-hero.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-hero.jpg">
+                <img class="hero-image" src="images/all-mob-hero.jpg" alt="Luxury cabin on the lake surrounded by trees with lush autumn leaves">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> 5 Star, Luxury Couples Resort & Spa</h2>
+                </div>
+
+                <section class="reservation-box">
+                    <h2>Check Availability</h2>
+                    
+                    <form action="#" method="post">
+                        <label for="checkin">Start Your Romantic Experience</label>
+                        <input type="date" id="checkin" name="checkin">
+                        <label for="num-of-nights">Number of Romantic Evenings</label>
+                        <select name="num-of-nights" id="num-of-nights">
+                            <option value="0">Select Your Duration</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <button type="submit">Let's Create Something Special</button>
+                    </form>
+                    
+                </section>
+
+                <div class="tab-spacer"></div>
+                
+                <p class="paragraph-normal">All room prices include a daily 5-Star, Classic 5-Course Gourmet Dinner in our European Style Dining Room or as Room Service brought to you as well as a Classic Style Breakfast In-Bed.</p>
+            </div>
+        </section>
+            
+
+        <section class="mini-contact">
+            <h3 class="hidden">Resort Contact Information and Address</h3>
+            <div>
+                <img class="contact-icon-phone" src="images/phone-icon.png" alt="Phone Icon">
+                <p class="paragraph-format-contact">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+            </div>
+
+            <div>
+                <img class="contact-icon-map" src="images/map-icon.png" alt="Map Address Icon"> 
+                <p class="paragraph-format-contact">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+            </div>
+        </section>
+
+        <section class="button-tab-section">
+            <div class="content-wrapper">
+                <h3 class="hidden">Tabs to Navigate Rooms Page</h3>
+                <button data-target="#room-features-cr"  class="button-tabs active">Room Features</button>
+                <button data-target="#room-styles-cr"  class="button-tabs">Room Styles</button>
+                <button data-target="#testimonials-cr"  class="button-tabs">Testimonials</button>
+            </div>
+        </section>
+        
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec01.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec01.jpg">
+                <img src="images/all-mob-sec01.jpg" alt="Man and Woman holding hands as they walk along a trail behind a log cabin">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="room-features-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br>  Room Features</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <div class="pagination">
+                    <section class="wrap" id="pagination-rooms-content">
+                        <!-- content generated by JS including the section heading -->
+                    </section>
+
+                    <nav> 
+                        <h2 class="hidden">Mobile Pagination Buttons</h2>
+                        <ul id="pagination-rooms">
+                            <!-- content generated by JS -->
+                        </ul>
+                    </nav>
+                </div>
+
+
+                <div class="card-container">
+                    <section class="card card-rooms">
+                        <h2 class="h-flipped">Room Amenities</h2>
+                        <p class="p-flipped">Please click below to see a list of amenities that all rooms are provided with.</p>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">1</p>
+                    </section>
+
+                    <section class="card card-rooms">
+                        <h2 class="h-flipped">Room Service</h2>
+                        <p class="p-flipped">Room Service is delivered between 6:00 pm and 7:00 pm — no specific time slots available. Place order between 11 am - 5 pm at the bar or call 866-202-1179 ext 108</p>
+                        <p class="unflipped">2</p>
+                    </section>
+                    
+                    <section class="card card-rooms">
+                        <h2 class="h-flipped">Coming Soon</h2>
+                        <p class="p-flipped">This new duplex building offers two accommodations nestled on a hill near the resort’s main entrance. Each features a private deck with an outdoor hot tub, a wood-burning fireplace, 70" TV, and Wi-Fi. Please note: no lake view.</p>
+                        <p class="unflipped">3</p>
+                    </section>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec02.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec02.jpg">
+                <img src="images/all-mob-sec02.jpg" alt="Two wooden lounge chairs at the end of a dock overlooking the water at sunrise ">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="room-styles-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Room Styles</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <section class="summary-grid">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/rm_styles_chateau.jpg">
+                        <source media="(min-width:768px)" srcset="images/rm_styles_chateau.jpg">
+                        <img src="images/rm_styles_chateau.jpg" alt="A neatly made king-size bed with lush pillows and comfortable linens">
+                    </picture>
+                    <h3>Chateaus</h3>
+                    <div class="summary-content">
+                        <p class="paragraph-normal">This 1,400-square-foot suite features a private outdoor hot tub, a private sauna, and a luxurious double shower equipped with a steam generator, four shower heads, and built-in benches, as well as a bidet for added comfort. Guests will enjoy a complimentary in-room basket stocked with lotions, bath salts, specialty products, and Soapstone (Bath and Body) items. The room also includes an Illy Espresso/Americano machine with capsules and a microwave for added convenience.</p>
+                    </div>
+                    <button>View Details</button>
+                </section>
+
+                <section class="summary-grid">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/rm_styles_villa.jpg">
+                        <source media="(min-width:768px)" srcset="images/rm_styles_villa.jpg">
+                        <img src="images/rm_styles_villa.jpg" alt="Front view of a log cabin with two wooden lounge chairs">
+                    </picture>
+                    <h3>Villas</h3>
+                    <div class="summary-content">
+                        <p class="paragraph-normal">This 1,000-square-foot suite offers a private outdoor hot tub, a private sauna, and a double shower featuring a steam generator, four shower heads, and built-in benches, along with a bidet for added luxury. The room also includes an Illy Espresso/Americano machine with complimentary capsules, as well as a microwave for your convenience.</p>
+                    </div>
+                    <button>View Details</button>
+                </section>
+
+                <section class="summary-grid">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/rm_styles_masters.jpg">
+                        <source media="(min-width:768px)" srcset="images/rm_styles_masters.jpg">
+                        <img src="images/rm_styles_masters.jpg" alt="A neatly made king-size bed with lush pillows and comfortable linens">
+                    </picture>
+                    <h3>Masters</h3>
+                    <div class="summary-content">
+                        <p class="paragraph-normal ">This 1,000-square-foot suite features a private outdoor hot tub and a double shower equipped with a steam generator, four shower heads, and built-in benches, as well as a bidet for added comfort. The room also includes a microwave for your convenience.</p>
+                    </div>
+                    <button>View Details</button>
+                </section>
+
+                 <section class="summary-grid">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/rm_styles_chalet.jpg">
+                        <source media="(min-width:768px)" srcset="images/rm_styles_chalet.jpg">
+                        <img src="images/rm_styles_chalet.jpg" alt="A neatly made king-size bed with lush pillows and comfortable linens">
+                    </picture>
+                    <h3>Chalet</h3>
+                    <div class="summary-content">
+                        <p class="paragraph-normal">700 sq feet private cabin with private out door hot tubs</p>
+                    </div>
+                    <button>View Details</button>
+                </section>
+
+                <section class="summary-grid">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/rm_styles_exotics.jpg">
+                        <source media="(min-width:768px)" srcset="images/rm_styles_exotics.jpg">
+                        <img src="images/rm_styles_exotics.jpg" alt="A neatly made king-size bed with lush pillows and comfortable linens">
+                    </picture>
+                    <h3>Exotics</h3>
+                    <div class="summary-content">
+                        <p class="paragraph-normal">This style offers two 1,000-square-foot suites and four 600-square-foot suites, each featuring a private outdoor hot tub. All suites include a microwave for added convenience.</p>
+                    </div>
+                    <button>View Details</button>
+                </section>
+
+                <section class="summary-grid">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/rm_styles_juniors.jpg">
+                        <source media="(min-width:768px)" srcset="images/rm_styles_juniors.jpg">
+                        <img src="images/rm_styles_juniors.jpg" alt="Resort room with a large soaking tub, big windows, and a view of the surrounding nature">
+                    </picture>
+                    <h3>Juniors</h3>
+                    <div class="summary-content">
+                        <p class="paragraph-normal">600 sq feet with private out door hot tubs</p>
+                    </div>
+                    <button>View Details</button>
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec03.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec03.jpg">
+                <img src="images/all-mob-sec03.jpg" alt="Man and Woman sitting at the end of a dock overlooking the water">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="testimonials-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Testimonials</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <div class="position">
+                    <div id="individualTestimonial">
+                        <!-- Content Generated by JS -->
+                    </div>
+
+                    <button class="prev" id="prev"> ❮ </button>
+                    <button class="next" id="next"> ❯ </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="body-grid-item">
+        <div class="content-wrapper">
+            <section class="footer-grid">
+                <div>
+                    <h2 class="footer-text">Couples Resort</h2>
+                    <p class="footer-text fine-print">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+                    <p class="footer-text fine-print">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+                </div>
+
+                <nav>
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="activities.html">Spa Activities</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-book-now">
+                    <a href="#">Book Now</a>
+                </div>
+
+            </section>
+
+            <hr>
+            <p class="footer-text fine-print center-text">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing. </p>
+            <p class="footer-text fine-print center-text">2013 Couples Resort Inc. All Rights Reserved. Privacy Policy. </p>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
