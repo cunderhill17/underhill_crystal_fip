@@ -860,5 +860,18 @@ ANIMATION STYLING
     column-count: 2;
   }
 }
+/* ====================================
+Styling specifically for PACKAGES page
+===================================== */
+.deals-image {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.deals-heading {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #505050;
+}
 
 /*# sourceMappingURL=main.css.map */
