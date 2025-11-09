@@ -1,0 +1,74 @@
+@use '../base' as *;
+
+.wrap { 
+    img {
+        float: left;
+        margin: 0 15px 15px 0;
+        width: 175px;
+        height: 130px;
+    }
+
+    h4 {
+        color: $main-text-color;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: $main-text-color;
+        font-size: $paragraph-mobile-normal;
+
+        &::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    }
+
+    > a {
+        color: $main-text-color;
+        display: block;
+        margin: 15px auto;
+        text-decoration: none;
+        width: $mobile-content-width;
+        cursor: pointer;
+    }
+}
+
+
+.pagination { 
+
+    > nav {
+        margin: 15px auto;
+        overflow: hidden;
+        text-align: center;
+        width: $mobile-content-width;
+
+        ul {
+            background-color: $brand-light-red;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            list-style-type: none;
+            padding: $padding-reset;
+
+            li {
+                padding-top: $padding-md;
+                padding-bottom: $padding-md;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) { 
+    .pagination>* {
+        display: none;
+    }
+
+    .pagination>a {
+        display: none;
+    }
+}

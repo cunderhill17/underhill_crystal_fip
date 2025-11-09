@@ -683,6 +683,64 @@ ANIMATION STYLING
     border-bottom: 4px solid #9B2018;
   }
 }
+.wrap img {
+  float: left;
+  margin: 0 15px 15px 0;
+  width: 175px;
+  height: 130px;
+}
+.wrap h4 {
+  color: #505050;
+  margin-bottom: 15px;
+}
+.wrap p {
+  color: #505050;
+  font-size: 12px;
+}
+.wrap p::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.wrap > a {
+  color: #505050;
+  display: block;
+  margin: 15px auto;
+  text-decoration: none;
+  width: 342px;
+  cursor: pointer;
+}
+
+.pagination > nav {
+  margin: 15px auto;
+  overflow: hidden;
+  text-align: center;
+  width: 342px;
+}
+.pagination > nav ul {
+  background-color: #C44242;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0px;
+}
+.pagination > nav ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.pagination > nav ul li a {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .pagination > * {
+    display: none;
+  }
+  .pagination > a {
+    display: none;
+  }
+}
 .tab-tags {
   width: 342px;
   position: absolute;
