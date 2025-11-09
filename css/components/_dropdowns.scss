@@ -1,0 +1,77 @@
+@use '../base' as *;
+
+summary {
+    background-color: #E7E7E7;
+    color: $main-text-color;
+    font-size: 14px;
+    padding: $padding-md $padding-reset;
+    padding-left: $padding-md;
+    margin: 5px 0px;
+    width: 100%;
+    max-width: $mobile-content-width;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+.summary-grid {
+    background-color: $bgcolor; 
+}
+
+.summary-grid h3, .summary-grid div, .summary-grid button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.summary-grid button {
+    white-space: nowrap;
+    border: none;
+    border-bottom: 1px solid $brand-dark-red;
+    color: $brand-dark-red;
+    background-color: transparent; 
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 5px;
+    align-self: self-end;
+}
+
+.summary-grid button:hover { 
+    cursor: pointer;
+}
+
+.summary-grid h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.amenities { 
+    border-bottom: 1px solid $brand-dark-red;
+    font-size: $paragraph-mobile-normal;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    summary {
+        max-width: $breakpoint-desktop;
+    }
+
+    .amenities-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    details img { 
+        height: 326px;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .summary-grid img {
+        height: 326px;
+    }
+}

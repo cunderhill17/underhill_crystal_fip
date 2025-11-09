@@ -359,5 +359,77 @@ body {
     font-size: 14px;
   }
 }
+summary {
+  background-color: #E7E7E7;
+  color: #505050;
+  font-size: 14px;
+  padding: 10px 0px;
+  padding-left: 10px;
+  margin: 5px 0px;
+  width: 100%;
+  max-width: 342px;
+}
+
+summary:hover {
+  cursor: pointer;
+}
+
+.summary-grid {
+  background-color: #F4F4F4;
+}
+
+.summary-grid h3, .summary-grid div, .summary-grid button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.summary-grid button {
+  white-space: nowrap;
+  border: none;
+  border-bottom: 1px solid #9B2018;
+  color: #9B2018;
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 5px;
+  align-self: self-end;
+}
+
+.summary-grid button:hover {
+  cursor: pointer;
+}
+
+.summary-grid h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.amenities {
+  border-bottom: 1px solid #9B2018;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  summary {
+    max-width: 1200px;
+  }
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  details img {
+    height: 326px;
+  }
+}
+@media (min-width: 768px) {
+  .summary-grid img {
+    height: 326px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
