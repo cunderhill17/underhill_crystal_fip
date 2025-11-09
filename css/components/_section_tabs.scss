@@ -1,0 +1,32 @@
+@use '../base' as *;
+
+.tab-tags { 
+    width: 342px;
+    position: absolute;
+    top: -55px;
+    padding: $padding-tabs-vertical $padding-md;
+    background-color: white;
+}
+
+.resort-name { 
+    color: $brand-dark-red;
+    font-size: $paragraph-mobile-fine-print;
+    font-family: $secondary-font;
+}
+
+.tab-headings { 
+    color: $main-text-color;
+    font-size: $button-mobile-text;
+}
+
+@media (min-width: $breakpoint-desktop) { 
+    .tab-tags {
+        width: 500px;
+    }
+    .resort-name {
+        font-size: 14px;
+    }
+    .tab-headings {
+        font-size: 24px;
+    }
+}

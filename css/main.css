@@ -655,5 +655,35 @@ ANIMATION STYLING
     right: 0px;
   }
 }
+.tab-tags {
+  width: 342px;
+  position: absolute;
+  top: -55px;
+  padding: 20px 10px;
+  background-color: white;
+}
+
+.resort-name {
+  color: #9B2018;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab-headings {
+  color: #505050;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .tab-tags {
+    width: 500px;
+  }
+  .resort-name {
+    font-size: 14px;
+  }
+  .tab-headings {
+    font-size: 24px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
