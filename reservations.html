@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Resort Reservations</title>
+    <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <h1 class="hidden">Couples Resort Website</h1>
+
+    <header class="body-grid-item mobile-header">
+
+        <a href="#" class="icon" id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo" class="site-logo">
+
+        <nav id="menu-links">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Spa Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+
+        <div class="book-now-button">
+            <a href="#" class="book-now">Book Now</a>
+        </div>
+
+    </header>
+
+
+    <main class="body-grid-item">
+
+        <section>
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-hero.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-hero.jpg">
+                <img class="hero-image" src="images/all-mob-hero.jpg" alt="Luxury cabin on the lake surrounded by trees with lush autumn leaves">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> 5 Star, Luxury Couples Resort & Spa</h2>
+                </div>
+
+                <section class="reservation-box">
+                    <h2>Check Availability</h2>
+                    
+                    <form action="#" method="post">
+                        <label for="checkin">Start Your Romantic Experience</label>
+                        <input type="date" id="checkin" name="checkin">
+                        <label for="num-of-nights">Number of Romantic Evenings</label>
+                        <select name="num-of-nights" id="num-of-nights">
+                            <option value="0">Select Your Duration</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <button type="submit">Let's Create Something Special</button>
+                    </form>
+                    
+                </section>
+
+                <div class="tab-spacer"></div>
+                
+                <p class="paragraph-normal">Welcome to Couples Resort – your all-inclusive luxury escape designed exclusively for couples. Nestled beside the tranquil beauty of Algonquin Park, every stay promises romance, relaxation, and indulgence with private lakeside hot tubs, gourmet dining, and breathtaking nature. Reserve your getaway today and experience the perfect blend of elegance, intimacy, and adventure.</p>
+
+            </div>
+        </section>
+
+
+        <section class="mini-contact">
+            <h3 class="hidden">Resort Contact Information and Address</h3>
+            <div>
+                <img class="contact-icon-phone" src="images/phone-icon.png" alt="Phone Icon">
+                <p class="paragraph-format-contact">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+            </div>
+
+            <div>
+                <img class="contact-icon-map" src="images/map-icon.png" alt="Map Address Icon"> 
+                <p class="paragraph-format-contact">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+            </div>
+        </section>
+
+        <section class="button-tab-section">
+            <div class="content-wrapper">
+                <h3 class="hidden">Tabs to Navigate Reservations Page</h3>
+                <button  data-target="#booking-info-cr"  class="button-tabs active">Booking Information</button>
+                <button  data-target="#policies-cr"  class="button-tabs">Policies</button>
+            </div>
+        </section>
+        
+
+        <section>
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec01.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec01.jpg">
+                <img src="images/all-mob-sec01.jpg" alt="Man and Woman holding hands as they walk along a trail behind a log cabin">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="booking-info-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Booking Information</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <section class="background-colour add-padding-full trip-info">
+                    <h3 class="header-medium">Trip Information</h3>
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="images/res_desk_book.jpg">
+                        <source media="(min-width:768px)" srcset="images/res_tab_book.jpg">
+                        <img src="images/res_mob_book.jpg" alt="A neatly made king-size bed with lush pillows and comfortable linens">
+                    </picture>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Room Type</p>
+                        <p class="p-guest-details right-align">Exotics</p>
+                    </div>
+                    
+                    <div class="column-count">
+                        <p class="p-guest-details">Arrival</p>
+                        <p class="p-guest-details right-align">Nov 15, 2025</p>
+                    </div>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Departure</p>
+                        <p class="p-guest-details right-align">Nov 18, 2025</p>
+                    </div>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Number of Nights</p>
+                        <p class="p-guest-details right-align">3 Nights</p>
+                    </div>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Number of Guests</p>
+                        <p class="p-guest-details right-align">2 Adults</p>
+                    </div>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Rate</p>
+                        <p class="p-guest-details right-align">$1,054.00</p>
+                    </div>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Tax</p>
+                        <p class="p-guest-details right-align">$137.02</p>
+                    </div>
+
+                    <hr class="add-margin">
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Total</p>
+                        <p class="p-guest-details right-align">$1,192.02</p>
+                    </div>
+
+                    <div class="column-count">
+                        <p class="p-guest-details">Required Deposit</p>
+                        <p class="p-guest-details right-align">$500.00</p>
+                    </div>
+
+                    <p class="fine-print add-padding-small">COUPLES RESORT is a NO-TIPPING Resort</p>
+                </section>
+
+
+                
+                <h3 class="header-medium">Guest Information</h3>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Guest One</legend>
+                        <div>
+                            <label for="fname1">First Name</label>
+                            <input type="text" id="fname1">
+                        </div>
+                        
+                        <div>
+                            <label for="lname1">Last Name</label>
+                            <input type="text" id="lname1">
+                        </div>
+
+                        <div>
+                            <label for="email1">Email Address</label>
+                            <input type="text" id="email1">
+                        </div>
+
+                        <div>
+                            <label for="phonenum1">Phone Number</label>
+                            <input type="text" id="phonenum1">
+                        </div>
+
+                        <div>
+                            <label for="street1">Street</label>
+                            <input type="text" id="street1">
+                        </div>
+
+                        <div>
+                            <label for="city1">City</label>
+                            <input type="text" id="city1">
+                        </div>
+
+                        <div>
+                            <label for="state1">State / Province</label>
+                            <input type="text" id="state1">
+                        </div>
+
+                        <div>
+                            <label for="country1">Country</label>
+                            <input type="text" id="country1">
+                        </div>
+
+                        <div>
+                            <label for="postalcode1">Postal Code</label>
+                            <input type="text" id="postalcode1">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Guest Two</legend>
+                        <div>
+                            <label for="fname2">First Name</label>
+                            <input type="text" id="fname2">
+                        </div>
+                        
+                        <div>
+                            <label for="lname2">Last Name</label>
+                            <input type="text" id="lname2">
+                        </div>
+
+                        <div>
+                            <label for="email2">Email Address</label>
+                            <input type="text" id="email2">
+                        </div>
+
+                        <div>
+                            <label for="phonenum2">Phone Number</label>
+                            <input type="text" id="phonenum2">
+                        </div>
+
+                        <div>
+                            <label for="street2">Street</label>
+                            <input type="text" id="street2">
+                        </div>
+
+                        <div>
+                            <label for="city2">City</label>
+                            <input type="text" id="city2">
+                        </div>
+
+                        <div>
+                            <label for="state2">State / Province</label>
+                            <input type="text" id="state2">
+                        </div>
+
+                        <div>
+                            <label for="country2">Country</label>
+                            <input type="text" id="country2">
+                        </div>
+
+                        <div>
+                            <label for="postalcode2">Postal Code</label>
+                            <input type="text" id="postalcode2">
+                        </div>
+                    </fieldset>
+
+
+                    <p class="paragraph-normal add-padding-small">Please specify if either guest requires accommodations with any of the following: </p>
+
+                    <p class="paragraph-normal add-padding-small">Allergies: Eggs, Milk, Mustard, Peanuts, Seafood, Soy, Sesame, Sulphites, Tree Nuts, gluten, feathers, or other unspecified allergies. </p>
+
+                    <p class="paragraph-normal add-padding-small">Dietary Needs: Vegan, Vegetarian, Celiac Disease</p>
+
+                    <textarea class="textarea-allergy" name="dietary_needs" id="dietary_needs"></textarea>
+
+
+                    <h3 class="header-medium">Payment Information</h3>
+
+                    <div class="side-by-side">
+                        <section class="credit-card">
+                            <h2 class="hidden">Enter your credit card information in order to reserve your accomodation</h2>
+                            <input type="text" placeholder="Credit Card Number">
+                            <input type="text" placeholder="MM/YY">
+                            <input type="text" placeholder="CVV">
+                        </section>
+                        <p class="fine-print add-padding-small deposit-disclaimer">A $500 deposit is required upon booking the accommodation. The rest will be paid during your stay </p>
+                    </div>
+                    
+                    <button class="reservation-button" id="reservation-button" type="button">Complete Reservation</button>
+                </form>
+                
+            </div>
+
+        </section>
+
+
+        <section class="add-margin">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec02.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec02.jpg">
+                <img src="images/all-mob-sec02.jpg" alt="Two wooden lounge chairs at the end of a dock overlooking the water at sunrise ">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="policies-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Resort Policies</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <p class="paragraph-normal">You will be signing a registration upon arrival. You will be accepting your invoice and paying upfront for your stay in advance and taking full responsibility for any and all charges made during your stay. We are strictly a NO-TIPPING RESORT therefore NO tipping allowed nor expected. <br><br>
+
+                All prices are quoted in Canadian Dollars. We accept Debit Card, Visa, MasterCard, American Express and Cash (NO Cheques). Rates are guaranteed at time of booking with deposit, plus 13% Harmonized Sales Tax. <br><br>
+
+                Check in time is around 4 pm-5 pm Check out time is 11 am <br><br>
+
+                Sorry no pets allowed. No Smoking nor Vaping inside any accommodation. <br><br>
+
+                Please be aware that we are a Destination Resort and Not a Hotel and that the Following Deposits, Change Date Fees and Cancellation Fees must Apply:</p> <br>
+
+                <details>
+                    <summary>Deposits</summary>
+                    <div>
+                        <p class="paragraph-normal add-padding-small">$500 Required on Booking an accommodation. we absolutely do not request or accept email transfers</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Guest Cancellation and Change Date Fees</summary>
+                    <div>
+                        <p class="paragraph-normal add-padding-small"> $200 Administration Fee will be charged to Change Dates and to Cancellations, Absolutely No Exceptions. There is a 24 hour delay, from booking time, before Fee takes effect.</p>
+                        <p class="paragraph-normal add-padding-small"> CHARGED FULL 1 NIGHTS ACCOMMODATION to GUEST who DO NOT Show up on Arrival Date, and did not prior Change Date or Prior Cancel.</p>
+                        <p class="paragraph-normal add-padding-small"> NO REFUND will be given for shortened Resort stays.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Extra Fees</summary>
+                    <div>
+                        <p class="paragraph-normal add-padding-small">EXTRA FEES: 13% HST TAX, Lunches, Extra food, Spa Treatments (however, repeat guests receive 2 free 1/2 treatments if here in the last 2 years), 20/30/40 hpr Italian Deck Boat(s), Drinks from the Bar, Store, Parking $20/Night. Spa Products. </p>
+                        
+                        <p class="paragraph-normal add-padding-small"> GUARANTEE: We aim to please. If at any time you need our help, please ask for immediate assistance. We are very fast at fixing what is broken or not right, usually we are always successful.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Tipping and Gratuity Policy</summary>
+                    <div>
+                        <p class="paragraph-normal add-padding-small">If you feel you really must tip or leave a gratuity, then we encourage you to tell the amazing staff and the World on TripAdvisor or Yelp or Google Reviews or Facebook as they, the staff, love to read it.</p>
+
+                        <p class="paragraph-normal add-padding-small">Your action will affect them both emotionally positively and financially positively as it will help their "joy of the day" and their careers as they move forward in life.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Property Policy</summary>
+                    <div>
+                        <p class="paragraph-normal add-padding-small">Front Desk office hours are 8:30 am to 10:00 pm.</p>
+                        
+                        <p class="paragraph-normal add-padding-small"> All Accommodations have Hot Tubs: Resort Policy for your Health Protection is that Hot Tub Chemical Testing is done daily in your Hot Tub, regardless of signage you hang at your door.</p>
+                        
+                        <p class="paragraph-normal add-padding-small">Cleaning will occur between 9 am and mid-afternoon. The cleaning card MUST be displayed on your outside door handle or in the plastic holder for housekeeping.</p>
+                        
+                        <p class="paragraph-normal add-padding-small">Business Services are available - Inquire at Front Desk.</p>
+                        
+                        <p class="paragraph-normal add-padding-small">Please no disturbing music around the lake front or from your private deck. Keep rooms quiet after 12 midnight.</p>
+                        
+                        <p class="paragraph-normal add-padding-small">No Pets Allowed</p>
+                        
+                        <p class="paragraph-normal add-padding-small">All rooms are non-smoking and non-vaping. There are ashtrays provided for smokers located on the balcony or patio. There will be a $300 surcharge applied, if you are smoking or vaping or leaving Cannabis in your accommodation. Leave Cannabis in your vehicle as it is known to stink up the accommodation. During the Spring, Summer and Fall there are Fire pits set up by the lake for those that indulge, to enjoy.</p>
+                        
+                        <p class="paragraph-normal add-padding-small">All Damages to Accommodations and facilities are the guest's responsibility!</p>
+                        
+                        <p class="paragraph-normal add-padding-small">Please give privacy & respect to homes & cottages on the lake and on the Resort. Do Not Trespass.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Power Outage Policy</summary>
+                    <div>
+                        <p class="paragraph-normal add-padding-small">Power Outage Policy was introduced due to outage in winter 2009, the first time in 42 years that the resort had to shut down due to a power outage. Currently in a Power Outage we can Provide the Following Services:</p>
+                            
+                        <ol class="paragraph-normal">
+                            <li>Wood burning fireplace in all Accommodations; for Romance ( Possibly # 1 Reason Guests stay with us)</li>
+                            <li>Fully operational Kitchen; Gourmet Dining (Possible also the #1 Reason Guests stay with us)</li>
+                            <li>Cold running water in all Accommodations</li>
+                            <li>Hot and Cold Showers in the Gym/Sauna Facilities</li>
+                            <li>Recreation Room with Big TV for the Vital Game (Much lower on the list of reasons to stay with us...but May be critical)</li>
+                            <li>Office has access to the outside world with Phone and Data Line services</li>
+                            <li>We Apologize that all the Toys in your Accommodation, and the Pool/Hot Tub will Not be operational</li>
+                        </ol>
+
+                        <p class="paragraph-normal add-padding-small">We will try to update the home page of our website to tell when we are up again. If there is a power outage we will try to notify guests. If we are successful the deposit will be refunded if desired. If guests arrive or if a power outage happens while guests are here, we will offer:</p>
+                        
+                        <ul class="paragraph-normal">
+                            <li>If power goes out for two hours between 4pm and 11pm: 10% off</li>
+                            <li>If power goes out for three hours between 8pm and 11pm: 20% off</li>
+                            <li>If power goes out for four hours between 7pm and 11pm: 30% off</li>
+                            <li>If power goes out for five hours between 6pm and 11pm: 35% off and one free night stay in the future, similar accommodation</li>
+                            <li>Power outages after 11pm through to 4pm will have no discount attached</li>
+                        </ul>
+                        
+                    </div>
+                </details>
+
+                <h3 class="res-heading">Revisions to These Policies</h3>
+
+                <p class="paragraph-normal">The Couples Resort reserves the right to revise, amend, or modify this policy, our Internet Service Agreement and our other policies and agreements at any time and in any manner. Notice of any revision, amendment, or modification will be posted in accordance with the Internet Service Agreement.</p>
+
+                <h3 class="res-heading">Where to Direct Questions About The Couples Resorts' Privacy Policy</h3>
+
+                <p class="paragraph-normal">If you have any questions about this Privacy Policy or the practices described herein, you may contact:<br> Attention: John Sorensen <br> Couples Resort <br> P. O. Box 310 <br> 139 Galeairy Lake Road<br> Whitney - Algonquin Park, ON K0J 2M0 <br>Canada</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="body-grid-item">
+        <div class="content-wrapper">
+            <section class="footer-grid">
+                <div>
+                    <h2 class="footer-text">Couples Resort</h2>
+                    <p class="footer-text fine-print">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+                    <p class="footer-text fine-print">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+                </div>
+
+                <nav>
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="activities.html">Spa Activities</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-book-now">
+                    <a href="#">Book Now</a>
+                </div>
+
+            </section>
+
+            <hr>
+            <p class="footer-text fine-print center-text">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing. </p>
+            <p class="footer-text fine-print center-text">2013 Couples Resort Inc. All Rights Reserved. Privacy Policy. </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
