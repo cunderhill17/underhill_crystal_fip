@@ -1,0 +1,46 @@
+@use '../base' as *;
+
+/* Styling for Testimonials */
+
+.individual-testimonial {
+    margin: 0px auto;
+    width: 265px;
+    text-align: center;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .individual-testimonial {
+        width: 500px;
+    }
+}
+
+.position {
+    position: relative;
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 5px;
+    background-color: $brand-light-red;
+    color: $bgcolor;
+    padding: 10px 15px;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 5px;
+    background-color: $brand-light-red;
+    color: $bgcolor;
+    padding: 10px 15px;
+}
+
+.prev:hover, .next:hover {
+    cursor: pointer;
+}

@@ -812,5 +812,47 @@ ANIMATION STYLING
     font-size: 24px;
   }
 }
+/* Styling for Testimonials */
+.individual-testimonial {
+  margin: 0px auto;
+  width: 265px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .individual-testimonial {
+    width: 500px;
+  }
+}
+.position {
+  position: relative;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 5px;
+  background-color: #C44242;
+  color: #F4F4F4;
+  padding: 10px 15px;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 5px;
+  background-color: #C44242;
+  color: #F4F4F4;
+  padding: 10px 15px;
+}
+
+.prev:hover, .next:hover {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=main.css.map */
