@@ -547,4 +547,113 @@ ANIMATION STYLING
   animation: blinkBackground 1s ease-in-out 3;
 }
 
+.mobile-header {
+  position: relative;
+  z-index: 10;
+}
+.mobile-header #menu-links {
+  background-color: #505050;
+  display: none;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 342px;
+  z-index: 1000;
+}
+.mobile-header #menu-links ul {
+  padding-left: 0px;
+}
+.mobile-header #menu-links ul li {
+  list-style-type: none;
+}
+.mobile-header #menu-links ul li a {
+  color: #F4F4F4;
+  display: block;
+  font-size: 17px;
+  padding: 10px;
+  text-decoration: none;
+}
+.mobile-header #menu-links ul li a:hover {
+  background-color: #F4F4F4;
+  color: #9B2018;
+}
+.mobile-header .site-logo {
+  display: block;
+  margin: 15px 15px;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .mobile-header .site-logo {
+    max-width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .mobile-header .site-logo {
+    max-width: 350px;
+  }
+}
+.mobile-header .book-now-button {
+  position: relative;
+  height: 100%;
+}
+.mobile-header .book-now {
+  display: flex;
+  position: absolute;
+  right: 50px;
+  width: 110px;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #9B2018;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-header #menu-links {
+    display: block;
+    position: static;
+    width: auto;
+    background-color: transparent;
+  }
+  .mobile-header #menu-links ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+  .mobile-header #menu-links ul li {
+    list-style-type: none;
+  }
+  .mobile-header #menu-links ul li a {
+    color: #505050;
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  .mobile-header #menu-links ul li a:hover {
+    background-color: transparent;
+    color: #9B2018;
+    font-size: 16px;
+    border-bottom: 1px solid #9B2018;
+  }
+  .mobile-header #menu-icon {
+    display: none;
+  }
+  .mobile-header .book-now {
+    right: 0px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
