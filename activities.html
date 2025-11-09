@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Resort Spa & Activities</title>
+    <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <h1 class="hidden">Couples Resort Website</h1>
+
+    <header class="body-grid-item mobile-header">
+
+        <a href="#" class="icon" id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo" class="site-logo">
+
+        <nav id="menu-links">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Spa Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+
+        <div class="book-now-button">
+            <a href="#" class="book-now">Book Now</a>
+        </div>
+
+    </header>
+
+
+    <main class="body-grid-item">
+
+        <section>
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-hero.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-hero.jpg">
+                <img class="hero-image" src="images/all-mob-hero.jpg" alt="Luxury cabin on the lake surrounded by trees with lush autumn leaves">
+            </picture>
+
+            <div class="content-wrapper">
+                <div class="tab-tags">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> 5 Star, Luxury Couples Resort & Spa</h2>
+                </div>
+
+                <section class="reservation-box">
+                    <h2>Check Availability</h2>
+                    
+                    <form action="#" method="post">
+                        <label for="checkin">Start Your Romantic Experience</label>
+                        <input type="date" id="checkin" name="checkin">
+                        <label for="num-of-nights">Number of Romantic Evenings</label>
+                        <select name="num-of-nights" id="num-of-nights">
+                            <option value="0">Select Your Duration</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <button type="submit">Let's Create Something Special</button>
+                    </form>
+                    
+                </section>
+
+                <div class="tab-spacer"></div>
+                
+                <p class="paragraph-normal">From spring wildflowers to fall’s fiery colours, summer lake adventures to cozy winter escapes, there’s no shortage of ways to reconnect with each other—and with nature. Our all-inclusive packages provide access to a wide range of activities, including canoeing, fishing, biking, swimming, and stargazing. With premium amenities, complimentary equipment, and thoughtful extras like park passes and outdoor gear, your stay at Couples Resort isn’t just a getaway—it’s an immersive escape into the heart of Ontario’s most iconic wilderness.</p>
+            </div>
+        </section>
+
+
+
+        <section class="mini-contact">
+            <h3 class="hidden">Resort Contact Information and Address</h3>
+            <div>
+                <img class="contact-icon-phone" src="images/phone-icon.png" alt="Phone Icon">
+                <p class="paragraph-format-contact">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+            </div>
+
+            <div>
+                <img class="contact-icon-map" src="images/map-icon.png" alt="Map Address Icon"> 
+                <p class="paragraph-format-contact">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+            </div>
+        </section>
+               
+
+        <section class="button-tab-section">
+            <div class="content-wrapper">
+                <h3 class="hidden">Tabs to Navigate Homepage</h3>
+                <button data-target="#activities-cr" class="button-tabs active">Activities</button>
+                <button data-target="#spa-services-cr" class="button-tabs">Spa</button>
+                <button data-target="#policies-overview-cr"  class="button-tabs">Policies</button>
+                <button data-target="#contact-cr"  class="button-tabs">Contact</button>
+            </div>
+        </section>
+        
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec01.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec01.jpg">
+                <img src="images/all-mob-sec01.jpg" alt="Man and Woman holding hands as they walk along a trail behind a log cabin">
+            </picture>
+
+            <div class="content-wrapper">
+                
+                <div class="tab-tags" id="activities-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Activities</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <details>
+                    <summary>Algonquin Park</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_algonguin_park01.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_algonguin_park01.jpg">
+                            <img src="images/act_algonguin_park01.jpg" alt="Lush autumn trees of Algonquin Park bordering the calm lake waters">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring, Summer, Fall, and Winter</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">Algonquin Park, the first provincial park in Ontario, protected from the noise and rush of civilization, this world-renowned park in Ontario is a sanctuary for the rugged beauty of the maple, pine, moose, and wolves. A Provincial Park since 1893, the 7500 square kilometers (3500 square miles) of Algonquin Park are home to a diverse and unblemished eco-system that can be found nowhere else on earth.</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Swimming Pool, Patio, & Lake</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_swimming_pool.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_swimming_pool.jpg">
+                            <img src="images/act_swimming_pool.jpg" alt="In ground pool with clear blue water and a stone walkway">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring and Summer</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">To invigorate the body, the best wild swimming, a wonderful long swim off of our swimming dock in our clean lake is a must. Adjacent to the lake, the pool is part of a 5000 square foot, multi-level patio.</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Kayaks & Canoes</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_canoeing.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_canoeing.jpg">
+                            <img src="images/act_canoeing.jpg" alt="Woman in a canoe overlooking the water as the sun's about to set">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring, Summer, and Fall</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">An important form of transportation for the Algonquin natives has always been the use of canoes on the beautiful lakes and rivers. Canoes and kayaks permit you to travel deep into Algonquin Park on our Galeairy Lake still as pristine as ever. Inquire at Sport Centre to go out super early next day (as early as sunrise)</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Pickleball, Tennis, Badminton, & Basketball</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_tennis.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_tennis.jpg">
+                            <img src="images/act_tennis.jpg" alt="Elderly couple close together with tennis rackets in their hands ">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring, Summer, and Fall</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">2 asphalt regulation-size Pickleball courts with all the racquets and balls provided </p>
+                            <p class="paragraph-normal">1 asphalt regulation-size tennis court with all the racquets and balls provided</p>
+                            <p class="paragraph-normal">1 asphalt court for playing basketball</p>
+                            <p class="paragraph-normal">1 asphalt regulation-size badminton court with all the racquets and birdies provided </p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Hiking & Biking</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_biking01.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_biking01.jpg">
+                            <img src="images/act_biking01.jpg" alt="Man and woman standing next to their bikes while they’re stopped by a stream">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring, Summer, and Fall</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">The Couples Resort Hiking Trails - On-site scenic hiking trails, leading to a scenic view of Algonquin Park, consisting of three loops, Lookout Trail 1.0 km in length, Bear trail loop 2.7 and Rail Line loop 1.2</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Motor, Paddle, & Row Boats</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_paddle_boat.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_paddle_boat.jpg">
+                            <img src="images/act_paddle_boat.jpg" alt="Man and woman in a paddle boat pushing their oars through the water ">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring, Summer, and Fall</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">Enjoy a free leisurely tour along the shores of Galeairy Lake and take in the beauty and subtle hues of Algonquin's spring colours. Or spend some time fishing for Trout, Bass, Pickerel. We have extensive collection of all weather clothing, fishing gear, outerwear, footwear, hats and accessories & apparel. </p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Wild Life Viewing</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_moose02.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_moose02.jpg">
+                            <img src="images/act_moose02.jpg" alt="Close up show of a mooses face ">
+                        </picture>
+                        <h3>Availability . . . . . . . Fall</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">During late fall, you'll have a good chance of seeing a big bull Moose, its antlers now full-grown and polished, ready for the rut (mating season - give them lots of room). Fall evenings are the best time to try howling for wolves, you may want to try it yourself.</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Feed the Canada Jay and Chickadee</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_chickadee.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_chickadee.jpg">
+                            <img src="images/act_chickadee.jpg" alt="A grey chickadee with a black head sitting on a branch">
+                        </picture>
+                        <h3>Availability . . . . . . . Winter</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal">Canada's New Official Bird; the Canada Jay and of course the Chick-a-dee! Touching Wildlife.</p>
+                            <p class="paragraph-normal">Famous birds that will eat seeds from your hand or your hat are the Canada Jay (aka the Gray Jay or the Whiskey Jack) and Boreal Chickadee.</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Ice Hiking and Skating</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_ice_hiking.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_ice_hiking.jpg">
+                            <img src="images/act_ice_hiking.jpg" alt="A woman hiking up a snowy path">
+                        </picture>
+                        <h3>Availability . . . . . . . Winter</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal ">IceHiking: Guaranteed Daily Winter Sport for you to enjoy nature! Touching Wildlife.Fun and Easy and Safe. Invented Here in 2018.</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Cross Country Skiing and Snow Shoeing</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_cross_country_skiing.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_cross_country_skiing.jpg">
+                            <img src="images/act_cross_country_skiing.jpg" alt="A man and woman cross country skiing along a snowy trail">
+                        </picture>
+                        <h3>Availability . . . . . . . Winter</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal ">Tranquil with peacefulness. Algonquin Park has International quality ski trails; track set and skating lane. 48 kilometres of groomed and 23 kilometres of non-groomed cross-country ski trails available in three low-usage trail networks, typically December to early April. Check the latest ski trail conditions If you cannot go skiing you can always go IceHiking.</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+                <details>
+                    <summary>Other Activities</summary>
+                    <section class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/act_atv.jpg">
+                            <source media="(min-width:768px)" srcset="images/act_atv.jpg">
+                            <img src="images/act_atv.jpg" alt="Two people on ATVs high-fiving while they’re stopped on a nature trail ">
+                        </picture>
+                        <h3>Availability . . . . . . . Spring, Summer, Fall, and Winter</h3>
+                        <div class="summary-content">
+                            <p class="paragraph-normal ">Autumn Studio Tours, Guided Snowmobile Tours, and ATV-ing</p>
+                        </div>
+                        <button>View Details</button>
+                    </section>
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/act-desk-spa-banner.jpg">
+                <source media="(min-width:768px)" srcset="images/act-tab-spa-banner.jpg">
+                <img src="images/act-mob-spa-banner.jpg" alt="Placeholder Text">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="spa-services-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Spa Services</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <details>
+                    <summary>Registered Massage Therapy</summary>
+                    <div class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/spa_massage.jpg">
+                            <source media="(min-width:768px)" srcset="images/spa_massage.jpg">
+                            <img src="images/spa_massage.jpg" alt="Woman lying down and receiving a relaxing massage">
+                        </picture>
+                        <h3>In Spa Only</h3>
+                        <div class="summary-content">
+                            <div class="paragraph-normal column-count">
+                                <p>30 Minute</p>
+                                <p class="right-align">$96</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>60 Minute</p>
+                                <p class="right-align">$186</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>90 Minute</p>
+                                <p class="right-align">$276</p>
+                            </div>
+                        </div>
+                        <button>View Details</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Hot Stones, Body Molding, Indian Head Massage</summary>
+                    <div class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/spa_hot_stone01.jpg">
+                            <source media="(min-width:768px)" srcset="images/spa_hot_stone01.jpg">
+                            <img src="images/spa_hot_stone01.jpg" alt="Man laying face down on a table while hot stones are applied to his back ">
+                        </picture>
+                        <div class="summary-content">
+                            <div class="paragraph-normal column-count">
+                                <p>30 minute relaxing body molding treatment</p>
+                                <p class="right-align">$70</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>60 minute relaxing body molding treatment</p>
+                                <p class="right-align">$132</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>Ayurveda Indian Head Massage</p>
+                                <p class="right-align">$118</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>Hot Stone Therapy</p>
+                                <p class="right-align">$166</p>
+                            </div>
+                        </div>
+                        <button>View Details</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Hand / Foot Treatments</summary>
+                    <div class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/spa_manicure.jpg">
+                            <source media="(min-width:768px)" srcset="images/spa_manicure.jpg">
+                            <img src="images/spa_manicure.jpg" alt="Close up of a woman receiving a manicure">
+                        </picture>
+                        <div class="summary-content">
+                            <div class="paragraph-normal column-count">
+                                <p>Spa Manicure with Polish (60 min)</p>
+                                <p class="right-align">$84</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>Spa Manicure with no Polish (45 min)</p>
+                                <p class="right-align">$78</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>Spa Pedicure with Polish (75 min)</p>
+                                <p class="right-align">$105</p>
+                            </div>
+                            <div class="paragraph-normal column-count">
+                                <p>Spa Pedicure with no Polish (75 min)</p>
+                                <p class="right-align">$84</p>
+                            </div>
+                        </div>
+                        <button>View Details</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Scrubs, Wraps, and Facials</summary>
+                    <div class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/spa_body_scrub.jpg">
+                            <source media="(min-width:768px)" srcset="images/spa_body_scrub.jpg">
+                            <img src="images/spa_body_scrub.jpg" alt="Woman laying face down on a table while her back is covered in a green body scrub">
+                        </picture>
+                        <div class="summary-content">
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Scrub, Wrap, and Facial in the Spa</p>
+                                <p class="right-align">$270</p>
+                            </div>
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Scrub and Wrap in the Spa</p>
+                                <p class="right-align">$173</p>
+                            </div>
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Signature Custom Facial in the Spa</p>
+                                <p class="right-align">$132</p>
+                            </div>
+                        </div>
+                        <button>View Details</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Waxing Services</summary>
+                    <div class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/spa_waxing01.jpg">
+                            <source media="(min-width:768px)" srcset="images/spa_waxing01.jpg">
+                            <img src="images/spa_waxing01.jpg" alt="Tools required for waxing">
+                        </picture>
+                        <div class="summary-content">
+                            <div class="paragraph-normal add-padding-small">
+                                <p>Space available in a walk-in basis only. Please see the office for pricing</p>
+                            </div>
+                            <div class="paragraph-normal add-padding-small">
+                                <p>Eye Brows ~ Upper Lip ~ Chin ~ Face (includes eyebrows, chin and upper lip)~ Arms ~ Half Leg ~ Full Leg ~ (Womens) Bikini ~ Under Arms ~ Men Chest ~ Men Back</p>
+                            </div>
+                        </div>
+                        <button>View Details</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Algonquin Spa Features</summary>
+                    <div class="summary-grid">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="images/spa_relaxing_spa.jpg">
+                            <source media="(min-width:768px)" srcset="images/spa_relaxing_spa.jpg">
+                            <img src="images/spa_relaxing_spa.jpg" alt="Man and Woman receiving a couples massage">
+                        </picture>
+                        <div class="summary-content">
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Divine (2 hours)</p>
+                                <p class="right-align">$208</p>
+                            </div>
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Heaven (4 hours)</p>
+                                <p class="right-align">$477</p>
+                            </div>
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Rejuvenating Body Package (3 hours)</p>
+                                <p class="right-align">$384</p>
+                            </div>
+                            <div class="paragraph-normal add-padding-small column-count">
+                                <p>Solstice in the Day (3 hours)</p>
+                                <p class="right-align">$274</p>
+                            </div>
+                        </div>
+                        <button>View Details</button>
+                    </div>
+                </details>
+            </div>
+
+        </section>
+
+
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec02.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec02.jpg">
+                <img src="images/all-mob-sec02.jpg" alt="Two wooden lounge chairs at the end of a dock overlooking the water at sunrise ">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="policies-overview-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Policies and Procedures</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <div class="pagination">
+                    <section class="wrap" id="pagination-activities-content">
+                        <!-- Content generated by JS - also includes section headings -->
+                    </section>
+
+                    <nav>
+                        <h2 class="hidden">Mobile Pagination Buttons</h2>
+                        <ul id="pagination-activities">
+                            <!-- Content generated by JS -->
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="card-container">
+                    <section class="card card-activities">
+                        <h2 class="h-flipped">seasons at a glance</h2>
+                        <p class="p-flipped">Click below to learn more about Couple’s Resort and what makes each of the seasons a wonderful time to visit. </p>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">1</p>
+                    </section>
+
+                    <section class="card card-activities">
+                        <h2 class="h-flipped">policies</h2>
+                        <p class="p-flipped">Click below to view spa policies and procedures.</p>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">2</p>
+                    </section>
+                    
+                    <section class="card card-activities">
+                        <h2 class="h-flipped">image gallery</h2>
+                        <p class="p-flipped">Click below to view images from our spa and the various activities available to guests at Couples Resort</p>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">3</p>
+                    </section> 
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec03.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec03.jpg">
+                <img src="images/all-mob-sec03.jpg" alt="Man and Woman sitting at the end of a dock overlooking the water">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="contact-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Contact</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <p class="paragraph-normal">Thank you for taking the time to learn more about our resort and why we are Ontario’s number one choice for couples looking to reconnect. For reservation inquiries and further information please complete our contact form below. Or if you prefer to talk call us at our toll free number listed below.</p>
+
+
+                <div class="form-grid">
+                    <div>
+                        <h2 class="add-padding">Couples Resort</h2>
+                        <p class="paragraph-normal">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+                        <p class="paragraph-normal">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+                    </div>
+
+                    <form action="#" method="post">
+                        <label for="fname">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="fname">
+                        </div>
+
+                        <label for="eml">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="eml">
+                        </div>
+                        
+                        <label for="contact_message">Question or Comment</label>
+                        <div class="input-wrapper">
+                            <textarea name="contact_message" id="contact_message"></textarea>
+                        </div>
+                        
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="body-grid-item">
+        <div class="content-wrapper">
+            <section class="footer-grid">
+                <div>
+                    <h2 class="footer-text">Couples Resort</h2>
+                    <p class="footer-text fine-print">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+                    <p class="footer-text fine-print">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+                </div>
+
+                <nav>
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="activities.html">Spa Activities</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-book-now">
+                    <a href="#">Book Now</a>
+                </div>
+
+            </section>
+
+            <hr>
+            <p class="footer-text fine-print center-text">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing. </p>
+            <p class="footer-text fine-print center-text">2013 Couples Resort Inc. All Rights Reserved. Privacy Policy. </p>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
