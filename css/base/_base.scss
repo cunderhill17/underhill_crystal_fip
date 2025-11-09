@@ -1,0 +1,78 @@
+@use 'variables' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.background-colour {
+    background-color: $bgcolor;
+}
+
+.paragraph-normal { 
+    color: $main-text-color;
+    font-size: $paragraph-mobile-normal;
+    padding: $padding-md 0px;
+}
+
+.fine-print {
+    font-size: $paragraph-mobile-fine-print;
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .center-text {
+        text-align: center;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .paragraph-normal {
+        font-size: 16px;
+    }
+
+    .fine-print {
+        font-size: 12px;
+    }
+}
+
+.column-count { 
+    column-count: 2;
+}
+
+.right-align { 
+    text-align: right; 
+}
+
+.add-padding-bottom {
+    padding-bottom: 50px;
+}
+
+.add-padding-top {
+    padding-top: 50px;
+}
+
+.add-padding-small {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.add-padding-full {
+    padding: 10px;
+}
+
+.tab-spacer { 
+    border-bottom: 2px solid $brand-dark-red;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.red-line {
+    width: 100%;
+    border-bottom: 2px solid $brand-dark-red;
+    margin: 10px 0px;
+}
