@@ -1,0 +1,49 @@
+@use '../base' as *;
+
+.reservation-box { 
+    display: none;
+    width: 342px;
+    position: absolute;
+    top: -425px;
+    padding: $padding-tabs-vertical $padding-tabs-vertical;
+    background-color: $brand-dark-red;
+    color: white;
+
+    h2 {
+        font-weight: 400;
+    }
+
+    >form>* {
+        display: block;
+        width: 100%;
+        margin: 5px 0px;
+        font-family: $primary-font;
+    }
+
+    >form>input,select,button {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    >form>label {
+        margin-top: 10px;
+    }
+
+    >form>button {
+        margin-top: 20px;
+        background-color: $brand-light-red;
+        color: white
+    }
+
+    >form>input,select {
+        background-color: #f8f8f8;
+        color: $main-text-color;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .reservation-box {
+        display: block;
+    }
+}
