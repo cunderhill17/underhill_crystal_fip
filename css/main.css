@@ -741,6 +741,47 @@ ANIMATION STYLING
     display: none;
   }
 }
+.reservation-box {
+  display: none;
+  width: 342px;
+  position: absolute;
+  top: -425px;
+  padding: 20px 20px;
+  background-color: #9B2018;
+  color: white;
+}
+.reservation-box h2 {
+  font-weight: 400;
+}
+.reservation-box > form > * {
+  display: block;
+  width: 100%;
+  margin: 5px 0px;
+  font-family: "Sanchez", serif;
+}
+.reservation-box > form > input, .reservation-box select, .reservation-box button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.reservation-box > form > label {
+  margin-top: 10px;
+}
+.reservation-box > form > button {
+  margin-top: 20px;
+  background-color: #C44242;
+  color: white;
+}
+.reservation-box > form > input, .reservation-box select {
+  background-color: #f8f8f8;
+  color: #505050;
+}
+
+@media (min-width: 1200px) {
+  .reservation-box {
+    display: block;
+  }
+}
 .tab-tags {
   width: 342px;
   position: absolute;
