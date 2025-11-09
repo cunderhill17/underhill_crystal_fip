@@ -1,0 +1,26 @@
+@use '../base' as *;
+
+.hero-image {
+    transform: none;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .hero-image {
+        transform: scaleX(-1);
+    }
+}
+
+
+/* ============================
+ANIMATION STYLING
+============================ */
+
+@keyframes blinkBackground {
+    0% { background-color: white; }
+    50% { background-color: $brand-light-red; border-color: #cc0000; }
+    100% { background-color: white; }
+}
+
+.blink {
+    animation: blinkBackground 1s ease-in-out 3;
+}

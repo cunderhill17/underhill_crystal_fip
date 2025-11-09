@@ -519,5 +519,32 @@ footer h2 {
     display: flex;
   }
 }
+.hero-image {
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    transform: scaleX(-1);
+  }
+}
+/* ============================
+ANIMATION STYLING
+============================ */
+@keyframes blinkBackground {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #C44242;
+    border-color: #cc0000;
+  }
+  100% {
+    background-color: white;
+  }
+}
+.blink {
+  animation: blinkBackground 1s ease-in-out 3;
+}
 
 /*# sourceMappingURL=main.css.map */
