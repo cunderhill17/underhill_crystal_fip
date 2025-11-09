@@ -1,0 +1,156 @@
+@use '../base' as *;
+
+
+.trip-info { 
+    max-width: 342px;
+}
+
+@media (min-width: $breakpoint-tablet) { 
+    .trip-info {
+        float: right;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) { 
+    .trip-info {
+        max-width: 342px;
+    }
+}
+
+.trip-info img { 
+    border-radius: 15px;
+    width: 100%;
+}
+
+fieldset { 
+    border: none;
+    padding-left: $padding-reset;
+    padding-right: $padding-reset;
+    max-width: 342px;
+}
+
+@media (min-width: $breakpoint-desktop) { 
+    fieldset {
+        max-width: 400px;
+    }
+}
+
+fieldset>legend { 
+    color: $main-text-color;
+    padding: $padding-reset;
+}
+
+fieldset>div { 
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 165px;
+}
+
+fieldset>div>label {
+    color: $main-text-color;
+    font-size: $paragraph-mobile-normal;
+}
+
+fieldset>div>input {
+    width: 155px;
+    font-family: inherit;
+    padding-left: 5px;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+@media (min-width: $breakpoint-desktop) { 
+    fieldset>div {
+        width: 195px;
+    }
+
+    fieldset>div>input {
+        width: 185px;
+        height: 32px;
+    }
+}
+
+.textarea-allergy {
+    height: 210px;
+    resize: none;
+    width: 100%;
+    font-family: inherit;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.credit-card {
+    background-color: $brand-dark-red;
+    height: 230px;
+    padding: 20px 25px;
+    width: $mobile-content-width;
+}
+
+.credit-card>input { 
+    height: 51px;
+    margin: 7px auto;
+    padding-left: $padding-md;
+    width: 284px;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.reservation-button {
+    background-color: $brand-dark-red;
+    border: none;
+    color: #D9D9D9;
+    font-size: $button-mobile-text;
+    font-family: inherit;
+    height: 57px;
+    margin: 15px 0px;
+    width: $mobile-content-width;
+}
+
+.reservation-button:hover {
+    cursor: pointer;
+}
+
+.header-medium {
+    color: $main-text-color;
+    margin: 15px 0px;
+}
+
+.p-guest-details {
+    color: $main-text-color;
+    font-size: $paragraph-mobile-normal;
+    margin: 5px 0px;
+}
+
+details ul, details ol {
+    list-style-position: inside;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+details li {
+    padding-bottom: 10px;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .side-by-side {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .deposit-disclaimer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-left: 15px;
+        border-left: 1px solid #505050;
+    }
+}
+
+.res-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $main-text-color;
+}
