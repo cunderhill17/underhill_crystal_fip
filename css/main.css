@@ -855,4 +855,10 @@ ANIMATION STYLING
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .about-us-text {
+    column-count: 2;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
