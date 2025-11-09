@@ -1,0 +1,7 @@
+@use '../base' as *;
+
+@media (min-width: $breakpoint-tablet) {
+    .about-us-text {
+        column-count: 2;
+    }
+}
