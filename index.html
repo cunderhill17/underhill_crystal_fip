@@ -3,11 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Couples Resort Homepage</title>
+    <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1 class="hidden">Couples Resort Website</h1>
     
+    <header class="body-grid-item mobile-header">
+
+        <a href="#" class="icon" id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo" class="site-logo">
+
+        <nav id="menu-links">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Spa Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+
+        <div class="book-now-button">
+            <a href="#" class="book-now">Book Now</a>
+        </div>
+
+    </header>
+
+
+    <main class="body-grid-item">
+
+        <section>
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-hero.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-hero.jpg">
+                <img class="hero-image" src="images/all-mob-hero.jpg" alt="Luxury cabin on the lake surrounded by trees with lush autumn leaves">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> 5 Star, Luxury Couples Resort & Spa</h2>
+                </div>
+
+                <section class="reservation-box">
+                    <h2>Check Availability</h2>
+                    
+                    <form action="#" method="post">
+                        <label for="checkin">Start Your Romantic Experience</label>
+                        <input type="date" id="checkin" name="checkin">
+                        <label for="num-of-nights">Number of Romantic Evenings</label>
+                        <select name="num-of-nights" id="num-of-nights">
+                            <option value="0">Select Your Duration</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <button type="submit">Let's Create Something Special</button>
+                    </form>
+                </section>
+
+                <div class="tab-spacer"></div>
+                
+                <p class="paragraph-normal">Welcome to Couples Resort, Soyers Lake. Haliburton’s Only 5 STAR Luxury Resort. Fine Luxury while still being Rustic with Wilderness. A Boutique Luxury Resort with Junior suite rooms and cottages that are each designed uniquely, just for the 2 of you, varying between Opulent Old European to Natural Hailburton Style. Come and experience very spacious accommodations, each and all, with Jacuzzi's, Wood Burning Fireplaces, Hot Tubs and so much more.</p>
+
+                <p class="paragraph-normal">"For over 50 years we have been committed to helping couples stay connected. 100% Canadian Owned, By the LeBlanc Family since 1958.</p>
+            </div>
+        </section>
+
+
+        <section class="mini-contact">
+            <h3 class="hidden">Resort Contact Information and Address</h3>
+            <div>
+                <img class="contact-icon-phone" src="images/phone-icon.png" alt="Phone Icon">
+                <p class="paragraph-format-contact">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+            </div>
+
+            <div>
+                <img class="contact-icon-map" src="images/map-icon.png" alt="Map Address Icon"> 
+                <p class="paragraph-format-contact">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+            </div>
+        </section>
+               
+
+        <section class="button-tab-section">
+            <div class="content-wrapper">
+                <h3 class="hidden">Tabs to Navigate Homepage</h3>
+                <button data-target="#choose-cr" class="button-tabs active">Why Choose Couples Resort</button>
+                <button data-target="#about-cr" class="button-tabs">About</button>
+                <button data-target="#faq-cr"  class="button-tabs">FAQ</button>
+                <button data-target="#contact-cr"  class="button-tabs">Contact</button>
+            </div>
+        </section>
+
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec01.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec01.jpg">
+                <img src="images/all-mob-sec01.jpg" alt="Man and Woman holding hands as they walk along a trail behind a log cabin">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="choose-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Why Choose Us</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <div class="pagination">
+                    <section class="wrap" id="pagination-homepage-content">
+                        <!-- content generated by JS -->
+                    </section>
+
+                    <nav>
+                        <h2 class="hidden">Mobile Pagination Buttons</h2>
+                        <ul id="pagination-homepage">
+                            <!-- content generated by JS -->
+                        </ul>
+                    </nav>
+                </div>
+
+
+                <div class="card-container"> 
+                    <section class="card card-homepage">
+                        <h2 class="h-flipped">Wine Selection</h2>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">1</p>
+                    </section>
+
+                    <section class="card card-homepage">
+                        <h2 class="h-flipped">Dining</h2>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">2</p>
+                    </section>
+                    
+                    <section class="card card-homepage">
+                        <h2 class="h-flipped">The Spa</h2>
+                        <h3 class="h-flipped">Haliburton Spa at Couples Resort</h3>
+                        <p class="p-flipped">Escape and rejuvenate yourself and your loved one with a spa vacation. Restore your balance and find energy with one of our Spa Packages for two. Visit the packages page for details on Spa Specials. Begin your journey to soothe by taking a spa vacation today.</p>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">3</p>
+                    </section>
+                    
+                    <section class="card card-homepage">
+                        <h2 class="h-flipped">Amenities</h2>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">4</p>
+                    </section>
+                    
+                    <section class="card card-homepage">
+                        <h2 class="h-flipped">Activities</h2>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">5</p>
+                    </section>
+                    
+                    <section class="card card-homepage">
+                        <h2 class="h-flipped">Packages</h2>
+                        <a href="#" class="a-flipped">CLICK TO VIEW MORE</a>
+                        <p class="unflipped">6</p>
+                    </section>
+                </div>
+
+            </div>
+
+        </section>
+        
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec02.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec02.jpg">
+                <img src="images/all-mob-sec02.jpg" alt="Two wooden lounge chairs at the end of a dock overlooking the water at sunrise ">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="about-cr">
+                    <h2 class="tab-headings"><span class="resort-name">About Couples Resort</span> <br> Haliburton - Soyers Lake</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <div class="about-us-text">
+                    <p class="paragraph-normal">Ontario's Couples Resort is on the shores of Haliburton’s Soyers Lake, which is part of the Kashagawigamog Lake system. The village Minden, Ontario is a short 15-minute walk away. We are surrounded with breathtaking wilderness, pure fresh air, secluded forests, pristine waters, an abundance of sunny days and a blanket of stars at night. <br><br>
+                    A 5-STAR Luxury Resort for 46 couples. Endless Nature and Sports Activities, together with Pampering Spa Treatments and followed by Decadent Gourmet dining by our International Chefs. <br><br>
+                    Those of you who need to escape from the bustle will find us calming and rejuvenating. There are many ways to do nothing if that is your wish. On the other hand, unlimited activities will keep the adventurer active all year round. Ontario's Natural Algonquin Park is ideal for the sport enthusiast or avid adventurer who will be delighted with the extraordinary activities available.</p>
+
+                    <p class="paragraph-normal">"Thank you for your interest in our Couples Resort. Here you will find the time to spend quality time together, and this is why we exist, to be here, so that you can spend lots of time together. We, the LeBlanc Family, started in 1958 to take care of guests, in 1987 we moved to couples only (no kids and no meetings/conferences) as we knew that many couples needed special time together. <br><br>
+                    In 2008, Canada Select which was rating 5000 accommodation properties in Canada, decided we should join them because we were easily in the top 1%, a 5 Star, and we are glad we made it for you to enjoy as you deserve it. Now, many times of the year, we offer rates super discounted as we wish to be accessible to as many couples as possible, as all couples should benefit from quiet time together. <br><br>
+                    We have learned over the decades from our guests that those guests that have a love for gratitude for each other and for their surroundings are the happiest people, daily I ask how grateful am I, and I hope you are filled with many things that you are grateful for. If you know other couples who need time away please pass on the word." <br><br>
+                    Your Hosts, The LeBlanc Family & Team<br><br>
+                    The Couples Resort, Ontario - Canada</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="add-padding-bottom add-padding-top background-colour">
+
+            <div class="content-wrapper" id="faq-cr">
+                
+                <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> FAQ</h2>
+                
+                <div class="red-line"></div>
+
+                <details>
+                    <summary>Check-In / Check-Out</summary>
+                    <div>
+                        <p>Content goes here</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>All Inclusive</summary>
+                    <div>
+                        <p>Content goes here</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Dining Hours and Dress Code</summary>
+                    <div>
+                        <p>Content goes here</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Amenities In-Room (All Rooms)</summary>
+                    <div class="amenities-grid">
+                        <p class="amenities">Private Out Door Hot Tubs</p>
+                        <p class="amenities">Fibre-Optic Internet</p>
+                        <p class="amenities">Free WIFI / 50 Inch Television</p>
+                        <p class="amenities">Free - Netflix Video Streaming</p>
+                        <p class="amenities">Walkout Spacious Lakeside Balcony</p>
+                        <p class="amenities">European Shower (2 or more heads)</p>
+                        <p class="amenities">Real Wood Burning Fireplace</p>
+                        <p class="amenities">2 Bath Robes</p>
+                        <p class="amenities">Hair Dryer</p>
+                        <p class="amenities">Irons / Ironing Boards</p>
+                        <p class="amenities">Keurig Coffee Maker & Bar Fridge</p>
+                        <p class="amenities">Phones - Free Long Distance</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Where are the moose?</summary>
+                    <div>
+                        <p>Content goes here</p>
+                    </div>
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <section class="add-padding-bottom">
+
+            <picture>
+                <source media="(min-width:1200px)" srcset="images/all-desk-sec03.jpg">
+                <source media="(min-width:768px)" srcset="images/all-tab-sec03.jpg">
+                <img src="images/all-mob-sec03.jpg" alt="Man and Woman sitting at the end of a dock overlooking the water">
+            </picture>
+
+            <div class="content-wrapper">
+
+                <div class="tab-tags" id="contact-cr">
+                    <h2 class="tab-headings"><span class="resort-name">Couples Resort</span> <br> Contact</h2>
+                </div>
+
+                <div class="tab-spacer"></div>
+
+                <p class="paragraph-normal">Thank you for taking the time to learn more about our resort and why we are Ontario’s number one choice for couples looking to reconnect. For reservation inquiries and further information please complete our contact form below. Or if you prefer to talk call us at our toll free number listed below.</p>
+
+
+                <div class="form-grid">
+                    <div>
+                        <h2 class="add-padding">Couples Resort</h2>
+                        <p class="paragraph-normal">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+                        <p class="paragraph-normal">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+                    </div>
+
+                  
+                    <form action="#" method="post">
+
+                        <label for="fname">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="fname">
+                        </div>
+
+                        <label for="eml">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="eml">
+                        </div>
+                        
+                        <label for="contact_message">Question or Comment</label>
+                        <div class="input-wrapper">
+                            <textarea name="contact_message" id="contact_message"></textarea>
+                        </div>
+                        
+                        <button type="submit">Send</button>
+
+                    </form>
+                   
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="body-grid-item">
+        <div class="content-wrapper">
+            <section class="footer-grid">
+                <div>
+                    <h2 class="footer-text">Couples Resort</h2>
+                    <p class="footer-text fine-print">Toll Free  +1 877 201-1156 <br>FAX +1 613 638 2217 <br>info@couplesresort.com</p>
+                    <p class="footer-text fine-print">1198 Osprey Rd (End of) <br>Minden. Soyers Lake, ON <br>K0M 2K0</p>
+                </div>
+
+                <nav>
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="activities.html">Spa Activities</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-book-now">
+                    <a href="#">Book Now</a>
+                </div>
+
+            </section>
+
+            <hr>
+            <p class="footer-text fine-print center-text">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing. </p>
+            <p class="footer-text fine-print center-text">2013 Couples Resort Inc. All Rights Reserved. Privacy Policy. </p>
+        </div>
+    </footer>
 
     
     <script src="js/main.js"></script>
