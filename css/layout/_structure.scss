@@ -1,22 +1,43 @@
 @use '../base' as *;
 
-body { 
+/* ============================================================
+Main grid used to organize the sections on the different pages
+============================================================ */
+body {
     display: grid;
     font-family: $primary-font;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     max-width: 412px;
     margin: 0px auto;
 
     @media (min-width: $breakpoint-tablet) {
         max-width: $breakpoint-tablet;
+        grid-template-columns: repeat(8, 1fr);
+
     }
 
     @media (min-width: $breakpoint-desktop) {
         max-width: $breakpoint-desktop;
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
+.body-grid-item {
+    grid-column: span 4;
+
+    @media (min-width: $breakpoint-tablet) {
+        grid-column: span 8;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        grid-column: span 12;
+    }
+}
+
+/* ===========================================================
+Content wrapper to center content within main sections
+=========================================================== */
 .content-wrapper { 
     width: 100%;
     max-width: $mobile-content-width; 
@@ -32,10 +53,9 @@ body {
     }
 }
 
-.body-grid-item {
-    grid-column: span 12;
-}
-
+/* ==================================
+Grid Used for the Card Objects 
+=================================== */
 .card-container {
     display: none;
     grid-template-columns: repeat(3, 1fr); 
@@ -49,6 +69,9 @@ body {
     }
 }
 
+/* ============================================================
+Grid used for the activities / spa / menu / room styles
+============================================================ */
 .summary-grid { 
     display: block;
     margin-top: 10px;
