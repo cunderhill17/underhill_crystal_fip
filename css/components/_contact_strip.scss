@@ -13,7 +13,7 @@
         align-items: center;
 
         .contact-icon-phone {
-            width: 35px;
+            width: 50px;
         }
 
         .contact-icon-map {
@@ -22,7 +22,7 @@
 
         @media (min-width: $breakpoint-desktop) {
             .contact-icon-phone {
-                width: 45px;
+                width: 65px;
             }
 
             .contact-icon-map {

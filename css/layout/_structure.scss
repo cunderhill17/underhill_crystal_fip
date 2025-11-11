@@ -34,17 +34,6 @@ body {
 
 .body-grid-item {
     grid-column: span 12;
-
-    #menu-icon {
-        display: block;
-        float: right;
-        margin: 10px;
-        margin-left: 25px;
-
-        i {
-            color: $brand-dark-red;
-        }
-    }
 }
 
 .card-container {
