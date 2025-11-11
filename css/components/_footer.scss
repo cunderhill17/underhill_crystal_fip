@@ -28,11 +28,6 @@ footer {
         border-bottom: 2px solid $brand-dark-red;
         width: 100%;
     }
-
-    h2 {
-        font-size: $main-heading-mobile;
-        font-family: $secondary-font;
-    }
 }
 
 .footer-grid { 
@@ -53,7 +48,6 @@ footer {
         a {
             color: white;
             text-decoration: none;
-            font-size: $paragraph-mobile-fine-print;
         }
 
         a:hover {
@@ -87,12 +81,6 @@ footer {
     .footer-nav-links { 
         display: block;
 
-        li {
-            a {
-                font-size: 12px;
-            }
-        }
-
     }
 
     .footer-book-now { 
@@ -100,3 +88,7 @@ footer {
     }
 }
 
+.cr-name {
+    font-family: $secondary-font;
+    color: #D9D9D9;
+}

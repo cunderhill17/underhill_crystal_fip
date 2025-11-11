@@ -23,12 +23,10 @@
 
 .h-flipped {
     display: none;
-    font-size: 12px;
 }
 
 .p-flipped {
     display: none;
-    font-size: 8px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -38,22 +36,9 @@
     text-decoration: none;
     color: $bgcolor;
     margin-top: 10px;
-    font-size: 10px;
 }
 
 .unflipped { 
     text-align: right;
-    font-size: 48px;
 }
 
-@media (min-width: $breakpoint-desktop) { 
-    .h-flipped {
-        font-size: 16px;
-    }
-    .p-flipped {
-        font-size: 12px;
-    }
-    .a-flipped {
-        font-size: 12px;
-    }
-}

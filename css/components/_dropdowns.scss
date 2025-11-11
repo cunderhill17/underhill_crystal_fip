@@ -3,7 +3,6 @@
 summary {
     background-color: #E7E7E7;
     color: $main-text-color;
-    font-size: 14px;
     padding: $padding-md $padding-reset;
     padding-left: $padding-md;
     margin: 5px 0px;
@@ -41,13 +40,12 @@ summary:hover {
 }
 
 .summary-grid h3 {
-    font-size: 24px;
     margin-top: 10px;
+    color: $main-text-color;
 }
 
 .amenities { 
     border-bottom: 1px solid $brand-dark-red;
-    font-size: $paragraph-mobile-normal;
     margin-top: 5px;
     margin-bottom: 5px;
 }

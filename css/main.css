@@ -14,25 +14,12 @@
 
 .paragraph-normal {
   color: #505050;
-  font-size: 12px;
   padding: 10px 0px;
-}
-
-.fine-print {
-  font-size: 10px;
 }
 
 @media (min-width: 1200px) {
   .center-text {
     text-align: center;
-  }
-}
-@media (min-width: 1200px) {
-  .paragraph-normal {
-    font-size: 16px;
-  }
-  .fine-print {
-    font-size: 12px;
   }
 }
 .column-count {
@@ -71,6 +58,73 @@
   width: 100%;
   border-bottom: 2px solid #9B2018;
   margin: 10px 0px;
+}
+
+/* ====================================
+All font sizing will go here for now
+=====================================*/
+a {
+  font-size: 16px;
+}
+
+* > button {
+  font-size: 16px;
+}
+
+.summary-grid button {
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.summary-grid h3 {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+}
+
+h2 {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(0.75rem, 1.13vw, 1rem);
+}
+
+p {
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+span {
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+summary {
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+label {
+  font-size: 14px;
+}
+
+.unflipped {
+  font-size: 48px;
+}
+
+.p-flipped {
+  font-size: clamp(0.625rem, 0.9vw, 0.75rem);
+}
+
+.a-flipped {
+  font-size: clamp(0.625rem, 0.9vw, 0.75rem);
+}
+
+.p-lg {
+  font-size: 24px;
+}
+
+.footer-text {
+  font-size: 12px;
+}
+
+.fine-print {
+  font-size: 12px;
 }
 
 /* ============================================================
@@ -217,12 +271,10 @@ Grid used for the activities / spa / menu / room styles
 }
 .h-flipped {
   display: none;
-  font-size: 12px;
 }
 
 .p-flipped {
   display: none;
-  font-size: 8px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -232,25 +284,12 @@ Grid used for the activities / spa / menu / room styles
   text-decoration: none;
   color: #F4F4F4;
   margin-top: 10px;
-  font-size: 10px;
 }
 
 .unflipped {
   text-align: right;
-  font-size: 48px;
 }
 
-@media (min-width: 1200px) {
-  .h-flipped {
-    font-size: 16px;
-  }
-  .p-flipped {
-    font-size: 12px;
-  }
-  .a-flipped {
-    font-size: 12px;
-  }
-}
 .form-grid {
   margin-top: 25px;
 }
@@ -283,7 +322,6 @@ Grid used for the activities / spa / menu / room styles
   background-color: #9B2018;
   border: none;
   color: #D9D9D9;
-  font-size: 16px;
   font-family: inherit;
   height: 45px;
   width: 180px;
@@ -303,7 +341,6 @@ Grid used for the activities / spa / menu / room styles
   top: 50%;
   transform: translateY(-50%);
   color: green;
-  font-size: 18px;
   opacity: 0;
   transition: opacity 0.2s ease;
   z-index: 10;
@@ -324,6 +361,10 @@ Grid used for the activities / spa / menu / room styles
   }
   .form-grid form input, .form-grid form textarea {
     width: 100%;
+  }
+  .form-grid .p-lg {
+    color: #505050;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 .mini-contact {
@@ -356,7 +397,6 @@ Grid used for the activities / spa / menu / room styles
 .paragraph-format-contact {
   color: #505050;
   display: inline-block;
-  font-size: 12px;
   line-height: 18px;
   padding-left: 10px;
 }
@@ -370,14 +410,10 @@ Grid used for the activities / spa / menu / room styles
   .mini-contact div {
     margin: 40px 10px;
   }
-  .paragraph-format-contact {
-    font-size: 14px;
-  }
 }
 summary {
   background-color: #E7E7E7;
   color: #505050;
-  font-size: 14px;
   padding: 10px 0px;
   padding-left: 10px;
   margin: 5px 0px;
@@ -415,13 +451,12 @@ summary:hover {
 }
 
 .summary-grid h3 {
-  font-size: 24px;
   margin-top: 10px;
+  color: #505050;
 }
 
 .amenities {
   border-bottom: 1px solid #9B2018;
-  font-size: 12px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -475,10 +510,6 @@ footer hr {
   border-bottom: 2px solid #9B2018;
   width: 100%;
 }
-footer h2 {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .footer-grid {
   display: block;
@@ -498,7 +529,6 @@ footer h2 {
 .footer-nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 10px;
 }
 .footer-nav-links li a:hover {
   color: #9B2018;
@@ -527,13 +557,15 @@ footer h2 {
   .footer-nav-links {
     display: block;
   }
-  .footer-nav-links li a {
-    font-size: 12px;
-  }
   .footer-book-now {
     display: flex;
   }
 }
+.cr-name {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #D9D9D9;
+}
+
 .hero-image {
   transform: none;
 }
@@ -594,7 +626,6 @@ ANIMATION STYLING
 .mobile-header #menu-links ul li a {
   color: #F4F4F4;
   display: block;
-  font-size: 17px;
   padding: 10px;
   text-decoration: none;
 }
@@ -633,7 +664,6 @@ ANIMATION STYLING
   height: 100%;
   background-color: #9B2018;
   color: white;
-  font-size: 16px;
   padding: 15px;
   text-decoration: none;
 }
@@ -663,12 +693,10 @@ ANIMATION STYLING
   .mobile-header #menu-links ul li a {
     color: #505050;
     padding: 10px 10px;
-    font-size: 14px;
   }
   .mobile-header #menu-links ul li a:hover {
     background-color: transparent;
     color: #9B2018;
-    font-size: 16px;
     border-bottom: 1px solid #9B2018;
   }
   .mobile-header #menu-icon {
@@ -686,7 +714,6 @@ ANIMATION STYLING
   border: none;
   color: #505050;
   display: block;
-  font-size: 16px;
   font-family: inherit;
   margin: 5px 0px;
   overflow: hidden;
@@ -718,7 +745,6 @@ ANIMATION STYLING
 }
 .wrap p {
   color: #505050;
-  font-size: 12px;
 }
 .wrap p::after {
   content: "";
@@ -815,24 +841,16 @@ ANIMATION STYLING
 
 .resort-name {
   color: #9B2018;
-  font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .tab-headings {
   color: #505050;
-  font-size: 16px;
 }
 
 @media (min-width: 1200px) {
   .tab-tags {
     width: 500px;
-  }
-  .resort-name {
-    font-size: 14px;
-  }
-  .tab-headings {
-    font-size: 24px;
   }
 }
 /* Styling for Testimonials */
@@ -964,7 +982,6 @@ fieldset > div {
 
 fieldset > div > label {
   color: #505050;
-  font-size: 12px;
 }
 
 fieldset > div > input {
@@ -1013,7 +1030,6 @@ fieldset > div > input {
   background-color: #9B2018;
   border: none;
   color: #D9D9D9;
-  font-size: 16px;
   font-family: inherit;
   height: 57px;
   margin: 15px 0px;
@@ -1031,7 +1047,6 @@ fieldset > div > input {
 
 .p-guest-details {
   color: #505050;
-  font-size: 12px;
   margin: 5px 0px;
 }
 

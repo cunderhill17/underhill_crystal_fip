@@ -37,7 +37,6 @@
             background-color: $brand-dark-red;
             border: none;
             color: #D9D9D9;
-            font-size: $button-mobile-text;
             font-family: inherit;
             height: 45px;
             width: 180px;
@@ -60,7 +59,6 @@
     top: 50%;
     transform: translateY(-50%);
     color: green;
-    font-size: 18px;
     opacity: 0;
     transition: opacity 0.2s ease;
     z-index: 10;
@@ -85,6 +83,11 @@
             input,textarea {
                 width: 100%;
             }
+        }
+
+        .p-lg {
+            color: $main-text-color;
+            font-family: $secondary-font;
         }
     }
 }

@@ -35,7 +35,6 @@
 .paragraph-format-contact {
     color: $main-text-color;
     display: inline-block;
-    font-size: $paragraph-mobile-normal;
     line-height: 18px;
     padding-left: $padding-md;
 }
@@ -49,10 +48,6 @@
         div {
             margin: 40px 10px;
         }
-    }
-
-    .paragraph-format-contact {
-        font-size: 14px;
     }
 }
 
