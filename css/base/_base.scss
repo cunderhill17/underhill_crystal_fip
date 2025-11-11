@@ -15,27 +15,13 @@
 
 .paragraph-normal { 
     color: $main-text-color;
-    font-size: $paragraph-mobile-normal;
     padding: $padding-md 0px;
 }
 
-.fine-print {
-    font-size: $paragraph-mobile-fine-print;
-}
 
 @media (min-width: $breakpoint-desktop) {
     .center-text {
         text-align: center;
-    }
-}
-
-@media (min-width: $breakpoint-desktop) {
-    .paragraph-normal {
-        font-size: 16px;
-    }
-
-    .fine-print {
-        font-size: 12px;
     }
 }
 
@@ -75,4 +61,72 @@
     width: 100%;
     border-bottom: 2px solid $brand-dark-red;
     margin: 10px 0px;
+}
+
+/* ====================================
+All font sizing will go here for now
+=====================================*/
+
+a {
+    font-size: 16px;
+}
+
+*>button {
+    font-size: 16px;
+}
+
+.summary-grid button {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.summary-grid h3 {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+}
+
+h2 {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+}
+
+h3 {
+    font-size: clamp(0.75rem, 1.13vw, 1rem);
+}
+
+p {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+span {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+summary {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+label {
+    font-size: 14px;
+}
+
+.unflipped {
+    font-size: 48px; 
+}
+
+.p-flipped {
+    font-size: clamp(0.625rem, 0.90vw, 0.75rem);
+}
+
+.a-flipped {
+    font-size: clamp(0.625rem, 0.90vw, 0.75rem);
+}
+
+.p-lg {
+    font-size: 24px; 
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+.fine-print {
+    font-size: 12px;
 }
