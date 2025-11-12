@@ -8,9 +8,10 @@
         height: 130px;
     }
 
-    h4 {
+    h3 {
         color: $main-text-color;
         margin-bottom: 15px;
+        font-weight: lighter;
     }
 
     p {
@@ -70,4 +71,8 @@
     .pagination>a {
         display: none;
     }
+}
+
+.page-btn {
+    margin: 0px 10px;
 }

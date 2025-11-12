@@ -311,7 +311,7 @@ var activitiesContentData = [
   {
     image: 'images/act_mob_card01.jpg',
     title: 'The sun rising on a beautiful day in Algonquin park',
-    heading: 'seasons at a glance',
+    heading: 'Seasons At a Glance',
     text: 'Click below to learn more about Couple’s Resort and what makes each of the seasons a wonderful time to visit.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -319,7 +319,7 @@ var activitiesContentData = [
   {
     image: 'images/act_mob_card02.jpg',
     title: 'Man and Woman receiving a couples massage',
-    heading: 'policies',
+    heading: 'Policies',
     text: 'Click below to view spa policies and procedures.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -327,7 +327,7 @@ var activitiesContentData = [
   {
     image: 'images/act_mob_card03.jpg',
     title: 'Woman in a yellow kayak about to put the oar in the water',
-    heading: 'image gallery',
+    heading: 'Image Gallery',
     text: 'Click below to view images from our spa and the various activities available to guests at Couples Resort.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -342,7 +342,7 @@ var roomsContentData = [
   {
     image: 'images/rm_mob_card01.jpg',
     title: 'Fresh towels, soap, and shampoos',
-    heading: 'room amenities',
+    heading: 'Room Amenities',
     text: 'Please click below to see a list of amenities that all rooms are provided with.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -350,7 +350,7 @@ var roomsContentData = [
   {
     image: 'images/rm_mob_card02.jpg',
     title: 'The inside of an empty sauna',
-    heading: 'room service',
+    heading: 'Room Service',
     text: 'Room Service is delivered between 6:00 pm and 7:00 pm — no specific time slots available. Place order between 11 am - 5 pm at the bar or call 866-202-1179 ext 108',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -373,7 +373,7 @@ var packagesContentData = [
   {
     image: 'images/pack_mob_card01.jpg',
     title: 'A white gift box topped with a white ribbon',
-    heading: 'wedding packages',
+    heading: 'Wedding Packages',
     text: 'Say “I do” in paradise. Our wedding and honeymoon packages make your special dates—you effortless and unforgettable.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -381,7 +381,7 @@ var packagesContentData = [
   {
     image: 'images/pack_mob_card02.jpg',
     title: 'Purple and light brown building blocks with symbols representing loyalty reward programs',
-    heading: 'loyalty rewards',
+    heading: 'Loyalty Rewards',
     text: 'Every visit deserves to be celebrated. Instantly enroll in our Loyalty Rewards starting from your second stay to enjoy exclusive perks.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -389,7 +389,7 @@ var packagesContentData = [
   {
     image: 'images/pack_mob_card03.jpg',
     title: 'a black grand piano inside a european style restaurant',
-    heading: 'entertainment packages',
+    heading: 'Entertainment Packages',
     text: 'Are you a musician or entertainer? Share your talent at the resort and enjoy exclusive accommodation discounts with our special Entertainment Packages.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -420,7 +420,7 @@ var diningContentData = [
   {
     image: 'images/din_mob_card03.jpg',
     title: 'Stemmed wine glasses lined up in a row holding white and red wine',
-    heading: 'wine Selection',
+    heading: 'Wine Selection',
     text: 'Wine Spectators Award of Excellence Since 2010.<br><br>Couples Resort presents a wide-ranging selection of exceptional regional and international wines to enhance your experience at our resort.',
     linkText: 'CLICK TO LEARN MORE',
     linkUrl: '#'
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         contentElement.innerHTML = `
           <img src="${item.image}" alt="${item.title}">
-          <h4>${item.heading}</h4>
+          <h3>${item.heading}</h3>
           <p>${item.text}</p>
           <a href="${item.linkUrl}">${item.linkText}</a>
         `;
@@ -465,6 +465,7 @@ document.addEventListener('DOMContentLoaded', () =>{
           a.textContent = i;
           a.href = "#";
           a.id = `page-btn-${i}`;
+          a.className = `page-btn`;
           a.addEventListener('click', (event)=> {
             event.preventDefault();
             loadPage(i);

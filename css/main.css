@@ -271,6 +271,7 @@ Grid used for the activities / spa / menu / room styles
 }
 .h-flipped {
   display: none;
+  font-weight: lighter;
 }
 
 .p-flipped {
@@ -739,9 +740,10 @@ ANIMATION STYLING
   width: 175px;
   height: 130px;
 }
-.wrap h4 {
+.wrap h3 {
   color: #505050;
   margin-bottom: 15px;
+  font-weight: lighter;
 }
 .wrap p {
   color: #505050;
@@ -790,6 +792,10 @@ ANIMATION STYLING
     display: none;
   }
 }
+.page-btn {
+  margin: 0px 10px;
+}
+
 .reservation-box {
   display: none;
   width: 342px;
