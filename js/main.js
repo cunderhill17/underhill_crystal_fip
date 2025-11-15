@@ -4,30 +4,28 @@ The below JS is used to open the navigation menu when clicking the hamburger ico
 document.querySelector("#menu-icon").addEventListener('click', myFunction);
 
 function myFunction() {
-  var x = document.querySelector("#menu-links");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  let menuLinks = document.querySelector("#menu-links");
+  if (menuLinks.style.display === "block") {
+    menuLinks.style.display = "none";
   } else {
-    x.style.display = "block";
+    menuLinks.style.display = "block";
   }
 }
 
 /* ================================================================================
 Function for the button-tabs to navigate to each major section within individual pages
 ================================================================================ */
-document.addEventListener("DOMContentLoaded", function () {
-  const tabButtons = document.querySelectorAll('.button-tabs');
 
-  tabButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      const target = button.getAttribute('data-target');
-      if (target) {
-        location.href = target;
-      }
-    });
+const tabButtons = document.querySelectorAll('.button-tabs');
+
+tabButtons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    const target = button.getAttribute('data-target');
+    if (target) {
+      location.href = target;
+    }
   });
 });
-
 
 /* ===============================================
 Array of background image paths for homepage cards
@@ -141,8 +139,6 @@ const diningImages = [
 GLOBAL CARDS FUNCTION
 =============================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-
   const imageSets = {
     dining: diningImages,
     activities: activitiesImages,
@@ -182,9 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update on window resize
       window.addEventListener('resize', setResponsiveBackground);
-
-      // card.style.backgroundSize = '100% 100%';
-
 
       card.dataset.flipped = 'false'; // initial state
 
@@ -243,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }); // closes sections.forEach
 
-}); // closes DOMContentLoaded
 
 
 
@@ -251,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
 CONTENT FOR HOMEPAGE MOBILE PAGINATION
 ========================================== */
 
-var homepageContentData = [
+const homepageContentData = [
   {
     image: 'images/hp_pag01.jpg',
     title: 'Wine glasses clinking over a dinner table at a restaurant',
@@ -307,7 +299,7 @@ var homepageContentData = [
 CONTENT FOR ACTIVITIES & SPA MOBILE PAGINATION
 ================================================== */
 
-var activitiesContentData = [
+const activitiesContentData = [
   {
     image: 'images/act_mob_card01.jpg',
     title: 'The sun rising on a beautiful day in Algonquin park',
@@ -338,7 +330,7 @@ var activitiesContentData = [
 CONTENT FOR ROOMS MOBILE PAGINATION
 ================================================== */
 
-var roomsContentData = [
+const roomsContentData = [
   {
     image: 'images/rm_mob_card01.jpg',
     title: 'Fresh towels, soap, and shampoos',
@@ -369,7 +361,7 @@ var roomsContentData = [
 CONTENT FOR PACKAGES MOBILE PAGINATION
 ================================================== */
 
-var packagesContentData = [
+const packagesContentData = [
   {
     image: 'images/pack_mob_card01.jpg',
     title: 'A white gift box topped with a white ribbon',
@@ -400,7 +392,7 @@ var packagesContentData = [
 CONTENT FOR DINING MOBILE PAGINATION
 ================================================== */
 
-var diningContentData = [
+const diningContentData = [
   {
     image: 'images/din_mob_card01.jpg',
     title: 'Birds eye view of various bowls holding different types of grain',
@@ -431,55 +423,58 @@ var diningContentData = [
 GLOBAL PAGINATION FUNCTION
 ========================== */
 
-document.addEventListener('DOMContentLoaded', () =>{
+const pageSections = ['dining', 'activities', 'packages', 'homepage', 'rooms']
 
-  const sections = ['dining', 'activities', 'packages', 'homepage', 'rooms']
+const pageSets = {
+    dining: diningContentData,
+    activities: activitiesContentData,
+    packages: packagesContentData,
+    homepage: homepageContentData,
+    rooms: roomsContentData,
+};
 
-  sections.forEach(section => {
+pageSections.forEach(section => {
 
-      const contentElement = document.getElementById(`pagination-${section}-content`);
-      const paginationElement = document.getElementById(`pagination-${section}`);
+    const contentElement = document.querySelector(`#pagination-${section}-content`);
+    const paginationElement = document.querySelector(`#pagination-${section}`);
 
-      if (!contentElement || !paginationElement) return;
+    if (!contentElement || !paginationElement) return;
 
-      const data = window[`${section}ContentData`];
+    const data = pageSets[section];
 
+    function loadPage(pageNumber) {
+      const item = data[pageNumber - 1];
 
-      function loadPage(pageNumber) {
-        const item = data[pageNumber - 1];
+      contentElement.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <h3>${item.heading}</h3>
+        <p>${item.text}</p>
+        <a href="${item.linkUrl}">${item.linkText}</a>
+      `;
 
-        contentElement.innerHTML = `
-          <img src="${item.image}" alt="${item.title}">
-          <h3>${item.heading}</h3>
-          <p>${item.text}</p>
-          <a href="${item.linkUrl}">${item.linkText}</a>
-        `;
+    };
 
-      };
+    function createPagination() {
 
-      function createPagination() {
+      for (let i=1; i<= data.length; i++) {
+        const a = document.createElement('a');
+        const li = document.createElement('li');
+        a.textContent = i;
+        a.href = "#";
+        a.id = `page-btn-${i}`;
+        a.className = `page-btn`;
+        a.addEventListener('click', (event)=> {
+          event.preventDefault();
+          loadPage(i);
+        });
+          
+        li.appendChild(a);
+        paginationElement.appendChild(li);
+      }
+    };
 
-        for (let i=1; i<= data.length; i++) {
-          const a = document.createElement('a');
-          const li = document.createElement('li');
-          a.textContent = i;
-          a.href = "#";
-          a.id = `page-btn-${i}`;
-          a.className = `page-btn`;
-          a.addEventListener('click', (event)=> {
-            event.preventDefault();
-            loadPage(i);
-          });
-            
-          li.appendChild(a);
-          paginationElement.appendChild(li);
-        }
-      };
-
-      createPagination();
-      loadPage(1);
-
-  });
+    createPagination();
+    loadPage(1);
 
 });
 
@@ -552,7 +547,7 @@ TRIGGERS AN EFFECT IF THE CREDIT CARD INPUTS HAVE BEEN LEFT BLANK
 ======================================================================= */
 
 if (document.querySelector('#reservation-button')) {
-  const button = document.getElementById('reservation-button');
+  const button = document.querySelector('#reservation-button');
   const creditInputs = document.querySelectorAll('.credit-card input');
 
   button.addEventListener('click', () => {
