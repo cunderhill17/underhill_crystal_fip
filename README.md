@@ -1,5 +1,7 @@
 # Couples Resort: Final Integrated Project
 
+![Desk Setup](images/computer_setup.jpg "Desk Set Up Showing Final Integrated Project")
+
 This repo is for the final integrated project for semester one of Interactive Media Design at Fanshawe College
 
 This project builds upon the Couples Resort website developed during the first semesters classes, expanding it with three new mobile pages (412px) and three equivalent desktop pages (1200px). All pages are designed, wireframed, and prototyped in Figma, then developed using static CSS Grid layouts with validated HTML.
