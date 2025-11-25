@@ -817,10 +817,11 @@ ANIMATION STYLING
   margin: 5px 0px;
   font-family: "Sanchez", serif;
 }
-.reservation-box > form > input, .reservation-box select, .reservation-box button {
+.reservation-box > form input, .reservation-box > form button {
   padding: 10px 10px;
   border: none;
   border-radius: 5px;
+  width: 100%;
 }
 .reservation-box > form > label {
   margin-top: 10px;
@@ -830,9 +831,40 @@ ANIMATION STYLING
   background-color: #C44242;
   color: white;
 }
-.reservation-box > form > input, .reservation-box select {
+.reservation-box > form > input {
   background-color: #f8f8f8;
   color: #505050;
+}
+.reservation-box .select-wrapper {
+  position: relative;
+  width: 100%;
+}
+.reservation-box .select-wrapper > select {
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #505050;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none; /* For Safari and Chrome */
+  -moz-appearance: none; /* For Firefox */
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.reservation-box .select-wrapper::after {
+  content: "⯈";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  color: #505050;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+.reservation-box .select-wrapper:has(select:focus)::after {
+  content: "⯆";
 }
 
 @media (min-width: 1200px) {
