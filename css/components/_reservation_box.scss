@@ -20,10 +20,13 @@
         font-family: $primary-font;
     }
 
-    >form>input,select,button {
-        padding: 10px 10px;
-        border: none;
-        border-radius: 5px;
+    >form {
+        input,button {
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
     }
 
     >form>label {
@@ -36,10 +39,49 @@
         color: white
     }
 
-    >form>input,select {
+    >form>input {
         background-color: #f8f8f8;
         color: $main-text-color;
     }
+
+    .select-wrapper {
+        position: relative;
+        width: 100%;
+
+        > select {
+            width: 100%;
+            background-color: #f8f8f8;
+            color: $main-text-color;
+            font-family: inherit;
+            appearance: none;
+            -webkit-appearance: none; /* For Safari and Chrome */
+            -moz-appearance: none;    /* For Firefox */
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        &::after {
+            content: "\2BC8"; 
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            font-size: 16px;
+            color: $main-text-color;
+            z-index: 1000;
+            transition: transform 0.2s ease;
+        }
+
+    }
+
+    .select-wrapper:has(select:focus) {
+        &::after {
+            content: "\2BC6";
+        }
+    }
+
 }
 
 @media (min-width: $breakpoint-desktop) {
