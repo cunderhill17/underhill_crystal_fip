@@ -1,5 +1,7 @@
 @use 'variables' as *;
 
+/*Styling for All Utility Classes used throughout the various pages*/
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -63,9 +65,7 @@
     margin: 10px 0px;
 }
 
-/* ====================================
-All font sizing will go here for now
-=====================================*/
+/* Font Sizing For All Pages Is Listed Below */
 
 a {
     font-size: 16px;
@@ -129,4 +129,8 @@ label {
 
 .fine-print {
     font-size: 12px;
+}
+
+.reservations-faq li {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
 }
