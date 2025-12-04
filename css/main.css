@@ -540,7 +540,11 @@ footer hr {
   color: white;
   text-decoration: none;
 }
-.footer-nav-links li a:hover {
+.footer-nav-links li:hover {
+  background-color: rgba(217, 217, 217, 0.7);
+  border-radius: 5px;
+}
+.footer-nav-links li:hover a {
   color: #9B2018;
 }
 
