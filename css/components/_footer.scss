@@ -50,8 +50,13 @@ footer {
             text-decoration: none;
         }
 
-        a:hover {
-            color: $brand-dark-red;
+        &:hover {
+            background-color: rgba(217, 217, 217, 0.7);
+            border-radius: 5px;
+
+            a {
+                color: $brand-dark-red;
+            }
         }
     }
 }
