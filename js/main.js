@@ -500,7 +500,8 @@
   if (document.querySelector('.input-wrapper')) {
     document.querySelectorAll('.input-wrapper input, .input-wrapper textarea').forEach((field) => {
       field.addEventListener('input', function () {
-        if (this.value.trim() !== '') {
+        const minLength = 5;
+        if (this.value.trim().length >= minLength) {
           this.parentElement.classList.add('filled');
         } else {
           this.parentElement.classList.remove('filled');
