@@ -868,15 +868,15 @@ ANIMATION STYLING
   position: absolute;
   right: 12px;
   top: 50%;
-  transform: translateY(-50%);
   pointer-events: none;
   font-size: 16px;
   color: #505050;
   z-index: 1000;
+  transform: translateY(-50%) rotate(0deg);
   transition: transform 0.2s ease;
 }
-.reservation-box .select-wrapper:has(select:focus)::after {
-  content: "⯆";
+.reservation-box .select-wrapper.arrowChange::after {
+  transform: translateY(-50%) rotate(90deg);
 }
 
 @media (min-width: 1200px) {

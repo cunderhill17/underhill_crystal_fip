@@ -528,6 +528,43 @@
     });
   }
 
+  /* Effect to Change Arrow on Reservations Box Dropdown */
+
+  if (document.querySelector('.select-wrapper')) {
+    const wrapper = document.querySelector('.select-wrapper');
+    const select = document.getElementById('num-of-nights');
+
+    if (wrapper && select) {
+      let letOpen = false;
+
+      // When user clicks to open the select
+      select.addEventListener('mousedown', (e) => {
+        if (!letOpen) {
+          wrapper.classList.add('arrowChange');
+          letOpen = true;
+        } else {
+          wrapper.classList.remove('arrowChange');
+          letOpen = false;
+        }
+      });
+
+      //Arrow changes when selecting an option
+      select.addEventListener('change', () => {
+        wrapper.classList.remove('arrowChange');
+        letOpen = false;
+      });
+
+      // Close when clicking anywhere else
+      document.addEventListener('click', (e) => {
+        if (letOpen && !wrapper.contains(e.target)) {
+          wrapper.classList.remove('arrowChange');
+          letOpen = false;
+        }
+      });
+    }
+  }
+
+
 
 })();
 
