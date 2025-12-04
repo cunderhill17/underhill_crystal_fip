@@ -1,27 +1,36 @@
 @use '../base' as *;
 
-
-.trip-info { 
-    max-width: 342px;
+.header-medium {
+    color: $main-text-color;
+    margin: 15px 0px;
 }
 
-@media (min-width: $breakpoint-tablet) { 
-    .trip-info {
+/* Styling for Trip Information Section*/
+.trip-info { 
+    max-width: 342px;
+
+    @media (min-width: $breakpoint-tablet) { 
         float: right;
         max-width: 300px;
     }
-}
 
-@media (min-width: $breakpoint-desktop) { 
-    .trip-info {
+    @media (min-width: $breakpoint-desktop) { 
         max-width: 342px;
     }
+
+    img { 
+        border-radius: 15px;
+        width: 100%;
+    }
+
 }
 
-.trip-info img { 
-    border-radius: 15px;
-    width: 100%;
+.p-guest-details {
+    color: $main-text-color;
+    margin: 5px 0px;
 }
+
+/* Styling for Guest Information Section */
 
 fieldset { 
     border: none;
@@ -79,6 +88,8 @@ fieldset>div>input {
     padding-left: 5px;
 }
 
+/*Styling for Payment Information / Credit Card Section */
+
 .credit-card {
     background-color: $brand-dark-red;
     height: 230px;
@@ -90,6 +101,7 @@ fieldset>div>input {
     height: 51px;
     margin: 7px auto;
     padding-left: $padding-md;
+    font-family: inherit;
     width: 284px;
     background-color: white;
     border: 1px solid grey;
@@ -109,26 +121,6 @@ fieldset>div>input {
     cursor: pointer;
 }
 
-.header-medium {
-    color: $main-text-color;
-    margin: 15px 0px;
-}
-
-.p-guest-details {
-    color: $main-text-color;
-    margin: 5px 0px;
-}
-
-details ul, details ol {
-    list-style-position: inside;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-details li {
-    padding-bottom: 10px;
-}
-
 @media (min-width: $breakpoint-tablet) {
     .side-by-side {
         display: grid;
@@ -146,8 +138,27 @@ details li {
     }
 }
 
+/*Styling for Reservations Page Dropdowns*/
+
+.reservations-faq {
+    padding: 5px 10px;
+    border-bottom: 1px solid #505050;
+}
+
+details ul, details ol {
+    list-style-position: inside;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+details li {
+    padding-bottom: 10px;
+}
+
+/* Styling for headings in the Policies section of the Reservations Page*/
 .res-heading {
     padding-top: 10px;
     padding-bottom: 10px;
     color: $main-text-color;
 }
+

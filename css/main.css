@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Styling for All Utility Classes used throughout the various pages*/
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -23,7 +24,8 @@
   }
 }
 .column-count {
-  column-count: 2;
+  -moz-column-count: 2;
+       column-count: 2;
 }
 
 .right-align {
@@ -60,9 +62,7 @@
   margin: 10px 0px;
 }
 
-/* ====================================
-All font sizing will go here for now
-=====================================*/
+/* Font Sizing For All Pages Is Listed Below */
 a {
   font-size: 16px;
 }
@@ -125,6 +125,10 @@ label {
 
 .fine-print {
   font-size: 12px;
+}
+
+.reservations-faq li {
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
 }
 
 /* ============================================================
@@ -375,6 +379,7 @@ Grid used for the activities / spa / menu / room styles
   padding: 15px 0px;
 }
 .mini-contact div {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 20px auto;
   display: flex;
@@ -442,7 +447,9 @@ summary:hover {
   border-bottom: 1px solid #9B2018;
   color: #9B2018;
   background-color: transparent;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 5px;
   align-self: self-end;
@@ -521,7 +528,8 @@ footer hr {
 
 .footer-nav-links {
   display: none;
-  column-count: 2;
+  -moz-column-count: 2;
+       column-count: 2;
   padding-left: 0px;
 }
 .footer-nav-links li {
@@ -939,7 +947,8 @@ ANIMATION STYLING
 
 @media (min-width: 768px) {
   .about-us-text {
-    column-count: 2;
+    -moz-column-count: 2;
+         column-count: 2;
   }
 }
 /* ====================================
@@ -978,10 +987,15 @@ Styling specifically for DINING page
     margin-bottom: 0px;
   }
 }
+.header-medium {
+  color: #505050;
+  margin: 15px 0px;
+}
+
+/* Styling for Trip Information Section*/
 .trip-info {
   max-width: 342px;
 }
-
 @media (min-width: 768px) {
   .trip-info {
     float: right;
@@ -998,6 +1012,12 @@ Styling specifically for DINING page
   width: 100%;
 }
 
+.p-guest-details {
+  color: #505050;
+  margin: 5px 0px;
+}
+
+/* Styling for Guest Information Section */
 fieldset {
   border: none;
   padding-left: 0px;
@@ -1051,6 +1071,7 @@ fieldset > div > input {
   padding-left: 5px;
 }
 
+/*Styling for Payment Information / Credit Card Section */
 .credit-card {
   background-color: #9B2018;
   height: 230px;
@@ -1062,6 +1083,7 @@ fieldset > div > input {
   height: 51px;
   margin: 7px auto;
   padding-left: 10px;
+  font-family: inherit;
   width: 284px;
   background-color: white;
   border: 1px solid grey;
@@ -1081,26 +1103,6 @@ fieldset > div > input {
   cursor: pointer;
 }
 
-.header-medium {
-  color: #505050;
-  margin: 15px 0px;
-}
-
-.p-guest-details {
-  color: #505050;
-  margin: 5px 0px;
-}
-
-details ul, details ol {
-  list-style-position: inside;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-details li {
-  padding-bottom: 10px;
-}
-
 @media (min-width: 768px) {
   .side-by-side {
     display: grid;
@@ -1116,10 +1118,25 @@ details li {
     border-left: 1px solid #505050;
   }
 }
+/*Styling for Reservations Page Dropdowns*/
+.reservations-faq {
+  padding: 5px 10px;
+  border-bottom: 1px solid #505050;
+}
+
+details ul, details ol {
+  list-style-position: inside;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+details li {
+  padding-bottom: 10px;
+}
+
+/* Styling for headings in the Policies section of the Reservations Page*/
 .res-heading {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #505050;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
