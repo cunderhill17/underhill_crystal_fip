@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #F5F1E8;
+    font-family: "Albert Sans", sans-serif;;
+}
+
+/*Box Class is Used to layout elements in grid - would be removed once content is added*/
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    background-color: darkgray;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
