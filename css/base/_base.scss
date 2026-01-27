@@ -3,13 +3,27 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F5F1E8;
+    font-family: "Albert Sans", sans-serif;;
+}
+
+section.grid-con {
+    margin: 25px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "GFS Didot", serif;
+}
+
+/* Utility Classes */
+
 .hidden {
     display: none;
 }
 
-body {
-    background-color: #F5F1E8;
-    font-family: "Albert Sans", sans-serif;;
+.center-text {
+    text-align: center;
 }
 
 /*Box Class is Used to layout elements in grid - would be removed once content is added*/
@@ -22,6 +36,5 @@ body {
     background-color: darkgray;
     padding: 10px;
     margin: 10px 0px;
-    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.07);
 }

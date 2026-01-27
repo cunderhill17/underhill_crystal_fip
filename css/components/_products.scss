@@ -1,0 +1,14 @@
+.flex-scroll {
+    display: flex;
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    div {
+        min-width: 250px;
+        margin: 15px;
+    }
+}
