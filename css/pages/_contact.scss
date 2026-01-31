@@ -1,0 +1,71 @@
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Styling for the page links strip on the contacts page */
+
+.links-box-container {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: flex-start;
+
+    @media screen and (min-width: 768px) {
+        top: 125px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.links-box {
+    margin: 0px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+
+    p {
+        padding: 15px 0px;
+        padding-left: 15px;
+        color: #F5F1E8;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: #C94A2A;
+}
+
+.links-bkg-box {
+    width: 100%;
+    height: 525px;
+    position: absolute;
+    z-index: -1;
+    background-color: grey;
+
+    @media screen and (min-width: 768px) {
+        height: 200px;
+        position: static;
+    }
+}
