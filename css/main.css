@@ -25,6 +25,17 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pos-relative {
+  position: relative;
+}
+
 /*Box Class is Used to layout elements in grid - would be removed once content is added*/
 .box {
   display: flex;
@@ -47,6 +58,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 .advertisement-box > * {
   text-align: center;
+}
+
+.contact-form {
+  font-family: "Albert Sans", sans-serif;
+  padding: 10px;
+  border: 1px dotted black;
+}
+.contact-form > * {
+  display: block;
+  margin-bottom: 10px;
+}
+.contact-form label, .contact-form input, .contact-form textarea {
+  font-family: inherit;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.contact-form button {
+  border: none;
+  padding: 10px 25px;
+  background-color: #C94A2A;
+  color: #F5F1E8;
+}
+.contact-form button:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -607,6 +647,75 @@ header .cart > img {
   }
   .lg\:col-end-13 {
     grid-column-end: 13;
+  }
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styling for the page links strip on the contacts page */
+.links-box-container {
+  position: relative;
+  top: 10px;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .links-box-container {
+    top: 125px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.links-box {
+  margin: 0px 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+.links-box p {
+  padding: 15px 0px;
+  padding-left: 15px;
+  color: #F5F1E8;
+}
+@media screen and (min-width: 768px) {
+  .links-box {
+    flex-direction: column;
+    padding: 0px;
+  }
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-color: #C94A2A;
+}
+
+.links-bkg-box {
+  width: 100%;
+  height: 525px;
+  position: absolute;
+  z-index: -1;
+  background-color: grey;
+}
+@media screen and (min-width: 768px) {
+  .links-bkg-box {
+    height: 200px;
+    position: static;
   }
 }
 

@@ -5,7 +5,7 @@
 
 body {
     background-color: #F5F1E8;
-    font-family: "Albert Sans", sans-serif;;
+    font-family: "Albert Sans", sans-serif;
 }
 
 section.grid-con {
@@ -24,6 +24,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .center-text {
     text-align: center;
+}
+
+.flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pos-relative {
+    position: relative;
 }
 
 /*Box Class is Used to layout elements in grid - would be removed once content is added*/
