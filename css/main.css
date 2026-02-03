@@ -60,6 +60,21 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+#news-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#news-btn button {
+  margin: 15px 0px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #C94A2A;
+  color: #F5F1E8;
+}
+
 .contact-form {
   font-family: "Albert Sans", sans-serif;
   padding: 10px;
@@ -208,6 +223,22 @@ header .cart > img {
   display: none;
 }
 .flex-scroll div {
+  min-width: 250px;
+  margin: 15px;
+}
+
+.flex-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-wrap div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  padding: 25px;
   min-width: 250px;
   margin: 15px;
 }
