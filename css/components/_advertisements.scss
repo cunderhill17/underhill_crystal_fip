@@ -1,11 +1,19 @@
+.prod-advert {
+    h3 {
+        text-align: center;
+    }
+}
+
 .advertisement-box {
     width: 100%;
     min-height: 100px;
-    background-color: darkgray;
     padding: 10px;
-    border: 1px solid black;
 
     > * { 
         text-align: center;
+    }
+
+    img {
+        max-width: 100%;
     }
 }
