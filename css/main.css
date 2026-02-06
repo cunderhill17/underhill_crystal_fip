@@ -106,8 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   padding: 15px;
-  background-color: #C94A2A;
-  color: #F5F1E8;
+  background-color: #E2D8CE;
+  color: #6B5B4C;
 }
 footer nav {
   display: none;
@@ -125,7 +125,7 @@ footer nav ul {
   text-align: center;
 }
 footer nav ul li a {
-  color: #F5F1E8;
+  color: #6B5B4C;
   text-decoration: none;
 }
 @media screen and (min-width: 1200px) {
@@ -163,7 +163,7 @@ footer .media-icons img {
 }
 
 header {
-  background-color: #C94A2A;
+  background-color: #E2D8CE;
   padding: 20px;
 }
 header .logo {
@@ -185,7 +185,7 @@ header nav ul {
 }
 header nav ul li a {
   text-decoration: none;
-  color: #F5F1E8;
+  color: #6B5B4C;
 }
 @media screen and (min-width: 1200px) {
   header nav {
