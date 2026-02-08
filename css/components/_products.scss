@@ -1,6 +1,7 @@
 .flex-scroll {
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
@@ -8,8 +9,17 @@
     }
 
     div {
-        min-width: 250px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
         margin: 15px;
+        flex-shrink: 0;
+
+        img {
+            max-width: 100%;
+        }
     }
 }
 
@@ -23,9 +33,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: lightgray;
         padding: 25px;
-        min-width: 250px;
-        margin: 15px;
+        width: 250px;
+
+        img {
+            max-width: 100%;
+        }
     }
 }
