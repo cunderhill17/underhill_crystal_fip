@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.32 477.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #800020;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #800020
+      }
+    </style>
+  </defs>
+  <g id="Instagram_Icon" data-name="Instagram Icon">
+    <circle class="cls-1" cx="238.66" cy="238.66" r="233.66"/>
+    <path class="cls-1" d="M238.66,122.32h-61.23s-49.02,1.53-49.79,52.09,0,123.32,0,123.32c0,0,8.04,53.62,55.34,54.38s113.17,0,113.17,0c0,0,60.51-4.6,61.28-55.91s0-118.72,0-118.72c0,0,3.06-54.38-54.38-55.15s-64.38,0-64.38,0Z"/>
+    <circle class="cls-1" cx="238.66" cy="238.66" r="55.19"/>
+    <circle class="cls-2" cx="309.94" cy="168.28" r="13.79"/>
+  </g>
+</svg>
