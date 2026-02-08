@@ -274,15 +274,23 @@ header .cart img {
 
 .flex-scroll {
   display: flex;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
 }
 .flex-scroll::-webkit-scrollbar {
   display: none;
 }
 .flex-scroll div {
-  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
   margin: 15px;
+  flex-shrink: 0;
+}
+.flex-scroll div img {
+  max-width: 100%;
 }
 
 .flex-wrap {
@@ -295,10 +303,11 @@ header .cart img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightgray;
   padding: 25px;
-  min-width: 250px;
-  margin: 15px;
+  width: 250px;
+}
+.flex-wrap div img {
+  max-width: 100%;
 }
 
 .tabs {
