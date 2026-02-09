@@ -797,6 +797,11 @@ header .cart img {
   color: #F5F1E8;
 }
 @media screen and (min-width: 768px) {
+  .links-box p {
+    padding: 15px 0px;
+  }
+}
+@media screen and (min-width: 768px) {
   .links-box {
     flex-direction: column;
     padding: 0px;
@@ -810,7 +815,6 @@ header .cart img {
   width: 150px;
   height: 150px;
   border-radius: 75px;
-  background-color: #C94A2A;
 }
 
 .links-bkg-box {
@@ -818,7 +822,7 @@ header .cart img {
   height: 525px;
   position: absolute;
   z-index: -1;
-  background-color: grey;
+  background-color: #6B5B4C;
 }
 @media screen and (min-width: 768px) {
   .links-bkg-box {
