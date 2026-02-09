@@ -292,6 +292,9 @@ header nav ul li a:hover {
     color: #6B5B4C;
   }
 }
+header nav.slide-toggle {
+  display: flex;
+}
 header .menu {
   display: flex;
   justify-content: center;
