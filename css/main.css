@@ -249,21 +249,47 @@ header nav {
   display: none;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  width: 350px;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 header nav * {
   padding-left: 15px;
 }
 header nav ul {
   display: flex;
+  flex-direction: column;
   list-style-type: none;
 }
 header nav ul li a {
   text-decoration: none;
-  color: #6B5B4C;
+  color: #E2D8CE;
+}
+header nav ul li a:hover {
+  color: #800020;
 }
 @media screen and (min-width: 1200px) {
   header nav {
     display: flex;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    min-height: fit-content;
+  }
+  header nav ul {
+    flex-direction: row;
+  }
+  header nav ul li {
+    margin: 10px 0px;
+  }
+  header nav ul li a {
+    color: #6B5B4C;
   }
 }
 header .menu {
