@@ -338,11 +338,16 @@ div:has(article.product-card-con) {
 
 .product-card-con {
   display: none;
+  /* positions the card when it appears on screen */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
   width: 345px;
   border: 1px solid #6B5B4C;
   padding: 10px;
   background-color: #F5F1E8;
-  filter: drop-shadow(3px 3px 2px #6B5B4C);
+  filter: drop-shadow(5px 5px 4px #6B5B4C);
 }
 .product-card-con .card-top {
   display: flex;

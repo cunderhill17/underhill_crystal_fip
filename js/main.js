@@ -18,6 +18,8 @@ function toggleNav() {
 
 //Product Card Functions
 function toggleCard() {
+    productCard.style.top = `${window.scrollY + 15}px`; //helps to position card when it appears on screen
+
     productCard.classList.toggle('slide-toggle');
 }
 
