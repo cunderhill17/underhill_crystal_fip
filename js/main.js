@@ -1,18 +1,30 @@
-/* Variables */
+/* ---Variables--- */
 
+//Hamburger Menu Variables
 const menuBtn = document.querySelector('header .menu img#hamburger-menu');
 const mainNav = document.querySelector('header nav');
 
+//Product Card Variables
 
-/* Functions */
+const productBottle = document.querySelector('#redCurrent');
+const productCard = document.querySelector('.product-card-con')
 
+/* ---Functions--- */
+
+//Hamburger Menu Functions
 function toggleNav() {
-
     mainNav.classList.toggle('slide-toggle');
-
 }
 
+//Product Card Functions
+function toggleCard() {
+    productCard.classList.toggle('slide-toggle');
+}
 
-/* Event Handlers */
+/* ---Event Handlers--- */
 
+//Hamburger Menu Event Handler
 menuBtn.addEventListener('click', toggleNav);
+
+//Product Card Event Handler
+productBottle.addEventListener('click', toggleCard);

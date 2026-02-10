@@ -5,6 +5,7 @@ div:has(article.product-card-con) {
 }
 
 .product-card-con {
+    display: none;
     width: 345px;
     border: 1px solid #6B5B4C;
     padding: 10px;
@@ -143,4 +144,8 @@ div:has(article.product-card-con) {
     @media screen and (min-width: 768px) {
         width: 535px;
     }
+}
+
+.product-card-con.slide-toggle {
+    display: block;
 }
