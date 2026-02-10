@@ -140,6 +140,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #F5F1E8;
 }
 
+.brand-btn {
+  margin: 15px 0px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #800020;
+  color: #F5F1E8;
+}
+
 .contact-form {
   font-family: "Albert Sans", sans-serif;
   padding: 10px;
@@ -315,6 +324,144 @@ header .cart {
 }
 header .cart img {
   width: 40px;
+}
+
+div:has(article.product-card-con) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card-con {
+  width: 345px;
+  border: 1px solid #6B5B4C;
+  padding: 10px;
+  background-color: #F5F1E8;
+  filter: drop-shadow(3px 3px 2px #6B5B4C);
+}
+.product-card-con .card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-card-con .card-top .img-previews {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card-con .card-top .img-previews div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 90px;
+  border: 1px solid #6B5B4C;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.product-card-con .card-top .img-previews div img {
+  height: 85px;
+}
+@media screen and (min-width: 768px) {
+  .product-card-con .card-top .img-previews {
+    display: block;
+  }
+}
+.product-card-con .card-top .img-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-card-con .card-top .img-full img {
+  height: 390px;
+}
+@media screen and (min-width: 768px) {
+  .product-card-con .card-top .img-full {
+    width: 175px;
+  }
+}
+.product-card-con .card-top .product-info {
+  order: 3;
+  width: 100%;
+  margin-left: 10px;
+}
+.product-card-con .card-top .product-info * {
+  margin-bottom: 10px;
+}
+.product-card-con .card-top .product-info .product-flavours div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.product-card-con .card-top .product-info .product-flavours div img {
+  width: 30px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .product-card-con .card-top .product-info {
+    width: 225px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-card-con .card-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .product-card-con .card-top .img-previews {
+    order: 1;
+    margin-left: 5px;
+  }
+  .product-card-con .card-top .img-full {
+    order: 2;
+  }
+  .product-card-con .card-top .product-info {
+    margin-right: 5px;
+  }
+}
+.product-card-con .card-btm section, .product-card-con .card-btm form {
+  margin: 10px 0px;
+}
+.product-card-con .card-btm .review-ratings {
+  margin: 5px 10px;
+}
+.product-card-con .card-btm .product-reviews div {
+  margin: 10px 10px;
+  background-color: #E2D8CE;
+  padding: 10px;
+}
+.product-card-con .card-btm .product-reviews div * {
+  margin-bottom: 5px;
+}
+.product-card-con .card-btm #product-review-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.product-card-con .card-btm #product-review-form input {
+  width: 100%;
+  height: 50px;
+  margin: 10px;
+  border: 1px solid #6B5B4C;
+  background-color: transparent;
+  color: #6B5B4C;
+  padding: 10px;
+}
+.product-card-con .card-btm #product-review-form input:focus {
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .product-card-con {
+    width: 535px;
+  }
 }
 
 .flex-scroll {
