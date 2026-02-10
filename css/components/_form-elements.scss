@@ -1,0 +1,73 @@
+/* Styling Related to Specific Forms */
+
+//Contact Form - Contact Page
+
+.contact-form {
+    font-family: "Albert Sans", sans-serif;
+    padding: 20px;
+    border: 1px dotted black;
+
+    > * {
+        display: block;
+        margin-bottom: 10px;
+
+    }
+
+}
+
+//Sign Up for Newsletter Button Container
+
+#news-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Generic Form Elements */
+
+//Button Styling
+.brand-btn {
+    margin: 15px 0px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #800020;
+    color: #F5F1E8;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+//Input Styling
+input {
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid #6B5B4C;
+    background-color: transparent;
+    color: #6B5B4C;
+    padding: 10px;
+}
+
+//Textarea Styling
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid #6B5B4C;
+}
+
+//Labels use the subheading-2 and brand-red classes 
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+label, input, textarea {
+    font-family: inherit;
+}
