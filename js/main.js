@@ -7,7 +7,8 @@ const mainNav = document.querySelector('header nav');
 //Product Card Variables
 
 const productBottle = document.querySelector('#redCurrent');
-const productCard = document.querySelector('.product-card-con')
+const productCard = document.querySelector('.product-card-con');
+const closeCard = document.querySelector('.card-btn');
 
 /* ---Functions--- */
 
@@ -17,10 +18,13 @@ function toggleNav() {
 }
 
 //Product Card Functions
-function toggleCard() {
-    productCard.style.top = `${window.scrollY + 15}px`; //helps to position card when it appears on screen
+function openProductCard() {
+    productCard.style.top = `${window.scrollY + 35}px`; //helps to position card when it appears on screen
+    productCard.classList.add('slide-toggle');
+}
 
-    productCard.classList.toggle('slide-toggle');
+function closeProductCard() {
+    productCard.classList.remove('slide-toggle');
 }
 
 /* ---Event Handlers--- */
@@ -29,4 +33,6 @@ function toggleCard() {
 menuBtn.addEventListener('click', toggleNav);
 
 //Product Card Event Handler
-productBottle.addEventListener('click', toggleCard);
+productBottle.addEventListener('click', openProductCard);
+
+closeCard.addEventListener('click', closeProductCard);
