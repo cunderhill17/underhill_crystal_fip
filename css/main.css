@@ -462,6 +462,18 @@ div:has(article.product-card-con) {
   }
 }
 
+.card-btn {
+  position: relative;
+  left: 310px;
+  top: -50px;
+  filter: drop-shadow(5px 5px 4px #6B5B4C);
+}
+@media screen and (min-width: 768px) {
+  .card-btn {
+    left: 500px;
+  }
+}
+
 .product-card-con.slide-toggle {
   display: block;
 }
