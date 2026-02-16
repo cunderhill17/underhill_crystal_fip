@@ -40,7 +40,104 @@ if (searchBtn) {
     .bindPopup("LCBO - 681 Wonderland Rd N");
 }
 
+//using an object to hold product information so the information can be acccessed by name rather than index 
 
+const productData = {
+  bergamot: {
+    flavor: 'Bergamot Liqueur',
+    description: 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.rition will go here',
+    ingredients: 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+    images: [
+      'images/product-bergamot.png',
+      'images/product-bergamot.png',
+      'images/product-bergamot.png',
+      'images/product-bergamot.png',
+      'images/product-bergamot.png',
+    ],
+    otherFlavors: [
+      'images/Bergamot.svg',
+      'images/Cherries.svg',
+      'images/Orange-Slice.svg',
+      'images/Pomegranate.svg',
+    ]
+  },
+
+  darkCherry: {
+    flavor: 'Dark Cherry Liqueur',
+    description: 'A deep garnet dark cherry liqueur layered with ripe, velvety fruit flavors and a subtle sweetness that lingers with a hint of warmth.',
+    ingredients: 'Water, Alcohol, Sugar, Dark Cherry Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+    images: [
+      'images/product-cherry.png',
+      'images/product-cherry.png',
+      'images/product-cherry.png',
+      'images/product-cherry.png',
+      'images/product-cherry.png',
+    ],
+    otherFlavors: [
+      'images/Bergamot.svg',
+      'images/Cherries.svg',
+      'images/Orange-Slice.svg',
+      'images/Pomegranate.svg',
+    ]
+  }, 
+
+  bloodOrange: {
+    flavor: 'Blood Orange Liqueur',
+    description: 'A radiant, sunset-hued blood orange liqueur alive with juicy citrus intensity, gently tempered by soft sweetness and a whisper of bittersweet zest.',
+    ingredients: 'Water, Alcohol, Sugar, Blood Orange Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+    images: [
+      'images/product-orange.png',
+      'images/product-orange.png',
+      'images/product-orange.png',
+      'images/product-orange.png',
+      'images/product-orange.png',
+    ],
+    otherFlavors: [
+      'images/Bergamot.svg',
+      'images/Cherries.svg',
+      'images/Orange-Slice.svg',
+      'images/Pomegranate.svg',
+    ]
+  }, 
+
+  pomegranate: {
+    flavor: 'Pomegranate Liqueur',
+    description: 'A vibrant, jewel-toned pomegranate liqueur bursting with tangy-sweet arils and a crisp, refreshing finish.',
+    ingredients: 'Water, Alcohol, Sugar, Pomegranate Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+    images: [
+      'images/product-pomegranate.png',
+      'images/product-pomegranate.png',
+      'images/product-pomegranate.png',
+      'images/product-pomegranate.png',
+      'images/product-pomegranate.png',
+    ],
+    otherFlavors: [
+      'images/Bergamot.svg',
+      'images/Cherries.svg',
+      'images/Orange-Slice.svg',
+      'images/Pomegranate.svg',
+    ]
+  }, 
+
+  redCurrent: {
+    flavor: 'Red Currant Liqueur',
+    description: 'A bright, ruby-hued red currant aperitif with lively tart berry flavors balanced by gentle sweetness.',
+    ingredients: 'Water, Alcohol, Sugar, Red Currant Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+    images: [
+      'images/product-red-current.png',
+      'images/product-red-current.png',
+      'images/product-red-current.png',
+      'images/product-red-current.png',
+      'images/product-red-current.png',
+    ],
+    otherFlavors: [
+      'images/Bergamot.svg',
+      'images/Cherries.svg',
+      'images/Orange-Slice.svg',
+      'images/Pomegranate.svg',
+    ]
+  }
+};
 
 
 /* ---Functions--- */
