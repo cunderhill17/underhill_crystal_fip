@@ -5,10 +5,8 @@ const menuBtn = document.querySelector('header .menu img#hamburger-menu');
 const mainNav = document.querySelector('header nav');
 
 //Product Card Variables
-
-const productBottle = document.querySelector('#redCurrent');
+const flavors = document.querySelectorAll('.beverageFlavor');
 const productCard = document.querySelector('.product-card-con');
-const closeCard = document.querySelector('.card-btn');
 
 //Contact Map Variables 
 let map;
@@ -229,6 +227,65 @@ async function handleAddressSearch() {
 
 }
 
+//Function to display product information
+function displayCard() {
+  const id = this.id;
+  let productCard = document.querySelector('.product-card-con');
+
+  productCard.innerHTML = `
+
+    <button class="card-btn brand-btn">X</button>
+    <section class="card-top">
+        <h3 class="hidden">Product Images and Purchase Information</h3>
+        <div class="img-previews">
+            <div>
+                <img src="${productData[id].images[0]}">
+            </div>
+            <div>
+                <img src="${productData[id].images[1]}">
+            </div>
+            <div>
+                <img src="${productData[id].images[2]}">
+            </div>
+            <div>
+                <img src="${productData[id].images[3]}">
+            </div>
+        </div>
+
+        <div class="img-full">
+            <img src="${productData[id].images[4]}">
+        </div>
+
+        <div class="product-info">
+            <h4 class="heading-4 brand-red">${productData[id].flavor}</h4>
+            <p class="paragraph">${productData[id].description}</p>
+            <h4 class="heading-4 brand-red">Ingredients</h4>
+            <p class="paragraph">${productData[id].ingredients}</p>
+            <p class="paragraph">$50.99 CAD</p>
+            <h4 class="heading-4 brand-red">Quantity</h4>
+            <p class="paragraph">-1+</p>
+            <button class="paragraph brand-btn">Add To Cart</button>
+
+            <section class="product-flavours">
+                <h4 class="heading-4 brand-red">Other Flavors Available</h4>
+                <div>
+                    <img src="${productData[id].otherFlavors[0]}">
+                    <img src="${productData[id].otherFlavors[1]}">
+                    <img src="${productData[id].otherFlavors[2]}">
+                    <img src="${productData[id].otherFlavors[3]}">
+                </div>
+            </section>
+        </div>
+    </section>
+
+  `;
+
+  //Adds a click event to the product card close button
+  const closeCard = document.querySelector('.card-btn');
+  closeCard.addEventListener('click', closeProductCard);
+
+}
+
 /* ---Event Handlers--- */
 
 //Hamburger Menu Event Handler
@@ -236,9 +293,9 @@ menuBtn.addEventListener('click', toggleNav);
 
 //Product Card Event Handler
 
-if (productBottle) {
-    productBottle.addEventListener('click', openProductCard);
-    closeCard.addEventListener('click', closeProductCard);
+if (flavors) {
+    flavors.forEach(flavor => flavor.addEventListener('click', openProductCard));
+    flavors.forEach(flavor => flavor.addEventListener('click', displayCard));
 }
 
 //Contact Map Event Handler
