@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=GFS+Didot&display=swap" rel="stylesheet">
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
     <title>Quattro Contact Page</title>
 </head>
 <body>
@@ -112,14 +115,15 @@
                 <div>
                     <h3>Locate Us Nearby</h3>
                     <input type="text" id="search-bar">
-                    <div>
-                        <p>Search Results will go here</p>
+                    <button id="search-btn">Find Distance</button>
+                    <div id="search-results">
+                        Search Results Will go here.
                     </div>
                 </div>
             </div>
 
-            <div class="box col-span-full md:col-span-4 lg:col-span-7">
-                <p>Map / Image</p>
+            <div id="contact-map" class="box col-span-full md:col-span-4 lg:col-span-7">
+                
             </div>
         </section>
 
@@ -176,6 +180,9 @@
     </div>
 
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Instagram JS -->
     <script async src="http://www.instagram.com/embed.js"></script>
     <script src="js/main.js"></script>
 </body>
