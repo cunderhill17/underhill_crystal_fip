@@ -11,7 +11,7 @@ const productCard = document.querySelector('.product-card-con');
 const closeCard = document.querySelector('.card-btn');
 
 //Contact Map Variables 
-
+let map;
 const searchBtn = document.querySelector('#search-btn');
 const distanceOutput = document.querySelector('#search-results')
 
@@ -24,19 +24,23 @@ const lcbo = {
 let userMarker = null;
 let userLine = null;
 
-// Initialize map
-const map = L.map('contact-map').setView([42.9849, -81.2453], 12);
+if (searchBtn) {
+    // Initialize map
+    map = L.map('contact-map').setView([42.9849, -81.2453], 12);
 
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
 
-// Add LCBO marker
-L.marker([lcbo.lat, lcbo.lon])
-  .addTo(map)
-  .bindPopup("LCBO - 681 Wonderland Rd N");
+    // Add LCBO marker
+    L.marker([lcbo.lat, lcbo.lon])
+    .addTo(map)
+    .bindPopup("LCBO - 681 Wonderland Rd N");
+}
+
+
 
 
 /* ---Functions--- */
@@ -141,4 +145,7 @@ if (productBottle) {
 }
 
 //Contact Map Event Handler
-searchBtn.addEventListener('click', handleAddressSearch);
+if (searchBtn) {
+   searchBtn.addEventListener('click', handleAddressSearch); 
+}
+
