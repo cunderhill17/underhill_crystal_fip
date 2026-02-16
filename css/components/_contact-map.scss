@@ -1,0 +1,19 @@
+.map-search-con {
+    margin-top: 25px;
+    padding: 10px;
+
+    #search-bar {
+        margin-left: 0px;
+    }
+}
+
+#contact-map {
+    margin-top: 25px;
+    height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .map-search-con, #contact-map {
+        margin-top: 100px;
+    }
+}

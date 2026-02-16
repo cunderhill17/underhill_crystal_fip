@@ -125,6 +125,24 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
 }
 
+.map-search-con {
+  margin-top: 25px;
+  padding: 10px;
+}
+.map-search-con #search-bar {
+  margin-left: 0px;
+}
+
+#contact-map {
+  margin-top: 25px;
+  height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .map-search-con, #contact-map {
+    margin-top: 100px;
+  }
+}
 footer {
   padding: 15px;
   background-color: #E2D8CE;
