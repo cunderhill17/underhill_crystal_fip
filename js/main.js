@@ -53,10 +53,22 @@ const productData = {
       'images/preview-bergamot-label-bottle.png',
     ],
     otherFlavors: [
-      'images/fruit-red-currant.svg',
-      'images/fruit-cherries.svg',
-      'images/fruit-orange-slice.svg',
-      'images/fruit-pomegranate.svg',
+      { 
+        id: 'fruit-redCurrent',
+        image:'images/fruit-red-currant.svg',
+      },
+      {
+        id: 'fruit-darkCherry',
+        image:'images/fruit-cherries.svg',
+      },
+      {
+        id: 'fruit-bloodOrange',
+        image:'images/fruit-orange-slice.svg',
+      },
+      {
+        id: 'fruit-pomegranate',
+        image:'images/fruit-pomegranate.svg',
+      },
     ]
   },
 
@@ -72,10 +84,22 @@ const productData = {
       'images/preview-d-cherry-label-bottle.png',
     ],
     otherFlavors: [
-      'images/fruit-bergamot.svg',
-      'images/fruit-red-currant.svg',
-      'images/fruit-orange-slice.svg',
-      'images/fruit-pomegranate.svg',
+      { 
+        id: 'fruit-redCurrent',
+        image:'images/fruit-red-currant.svg',
+      },
+      {
+        id: 'fruit-bergamot',
+        image:'images/fruit-bergamot.svg',
+      },
+      {
+        id: 'fruit-bloodOrange',
+        image:'images/fruit-orange-slice.svg',
+      },
+      {
+        id: 'fruit-pomegranate',
+        image:'images/fruit-pomegranate.svg',
+      },
     ]
   }, 
 
@@ -91,10 +115,22 @@ const productData = {
       'images/preview-b-orange-label-bottle.png',
     ],
     otherFlavors: [
-      'images/fruit-bergamot.svg',
-      'images/fruit-cherries.svg',
-      'images/fruit-red-currant.svg',
-      'images/fruit-pomegranate.svg',
+      { 
+        id: 'fruit-redCurrent',
+        image:'images/fruit-red-currant.svg',
+      },
+      {
+        id: 'fruit-darkCherry',
+        image:'images/fruit-cherries.svg',
+      },
+      {
+        id: 'fruit-bergamot',
+        image:'images/fruit-bergamot.svg',
+      },
+      {
+        id: 'fruit-pomegranate',
+        image:'images/fruit-pomegranate.svg',
+      },
     ]
   }, 
 
@@ -110,10 +146,22 @@ const productData = {
       'images/preview-pomegranate-label-bottle.png',
     ],
     otherFlavors: [
-      'images/fruit-bergamot.svg',
-      'images/fruit-cherries.svg',
-      'images/fruit-orange-slice.svg',
-      'images/fruit-red-currant.svg',
+      { 
+        id: 'fruit-redCurrent',
+        image:'images/fruit-red-currant.svg',
+      },
+      {
+        id: 'fruit-darkCherry',
+        image:'images/fruit-cherries.svg',
+      },
+      {
+        id: 'fruit-bloodOrange',
+        image:'images/fruit-orange-slice.svg',
+      },
+      {
+        id: 'fruit-bergamot',
+        image:'images/fruit-bergamot.svg',
+      },
     ]
   }, 
 
@@ -129,10 +177,22 @@ const productData = {
       'images/preview-r-currant-label-bottle.png',
     ],
     otherFlavors: [
-      'images/fruit-bergamot.svg',
-      'images/fruit-cherries.svg',
-      'images/fruit-orange-slice.svg',
-      'images/fruit-pomegranate.svg',
+      { 
+        id: 'fruit-bergamot',
+        image:'images/fruit-bergamot.svg',
+      },
+      {
+        id: 'fruit-darkCherry',
+        image:'images/fruit-cherries.svg',
+      },
+      {
+        id: 'fruit-bloodOrange',
+        image:'images/fruit-orange-slice.svg',
+      },
+      {
+        id: 'fruit-pomegranate',
+        image:'images/fruit-pomegranate.svg',
+      },
     ]
   }
 };
@@ -229,7 +289,14 @@ async function handleAddressSearch() {
 
 //Function to display product information
 function displayCard() {
-  const id = this.id;
+  let id;
+
+  if (this.id.includes('fruit')) {
+    id = this.id.replace('fruit-', '');
+  } else {
+    id = this.id;
+  }
+
   let productCard = document.querySelector('.product-card-con');
 
   productCard.innerHTML = `
@@ -269,10 +336,10 @@ function displayCard() {
             <section class="product-flavours">
                 <h4 class="heading-4 brand-red">Other Flavors Available</h4>
                 <div>
-                    <img src="${productData[id].otherFlavors[0]}">
-                    <img src="${productData[id].otherFlavors[1]}">
-                    <img src="${productData[id].otherFlavors[2]}">
-                    <img src="${productData[id].otherFlavors[3]}">
+                    <img src="${productData[id].otherFlavors[0].image}" id="${productData[id].otherFlavors[0].id}">
+                    <img src="${productData[id].otherFlavors[1].image}" id="${productData[id].otherFlavors[1].id}">
+                    <img src="${productData[id].otherFlavors[2].image}" id="${productData[id].otherFlavors[2].id}">
+                    <img src="${productData[id].otherFlavors[3].image}" id="${productData[id].otherFlavors[3].id}">
                 </div>
             </section>
         </div>
@@ -280,9 +347,13 @@ function displayCard() {
 
   `;
 
-  //Adds a click event to the product card close button
+  //Adds a click event to the product card close button - need to move to proper sections
   const closeCard = document.querySelector('.card-btn');
   closeCard.addEventListener('click', closeProductCard);
+
+  //Updates the product card contents based on the flavor selected - need to move to proper sections
+  const flavorImages = document.querySelectorAll('.product-flavours img');
+  flavorImages.forEach(flavor => flavor.addEventListener('click', displayCard));
 
 }
 
