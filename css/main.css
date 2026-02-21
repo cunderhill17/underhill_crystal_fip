@@ -402,6 +402,9 @@ div:has(article.product-card-con) {
 .product-card-con .card-top .img-previews div img {
   height: 85px;
 }
+.product-card-con .card-top .img-previews div img:hover {
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .product-card-con .card-top .img-previews {
     display: block;
@@ -443,6 +446,9 @@ div:has(article.product-card-con) {
 .product-card-con .card-top .product-info .product-flavours div img {
   width: 30px;
   margin-right: 10px;
+}
+.product-card-con .card-top .product-info .product-flavours div img:hover {
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .product-card-con .card-top .product-info {
@@ -544,6 +550,9 @@ div:has(article.product-card-con) {
 }
 .flex-wrap div img {
   max-width: 100%;
+}
+.flex-wrap div img:hover {
+  cursor: pointer;
 }
 
 .tabs {

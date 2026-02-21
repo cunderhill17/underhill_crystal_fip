@@ -41,6 +41,10 @@ div:has(article.product-card-con) {
 
                 img {
                     height: 85px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -88,6 +92,10 @@ div:has(article.product-card-con) {
                     img {
                         width: 30px;
                         margin-right: 10px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -146,7 +154,7 @@ div:has(article.product-card-con) {
             align-items: center;
             width: 100%;
         }
-    }
+    } // not currently being used - don't get rid of yet, til I know I'm not going to use it
 
     @media screen and (min-width: 768px) {
         width: 535px;
