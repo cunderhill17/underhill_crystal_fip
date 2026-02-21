@@ -423,7 +423,7 @@ div:has(article.product-card-con) {
   align-items: center;
 }
 .product-card-con .card-top .img-full img {
-  height: 390px;
+  max-width: 95%;
 }
 @media screen and (min-width: 768px) {
   .product-card-con .card-top .img-full {
