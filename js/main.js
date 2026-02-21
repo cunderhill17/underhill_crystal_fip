@@ -8,38 +8,7 @@ const mainNav = document.querySelector('header nav');
 const flavors = document.querySelectorAll('.beverageFlavor');
 const productCard = document.querySelector('.product-card-con');
 
-//Contact Map Variables 
-let map;
-const searchBtn = document.querySelector('#search-btn');
-const distanceOutput = document.querySelector('#search-results')
-
-// Fixed LCBO location -- want to update this so it contains multiple locations, and will show the user the closest location to them
-const lcbo = {
-  lat: 42.9851783,
-  lon: -81.292785
-};
-
-let userMarker = null;
-let userLine = null;
-
-if (searchBtn) {
-    // Initialize map
-    map = L.map('contact-map').setView([42.9849, -81.2453], 12);
-
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-
-    // Add LCBO marker
-    L.marker([lcbo.lat, lcbo.lon])
-    .addTo(map)
-    .bindPopup("LCBO - 681 Wonderland Rd N");
-}
-
 //using an object to hold product information so the information can be acccessed by name rather than index 
-
 const productData = {
   bergamot: {
     flavor: 'Bergamot Liqueur',
@@ -197,6 +166,42 @@ const productData = {
   }
 };
 
+//Contact Map Variables 
+let map;
+const searchBtn = document.querySelector('#search-btn');
+const distanceOutput = document.querySelector('#search-results')
+
+// Fixed LCBO location -- want to update this so it contains multiple locations, and will show the user the closest location to them
+const lcbo = {
+  lat: 42.9851783,
+  lon: -81.292785
+};
+
+let userMarker = null;
+let userLine = null;
+
+if (searchBtn) {
+    // Initialize map
+    map = L.map('contact-map').setView([42.9849, -81.2453], 12);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+
+    // Add LCBO marker
+    L.marker([lcbo.lat, lcbo.lon])
+    .addTo(map)
+    .bindPopup("LCBO - 681 Wonderland Rd N");
+}
+
+
+
+
+
+
+
 
 /* ---Functions--- */
 
@@ -216,7 +221,6 @@ function closeProductCard() {
 }
 
 //Contact Map Functions
-
 // Haversine formula - still need to gain a better understanding of this formula
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371; // Earth radius in km
@@ -355,7 +359,22 @@ function displayCard() {
   const flavorImages = document.querySelectorAll('.product-flavours img');
   flavorImages.forEach(flavor => flavor.addEventListener('click', displayCard));
 
+  const imgPreviews = document.querySelectorAll('.img-previews img');
+  imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
+
 }
+
+function changePreview(e) {
+  const url = e.target.src;
+  const imgPath = url.substring(url.indexOf("images/"));
+
+  const lgImage = document.querySelector('.img-full');
+
+  lgImage.innerHTML = `<img src="${imgPath}">`;
+}
+
+
+
 
 /* ---Event Handlers--- */
 
