@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Quattro CMS: Contact</title>
+</head>
+<body>
+
+    <h1 class="visually-hidden">Quattro CMS: Contact</h1>
+    
+    <div class="large-grid">
+
+        <div id="vertical-nav" class="vertical-nav">
+            <nav>
+                <section class="logo">
+                    <h2 class="visually-hidden">Brand Logo</h2>
+                    <button id="closeVerticalNav" class="brand-btn">Close</button>
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="Quattro Logo">
+                    </a>
+                </section>
+
+                <h2 class="visually-hidden">Main Navigation</h2>
+
+                <ul>
+
+                    <li>
+                        <button class="toggle-btn dropdown-toggle">Website Content</button>
+
+                        <ul id="submenu-web">
+                            <li><a href="admin-products.html">Products</a></li>
+                            <li><a href="admin-contact.html">Contact</a></li>
+                            <li><a href="#">Body Text</a></li>
+                            <li><a href="#">Extra</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Media</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Users</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Analytics</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Settings</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            
+            <header class="grid-con">
+                <section class="search col-span-3 md:col-span-5 lg:col-span-7">
+                    <h2 class="visually-hidden">Search Box</h2>
+                    <button id="openVerticalNav" class="brand-btn">Open</button>
+                    <input type="search" placeholder="search...">
+                </section>
+
+                <section class="avatar-box col-span-1 md:col-span-3 lg:col-span-5">
+                    <h2 class="visually-hidden">Admin Avatar</h2>
+                    <h3 id="userName">John Doe</h3>
+                    <div class="avatar-img"></div>
+                </section>
+            </header>
+
+            <main>
+
+                <!-- Section to update contact info -->
+                <div class="grid-con">
+                    <section class="admin-card contact-updates col-span-full md:col-span-5 lg:col-span-8">
+                        <h2 class="brand-red">Update Contact Details</h2>
+
+                        <form action="#" method="post">
+                            <label for="sales_email">Sales Email</label>
+                            <input type="text"name="sales_email">
+
+                            <label for="marketing_email">Marketing Email</label>
+                            <input type="text" name="marketing_email">
+
+                            <label for="corporate_number">Corporate Number</label>
+                            <input type="text" name="corporate_number">
+
+                            <label for="street_addr">Street</label>
+                            <input type="text" name="street_addr">
+
+                            <label for="city_addr">City and Province</label>
+                            <input type="text" name="city_addr">
+
+                            <label for="country_addr">Postal Code and Country</label>
+                            <input type="text" name="country_addr">
+
+                            <button class="brand-btn" type="submit">Update Contact</button>
+                        </form>                        
+                    </section>
+
+                    <section class="admin-card recent-activity col-span-full md:col-span-3 lg:col-span-4">
+                        <h2 class="brand-red">Updated Contact Info</h2>
+
+                        <ul class="activity">
+                            <li>
+                                <p class="brand-red">Sales Email:</p>
+                                <p>sales@quattro.ca</p>
+                            </li>
+
+                            <li>
+                                <p class="brand-red">Marketing Email:</p>
+                                <p>marketing@quattro.ca</p>
+                            </li>
+
+                            <li>
+                                <p class="brand-red">Corporate Phone Number:</p>
+                                <p>555-220-6958</p>
+                            </li>
+
+                            <li>
+                                <p class="brand-red">Corporate Address:</p>
+                                <p>76 Billowing Dr <br> Toronto ON, <br> N8Y U7L Canada</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
