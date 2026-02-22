@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Quattro CMS: Dashboard</title>
+</head>
+<body>
+
+    <h1 class="visually-hidden">Quattro CMS Dashboard</h1>
+    
+    <div class="large-grid">
+
+        <div id="vertical-nav" class="vertical-nav">
+            <nav>
+                <section class="logo">
+                    <h2 class="visually-hidden">Brand Logo</h2>
+                    <button id="closeVerticalNav" class="brand-btn">Close</button>
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="Quattro Logo">
+                    </a>
+                </section>
+
+                <h2 class="visually-hidden">Main Navigation</h2>
+
+                <ul>
+
+                    <li>
+                        <button class="toggle-btn dropdown-toggle">Website Content</button>
+
+                        <ul id="submenu-web">
+                            <li><a href="admin-products.html">Products</a></li>
+                            <li><a href="admin-contact.html">Contact</a></li>
+                            <li><a href="#">Body Text</a></li>
+                            <li><a href="#">Extra</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Media</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Users</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Analytics</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Settings</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            
+            <header class="grid-con">
+                <section class="search col-span-3 md:col-span-5 lg:col-span-7">
+                    <h2 class="visually-hidden">Search Box</h2>
+                    <button id="openVerticalNav" class="brand-btn">Open</button>
+                    <input type="search" placeholder="search...">
+                </section>
+
+                <section class="avatar-box col-span-1 md:col-span-3 lg:col-span-5">
+                    <h2 class="visually-hidden">Admin Avatar</h2>
+                    <h3 id="userName">John Doe</h3>
+                    <div class="avatar-img"></div>
+                </section>
+            </header>
+
+            <main>
+
+                <!-- Top Content Boxes -->
+                <section class="grid-con">
+                    <h2 class="visually-hidden">Progress Overivew</h2>
+                    <div class="mini-boxes col-span-full">
+                        <section class="admin-card mini-box">
+                            <h2 class="brand-red">Published</h2>
+                            <p>12</p>
+                        </section>
+                        <section class="admin-card mini-box">
+                            <h2 class="brand-red">Drafts</h2>
+                            <p>4</p>
+                        </section>
+                        <section class="admin-card mini-box">
+                            <h2 class="brand-red">Pending Review</h2>
+                            <p>7</p>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- Recent Content -->
+                <section class="grid-con">
+                    <div class="admin-card col-span-full">
+                        <h2 class="brand-red">Recent Content</h2>    
+                        
+                        <table>
+                            <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Last Edited</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Website Body Text</td>
+                                <td><span class="status published">Published</span></td>
+                                <td>Feb 20, 2026</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing Plan</td>
+                                <td><span class="status draft">Draft</span></td>
+                                <td>Feb 18, 2026</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Quick Actions & Recent Activity -->
+                <div class="grid-con">
+                    <section class="admin-card quick-actions col-span-full md:col-span-5 lg:col-span-8">
+                        <h2 class="brand-red">Quick Actions</h2>
+
+                        <button class="admin-btn">+ New Page</button>
+                        <button class="admin-btn">+ New Blog Post</button>
+                        <button class="admin-btn">Upload Media</button>
+                    </section>
+
+                    <section class="admin-card recent-activity col-span-full md:col-span-3 lg:col-span-4">
+                        <h2 class="brand-red">Recent Activity</h2>
+
+                        <ul class="activity">
+                            <li>Sarah updated product: Dark Cherry Liqueur"</li>
+                            <li>James uploaded 3 images</li>
+                            <li>Admin published "Pricing Update"</li>
+                        </ul>
+                    </section>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
