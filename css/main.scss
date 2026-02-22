@@ -1,5 +1,6 @@
 @use 'base/base';
 @use 'components/advertisements';
+@use 'components/cards';
 @use 'components/contact-map';
 @use 'components/footer';
 @use 'components/form-elements';
@@ -7,5 +8,7 @@
 @use 'components/product-cards';
 @use 'components/products';
 @use 'components/tab-switcher';
+@use 'components/tables';
+@use 'components/vertical_nav';
 @use 'layout/grid';
 @use 'pages/contact';

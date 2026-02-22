@@ -137,6 +137,44 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
 }
 
+.admin-card {
+  width: 100%;
+  min-height: 100px;
+  margin: 10px 0px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Unsure of what to classify these as */
+.mini-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mini-box * {
+  margin: 10px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .mini-box {
+    width: 30%;
+  }
+}
+.activity {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.activity li {
+  margin: 10px 0px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .map-search-con {
   margin-top: 25px;
   padding: 10px;
@@ -232,6 +270,20 @@ footer .media-icons img {
   width: 100%;
 }
 
+/* Admin Button */
+.admin-btn {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: none;
+  background: #E2D8CE;
+  color: #6B5B4C;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 /* Generic Form Elements */
 .brand-btn {
   margin: 15px 0px;
@@ -247,7 +299,7 @@ button:hover {
 }
 
 input {
-  width: 100%;
+  width: 95%;
   height: 50px;
   margin: 10px;
   border: 1px solid #6B5B4C;
@@ -273,6 +325,7 @@ label, input, textarea {
   font-family: inherit;
 }
 
+/*CUSTOMER SITE HEADER*/
 header {
   background-color: #E2D8CE;
   padding: 20px;
@@ -360,6 +413,58 @@ header .cart img {
   width: 40px;
 }
 
+/* ADMIN SITE TOP NAV */
+.search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+  margin: 10px 0px;
+  padding: 20px;
+}
+.search input[type=search] {
+  width: 250px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #6B5B4C;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.avatar-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+  margin: 10px 0px;
+  padding: 20px;
+}
+.avatar-box #userName {
+  display: none;
+}
+.avatar-box .avatar-img {
+  margin: 0px 10px;
+  width: 75px;
+  height: 75px;
+  background-color: #800020;
+  color: #6B5B4C;
+  border-radius: 35px;
+}
+
+@media screen and (min-width: 1450px) {
+  #openVerticalNav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #userName {
+    display: block;
+  }
+}
 div:has(article.product-card-con) {
   display: flex;
   justify-content: center;
@@ -590,7 +695,136 @@ div:has(article.product-card-con) {
   color: #fff;
 }
 
+table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status.published {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.status.draft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+#vertical-nav {
+  display: none;
+}
+
+#vertical-nav.open {
+  display: flex;
+}
+
+.vertical-nav {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.vertical-nav .logo {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.vertical-nav .logo button {
+  float: right;
+}
+.vertical-nav nav {
+  width: 100%;
+}
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.vertical-nav ul li {
+  background-color: #E2D8CE;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+.vertical-nav .toggle-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #6B5B4C;
+  cursor: pointer;
+}
+
+#submenu-web {
+  display: none;
+  margin-top: 15px;
+  border-top: 1px solid #6B5B4C;
+  padding-top: 15px;
+}
+#submenu-web li {
+  margin: 0px;
+  padding: 5px;
+}
+#submenu-web li a {
+  text-decoration: none;
+  color: #6B5B4C;
+}
+#submenu-web li a:hover {
+  color: #800020;
+}
+
+#submenu-web.open {
+  display: block;
+}
+
+@media screen and (min-width: 1450px) {
+  .logo button {
+    display: none;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .vertical-nav {
+    width: 100%;
+    position: sticky;
+  }
+  #vertical-nav {
+    display: flex;
+  }
+}
 /*Styling for the Grid System */
+.large-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1460px;
+  margin: 0px auto;
+}
+
+@media (min-width: 1450px) {
+  .large-grid {
+    grid-template-columns: 250px 1fr;
+    column-gap: 10px;
+  }
+}
 .grid-con {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

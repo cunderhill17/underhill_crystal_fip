@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status.published {
+    background: #e6f4ea;
+    color: #1e7e34;
+}
+
+.status.draft {
+    background: #fff3cd;
+    color: #856404;
+}
