@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Quattro CMS: Products</title>
+</head>
+<body>
+
+    <h1 class="visually-hidden">Quattro CMS: Products</h1>
+    
+    <div class="large-grid">
+
+        <div id="vertical-nav" class="vertical-nav">
+            <nav>
+                <section class="logo">
+                    <h2 class="visually-hidden">Brand Logo</h2>
+                    <button id="closeVerticalNav" class="brand-btn">Close</button>
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="Quattro Logo">
+                    </a>
+                </section>
+
+                <h2 class="visually-hidden">Main Navigation</h2>
+
+                <ul>
+
+                    <li>
+                        <button class="toggle-btn dropdown-toggle">Website Content</button>
+
+                        <ul id="submenu-web">
+                            <li><a href="admin-products.html">Products</a></li>
+                            <li><a href="admin-contact.html">Contact</a></li>
+                            <li><a href="#">Body Text</a></li>
+                            <li><a href="#">Extra</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Media</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Users</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Analytics</button>
+                    </li>
+
+                    <li>
+                        <button class="toggle-btn">Settings</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            
+            <header class="grid-con">
+                <section class="search col-span-3 md:col-span-5 lg:col-span-7">
+                    <h2 class="visually-hidden">Search Box</h2>
+                    <button id="openVerticalNav" class="brand-btn">Open</button>
+                    <input type="search" placeholder="search...">
+                </section>
+
+                <section class="avatar-box col-span-1 md:col-span-3 lg:col-span-5">
+                    <h2 class="visually-hidden">Admin Avatar</h2>
+                    <h3 id="userName">John Doe</h3>
+                    <div class="avatar-img"></div>
+                </section>
+            </header>
+
+            <main>
+
+                <!-- Section to add new product -->
+                <div class="grid-con">
+                    <!-- create product -->
+                    <section id="createProduct" class="admin-card col-span-full md:col-span-6 lg:col-span-9">
+                        <h2 class="brand-red">Create New Product</h2>
+
+                        <form action="#" method="post" enctype="multipart/form-data">
+
+                            <fieldset>
+                                <legend>Product Details</legend>
+
+                                <label for="product_name">Product Name</label>
+                                <input type="text"name="product_name">
+
+                                <label for="product_description">Product Description</label>
+                                <input type="text" name="product_description">
+
+                                <label for="product_ingredients">Ingredients & Materials</label>
+                                <input type="text" name="product_ingredients">
+
+                                <label for="product_image">Product Image</label>
+                                <input type="file" name="product_image" accept="image/*">
+
+                                <label for="product_image_alt">Product Image Alternate Text</label>
+                                <input type="text" name="product_image_alt">
+                            </fieldset>
+
+
+
+                            <fieldset>
+                                <legend>Pricing</legend>
+
+                                <label for="product_price">Price</label>
+                                <input type="text" name="product_price" type="number" step="0.01">
+
+                                <label for="product_sale_price">Sale Price</label>
+                                <input type="text" name="product_sale_price" type="number" step="0.01">
+
+                                <label for="product_on_sale">On Sale</label>
+                                <input type="text" name="product_on_sale">
+
+                                <label for="product_stock">Available Stock</label>
+                                <input type="text" name="product_stock" type="number" min="0">  
+                            </fieldset>
+
+
+                            <fieldset>
+                                <legend>Product Previews</legend>
+
+                                <label for="product_pre_1">Product Preview One</label>
+                                <input type="file" name="product_pre_1" accept="image/*">
+
+                                <label for="product_pre_1_alt">Product Preview Alternate Text</label>
+                                <input type="text" name="product_pre_1_alt">
+
+                                <label for="product_pre_2">Product Preview Two</label>
+                                <input type="file" name="product_pre_2" accept="image/*">
+
+                                <label for="product_pre_2_alt">Product Preview Alternate Text</label>
+                                <input type="text" name="product_pre_2_alt">
+
+                                <label for="product_pre_3">Product Preview Three</label>
+                                <input type="file" name="product_pre_3" accept="image/*">
+
+                                <label for="product_pre_3_alt">Product Preview Alternate Text</label>
+                                <input type="text" name="product_pre_3_alt">
+
+                                <label for="product_pre_4">Product Preview Four</label>
+                                <input type="file" name="product_pre_4" accept="image/*">
+
+                                <label for="product_pre_4_alt">Product Preview Alternate Text</label>
+                                <input type="text" name="product_pre_4_alt">
+                            </fieldset>
+
+                            <button class="brand-btn" type="submit">Add New Product</button>
+                        </form>                        
+                    </section>
+
+                    <!-- View Product Table -->
+                    <section id="viewProducts" class="hidden admin-card col-span-full md:col-span-6 lg:col-span-9">
+                        <h2 class="brand-red">Products Table</h2>
+
+                        <table>
+                            <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">View More Details</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Dark Cherry Liqueur</td>
+                                <td>Product description for dark cherry liqueur</td>
+                                <td><button class="brand-btn">View Product</button></td>
+                            </tr>
+                            <tr>
+                                <td>Blood Orange Liqueur</td>
+                                <td>Product description for blood orange liqueur</td>
+                                <td><button class="brand-btn">View Product</button></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Product Tabs -->
+                    <section class="admin-card col-span-full md:col-span-2 lg:col-span-3">
+                        <h2 class="brand-red">Product Tabs</h2>
+
+                        <ul class="activity">
+                            <li>
+                                <button id="createProductTab" class="brand-btn">Add New Product</button>
+                            </li>
+
+                            <li>
+                                <button id="viewProductsTab" class="brand-btn">View Products</button>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
