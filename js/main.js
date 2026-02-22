@@ -174,6 +174,13 @@ const verticalNav = document.querySelector('#vertical-nav');
 // Variable for dropdowns on Vertical Nav menu Admin pages
 const toggleBtns = document.querySelectorAll('.dropdown-toggle'); 
 
+// Variables for switching tabs on the admin products page
+const viewProduct = document.querySelector('#viewProducts');
+const createProduct = document.querySelector('#createProduct');
+
+const viewProductsTab = document.querySelector('#viewProductsTab');
+const createProductTab = document.querySelector('#createProductTab');
+
 //Contact Map Variables 
 let map;
 const searchBtn = document.querySelector('#search-btn');
@@ -398,6 +405,35 @@ function toggleSubMenu(e) {
     menu.classList.toggle('open');
 }
 
+//Functions to switch between create product tab and view products tab
+function displayCreateProduct() {
+
+    if (!viewProduct.classList.contains('hidden')) {
+        viewProduct.classList.add('hidden');
+    }
+
+    if (createProduct.classList.contains('hidden')) {
+        createProduct.classList.remove('hidden');
+    }
+
+}
+
+function displayViewProducts() {
+    if (viewProduct.classList.contains('hidden')) {
+        viewProduct.classList.remove('hidden');
+    }
+
+    if (!createProduct.classList.contains('hidden')) {
+        createProduct.classList.add('hidden');
+    }
+}
+
+
+
+
+
+
+
 
 
 /* ---Event Handlers--- */
@@ -430,5 +466,10 @@ if (toggleBtns) {
   toggleBtns.forEach(toggleBtn => toggleBtn.addEventListener('click', toggleSubMenu));
 }
 
+// Admin event handler to switch tabs on the admin products page
+if (viewProductsTab) {
+    viewProductsTab.addEventListener('click', displayViewProducts);
+    createProductTab.addEventListener('click', displayCreateProduct);
+}
 
 
