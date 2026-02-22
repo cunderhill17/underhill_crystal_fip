@@ -339,6 +339,16 @@ label, input, textarea {
   font-family: inherit;
 }
 
+fieldset {
+  margin-top: 15px;
+  padding-right: 10px;
+  border: 1px solid #800020;
+}
+
+legend {
+  color: #800020;
+}
+
 /*CUSTOMER SITE HEADER*/
 header {
   background-color: #E2D8CE;
