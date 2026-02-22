@@ -1,0 +1,38 @@
+.admin-card {
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Unsure of what to classify these as */
+.mini-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mini-box * {
+    margin: 10px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .mini-box {
+        width: 30%;
+    }
+}
+
+.activity {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.activity li {
+    margin: 10px 0px;
+    font-size: 0.9rem;
+    color: #555;
+}

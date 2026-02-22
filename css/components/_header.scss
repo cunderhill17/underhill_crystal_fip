@@ -1,3 +1,4 @@
+/*CUSTOMER SITE HEADER*/
 header {
     background-color: #E2D8CE;
     padding: 20px;
@@ -100,5 +101,63 @@ header {
         img {
             width: 40px;
         }
+    }
+}
+
+/* ADMIN SITE TOP NAV */
+
+.search { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0px;
+    padding: 20px;
+
+    input[type='search'] {
+        width: 250px;
+        height: 40px;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #6B5B4C;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.avatar-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0px;
+    padding: 20px;
+
+    #userName {
+        display: none;
+    }
+
+    .avatar-img {
+        margin: 0px 10px;
+        width: 75px;
+        height: 75px;
+        background-color: #800020;
+        color: #6B5B4C;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    #openVerticalNav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #userName {
+        display: block;
     }
 }
