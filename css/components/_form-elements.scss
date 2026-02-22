@@ -38,6 +38,20 @@
     cursor: pointer;
 }
 
+/* Admin Form to Update Contact information */
+.contact-updates form {
+    font-family: "Albert Sans", sans-serif;
+    padding: 20px;
+    border: 1px dotted #6B5B4C;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.contact-updates form > * {
+    display: block;
+    margin-bottom: 10px;
+}
+
 
 /* Generic Form Elements */
 
