@@ -213,6 +213,9 @@ footer nav ul {
   line-height: 25px;
   text-align: center;
 }
+footer nav ul li {
+  margin-bottom: 10px;
+}
 footer nav ul li a {
   color: #6B5B4C;
   text-decoration: none;
@@ -250,6 +253,9 @@ footer .media-icons img {
   width: 100%;
   max-width: 40px;
   margin: 10px;
+}
+footer hr {
+  border: 0.5px solid #800020;
 }
 
 /* Styling Related to Specific Forms */
