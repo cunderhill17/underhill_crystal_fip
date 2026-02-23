@@ -19,6 +19,8 @@ footer {
             text-align: center;
 
             li {
+                margin-bottom: 10px;
+
                 a {
                     color: #6B5B4C;
                     text-decoration: none;
@@ -64,6 +66,10 @@ footer {
             max-width: 40px;
             margin: 10px;
         }
+    }
+
+    hr {
+        border: 0.5px solid #800020;
     }
 
 }
