@@ -438,6 +438,10 @@ header .cart img {
 }
 
 /* ADMIN SITE TOP NAV */
+header#admin-header {
+  background-color: transparent;
+}
+
 .search {
   display: flex;
   justify-content: flex-start;
@@ -470,6 +474,11 @@ header .cart img {
 .avatar-box #userName {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .avatar-box #userName {
+    display: block;
+  }
+}
 .avatar-box .avatar-img {
   margin: 0px 10px;
   width: 75px;
@@ -482,11 +491,6 @@ header .cart img {
 @media screen and (min-width: 1450px) {
   #openVerticalNav {
     display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  #userName {
-    display: block;
   }
 }
 div:has(article.product-card-con) {
