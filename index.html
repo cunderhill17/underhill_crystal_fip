@@ -56,44 +56,58 @@
         </section>
 
         <!-- Featured Products - Scroll Through -->
-        <section class="feat-prod grid-con">
+        <section class="grid-con">
             <h2 class="heading-1 center-text col-span-full">Featured Products</h2>
 
-            <div class="flex-scroll col-span-full">
-                <div>
-                    <img src="images/product-bergamot.png" alt="Bergamot Liqueur">
-                </div>
-                <div>
-                    <img src="images/product-cherry.png" alt="Dark Cherry Liqueur">
-                </div>
-                <div>
-                    <img src="images/product-orange.png" alt="Blood Orange Liqueur">
-                </div>
-                <div>
-                    <img src="images/product-pomegranate.png" alt="Pomegranate Liqueur">
-                </div>
+            <picture class="col-span-full md:col-span-full lg:col-span-4">
+                <source srcset="images/bottle-front-bergamot-400.png" media="(min-width: 1200px)">
+                <source srcset="images/bottle-side-bergamot-835.png" media="(min-width: 768px)">
+                <img src="images/bottle-side-bergamot-412.png" alt="Bergamot Liqueur">
+            </picture>
 
-            </div>
+            <picture class="col-span-full md:col-span-full lg:col-span-4">
+                <source srcset="images/bottle-front-blood-orange-400.png" media="(min-width: 1200px)">
+                <source srcset="images/bottle-side-blood-orange-830.png" media="(min-width: 768px)">
+                <img src="images/bottle-side-blood-orange-412.png" alt="Blood Orange Liqueur">
+            </picture>
+
+            <picture class="col-span-full md:col-span-full lg:col-span-4">
+                <source srcset="images/bottle-front-dark-cherry-400.png" media="(min-width: 1200px)">
+                <source srcset="images/bottle-side-dark-cherry-824.png" media="(min-width: 768px)">
+                <img src="images/bottle-side-dark-cherry-412.png" alt="Bergamot Liqueur">
+            </picture>
         </section>
 
         <!-- Product Advertisements - Images with text overlayed -->
-        <section class="prod-advert grid-con">
+        <section class="full-width-grid-con">
             <h2 class="visually-hidden">Product Advertisements</h2>
 
-            <h3 class="heading-1 col-span-full">Family. Friends. <span class="brand-red">Enjoy!</span></h3>
+            <section class="grid-con prod-advert">
+                <h3 class="heading-1 col-span-full">Family. Friends. <span class="brand-red">Enjoy!</span></h3>
+            </section>
 
-            <div class="col-span-full">
-                <div class="advertisement-box">
-                    <img src="images/restaurant-dinner.jpeg" alt="Friends gathered around a table at a restaurant">
-                    <!-- <p>Text</p> -->
-                </div>
+            <img class="col-span-full"
+                sizes="100vw"
+                srcset="
+                images/hp-banner-1-412.jpg 412w,
+                images/hp-banner-1-1101.jpg 1101w,
+                images/hp-banner-1-1557.jpg 1557w,
+                images/hp-banner-1-2037.jpg 2037w,
+                images/hp-banner-1-2460.jpg 2460w"
+                src="images/hp-banner-1-2460.jpg"
+                alt="Friends dining at a restaurant"
+            >
 
-                <div class="advertisement-box">
-                    <img src="images/hp-banner-2.jpg" alt="Close up shot of the Blood Orange Liqueur bottle">
-                    <!-- <p>Text</p> -->
-                </div>
-            </div>
-
+            <img class="col-span-full"
+                sizes="100vw"
+                srcset="
+                images/hp-banner-2-412.jpg 412w,
+                images/hp-banner-2-1225.jpg 1225w,
+                images/hp-banner-2-1797.jpg 1797w,
+                images/hp-banner-2-1920.jpg 1920w"
+                src="images/hp-banner-1-2460.jpg"
+                alt="Bottle of Blood Orange Liqueur"
+            >
         </section>
 
         <!-- Social Media Posts -->
