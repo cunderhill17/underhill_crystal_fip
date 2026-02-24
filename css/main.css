@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "GFS Didot", serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* Utility Classes */
 .hidden {
   display: none;
@@ -119,22 +123,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .fine-print {
   font-size: clamp(0.75rem, 0.72rem + 0.04vw, 1rem);
-}
-
-.prod-advert h3 {
-  text-align: center;
-}
-
-.advertisement-box {
-  width: 100%;
-  min-height: 100px;
-  padding: 10px;
-}
-.advertisement-box > * {
-  text-align: center;
-}
-.advertisement-box img {
-  max-width: 100%;
 }
 
 .admin-card {
@@ -651,82 +639,6 @@ div:has(article.product-card-con) {
 
 .product-card-con.slide-toggle {
   display: block;
-}
-
-.flex-scroll {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-}
-.flex-scroll::-webkit-scrollbar {
-  display: none;
-}
-.flex-scroll div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  margin: 15px;
-  flex-shrink: 0;
-}
-.flex-scroll div img {
-  max-width: 100%;
-}
-
-.flex-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.flex-wrap div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 25px;
-  width: 250px;
-}
-.flex-wrap div img {
-  max-width: 100%;
-}
-.flex-wrap div img:hover {
-  cursor: pointer;
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  list-style-type: none;
-  padding: 0px;
-}
-.tabs li {
-  padding: 15px;
-  background-color: #B8B1A9;
-  color: #F5F1E8;
-}
-
-.tab-details {
-  display: flex;
-  padding: 10px;
-  width: 100%;
-  min-height: 100px;
-  background-color: darkgray;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-}
-.tab-details .details-text {
-  display: inline-block;
-  width: 50%;
-}
-.tab-details .details-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  background-color: #4a4a4a;
-  border-radius: 10px;
-  color: #fff;
 }
 
 table {
