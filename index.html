@@ -49,11 +49,26 @@
     <main>
         <!-- Hero Image -->
         <div class="full-width-grid-con">
-            <img id="hero-image" class="col-span-full" src="images/hero-image.jpg" alt="Shot of Dark Cherry Liqueur on a bar top">
+            <img class="col-span-full" id="hero-image"
+                sizes="100vw"
+                srcset="
+                images/hero-image-412.jpg 412w,
+                images/hero-image-1324.jpg 1324w,
+                images/hero-image-1938.jpg 1938w,
+                images/hero-image-2478.jpg 2478w"
+                src="images/hero-image-2478.jpg"
+                alt="Shot of Dark Cherry Liqueur on a bar top"
+            >
             <section id="nested-hero-grid" class="grid-con">
-                <h2 class="col-span-full">Begin Beautifully</h2>
-                <h3 class="col-span-full">Quattro is a modern aperitif crafted to awaken the senses before the first course.</h3>
-                <a href="#" class="brand-btn col-span-3">Discover the ritual</a>
+                <div class="col-span-full">
+                    <h2 class="x-large-text">Begin Beautifully</h2>
+                    <h3 class="heading-2">Quattro is a modern aperitif crafted to awaken the senses before the first course.</h3>
+                </div>
+                <div class="col-span-3">
+                    <button class="brand-btn">
+                        <a href="#">Discover the ritual</a>
+                    </button>
+                </div>
             </section>
         </div>
 
