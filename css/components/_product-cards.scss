@@ -1,3 +1,7 @@
+.beverageFlavor:hover {
+    cursor: pointer;
+}
+
 div:has(article.product-card-con) {
     display: flex;
     justify-content: center;
@@ -125,36 +129,6 @@ div:has(article.product-card-con) {
         }
 
     }
-
-    .card-btm {
-        section, form {
-            margin: 10px 0px;
-        }
-
-        .review-ratings {
-            margin: 5px 10px;
-        }
-
-        .product-reviews {
-            div {
-                margin: 10px 10px;
-                background-color: #E2D8CE;
-                padding: 10px;
-
-                * {
-                    margin-bottom: 5px;
-                }
-            }
-        }
-
-        #product-review-form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-    } // not currently being used - don't get rid of yet, til I know I'm not going to use it
 
     @media screen and (min-width: 768px) {
         width: 535px;

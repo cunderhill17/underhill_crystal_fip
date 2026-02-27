@@ -487,6 +487,10 @@ header#admin-header {
     display: none;
   }
 }
+.beverageFlavor:hover {
+  cursor: pointer;
+}
+
 div:has(article.product-card-con) {
   display: flex;
   justify-content: center;
@@ -597,27 +601,6 @@ div:has(article.product-card-con) {
   .product-card-con .card-top .product-info {
     margin-right: 5px;
   }
-}
-.product-card-con .card-btm section, .product-card-con .card-btm form {
-  margin: 10px 0px;
-}
-.product-card-con .card-btm .review-ratings {
-  margin: 5px 10px;
-}
-.product-card-con .card-btm .product-reviews div {
-  margin: 10px 10px;
-  background-color: #E2D8CE;
-  padding: 10px;
-}
-.product-card-con .card-btm .product-reviews div * {
-  margin-bottom: 5px;
-}
-.product-card-con .card-btm #product-review-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .product-card-con {
