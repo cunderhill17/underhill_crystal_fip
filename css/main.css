@@ -360,17 +360,20 @@ header .logo a img {
   max-width: 100%;
 }
 header nav {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   width: 350px;
   min-height: 100vh;
   min-height: 100dvh;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.3s ease;
 }
 header nav * {
   padding-left: 15px;
@@ -380,9 +383,12 @@ header nav ul {
   flex-direction: column;
   list-style-type: none;
 }
+header nav ul li {
+  margin: 10px 0px;
+}
 header nav ul li a {
   text-decoration: none;
-  color: #E2D8CE;
+  color: #6B5B4C;
 }
 header nav ul li a:hover {
   color: #800020;
@@ -390,6 +396,9 @@ header nav ul li a:hover {
 @media screen and (min-width: 1200px) {
   header nav {
     display: flex;
+    transform: none;
+    opacity: 1;
+    transition: none;
     position: static;
     background-color: transparent;
     padding: 0;
@@ -399,15 +408,13 @@ header nav ul li a:hover {
   header nav ul {
     flex-direction: row;
   }
-  header nav ul li {
-    margin: 10px 0px;
-  }
   header nav ul li a {
     color: #6B5B4C;
   }
 }
 header nav.slide-toggle {
-  display: flex;
+  transform: translateX(0);
+  opacity: 1;
 }
 header .menu {
   display: flex;
