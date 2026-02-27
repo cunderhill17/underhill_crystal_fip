@@ -8,18 +8,58 @@
     grid-row: 1;
 
     h2, h3 {
+        display: none;
         color: #F5F1E8;
         margin-bottom: 10px;
         font-weight: normal;
     }
 
-    button {
-        width: 100%;
+    @media screen and (min-width: 768px) {
+        h2 {
+            display: block;
+            font-size: 55px;
+        }
+
+        h3 {
+            display: block;
+            font-size: 20px;
+            width: 456px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        h2 {
+            font-size: 96px;
+        }
+
+        h3 {
+            width: 743px;
+        }
+    }
+
+    .call-to-action {
+        background-color: #800020;
+        border-radius: 10px;
+        border: none;
+        width: 186px;
+        height: 56px;
+        font-size: 16px;
+        margin-top: 115px;
 
         a {
             text-decoration: none;
             font-size: 20px;
             color: #F5F1E8;
         }
+
+        @media screen and (min-width: 768px) {
+            width: 274px;
+            height: 68px;
+            font-size: 24px;
+
+        }
+
     }
+
+
 }

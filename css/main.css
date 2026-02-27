@@ -504,17 +504,50 @@ header#admin-header {
   grid-row: 1;
 }
 #nested-hero-grid h2, #nested-hero-grid h3 {
+  display: none;
   color: #F5F1E8;
   margin-bottom: 10px;
   font-weight: normal;
 }
-#nested-hero-grid button {
-  width: 100%;
+@media screen and (min-width: 768px) {
+  #nested-hero-grid h2 {
+    display: block;
+    font-size: 55px;
+  }
+  #nested-hero-grid h3 {
+    display: block;
+    font-size: 20px;
+    width: 456px;
+  }
 }
-#nested-hero-grid button a {
+@media screen and (min-width: 1200px) {
+  #nested-hero-grid h2 {
+    font-size: 96px;
+  }
+  #nested-hero-grid h3 {
+    width: 743px;
+  }
+}
+#nested-hero-grid .call-to-action {
+  background-color: #800020;
+  border-radius: 10px;
+  border: none;
+  width: 186px;
+  height: 56px;
+  font-size: 16px;
+  margin-top: 115px;
+}
+#nested-hero-grid .call-to-action a {
   text-decoration: none;
   font-size: 20px;
   color: #F5F1E8;
+}
+@media screen and (min-width: 768px) {
+  #nested-hero-grid .call-to-action {
+    width: 274px;
+    height: 68px;
+    font-size: 24px;
+  }
 }
 
 .beverageFlavor:hover {
