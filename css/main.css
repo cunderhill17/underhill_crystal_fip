@@ -500,8 +500,11 @@ header#admin-header {
 }
 
 #nested-hero-grid {
-  grid-column: 2/3;
-  grid-row: 1;
+  position: absolute;
+  top: 35%;
+  left: 8%;
+  transform: translateY(-50%);
+  overflow: hidden;
 }
 #nested-hero-grid h2, #nested-hero-grid h3 {
   display: none;
@@ -535,7 +538,7 @@ header#admin-header {
   width: 186px;
   height: 56px;
   font-size: 16px;
-  margin-top: 115px;
+  margin-top: 80px;
 }
 #nested-hero-grid .call-to-action a {
   text-decoration: none;
