@@ -32,6 +32,7 @@ div:has(article.product-card-con) {
             order: 2;
             display: flex;
             flex-wrap: wrap;
+            margin-top: 100px;
 
             div {
                 display: flex;
@@ -54,6 +55,7 @@ div:has(article.product-card-con) {
 
             @media screen and (min-width: 768px) {
                 display: block;
+                margin-top: 0px;
             }
         }
 
