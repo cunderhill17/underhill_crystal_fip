@@ -494,6 +494,29 @@ header#admin-header {
     display: none;
   }
 }
+#hero-image {
+  justify-self: center;
+  grid-row: 1;
+}
+
+#nested-hero-grid {
+  grid-column: 2/3;
+  grid-row: 1;
+}
+#nested-hero-grid h2, #nested-hero-grid h3 {
+  color: #F5F1E8;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+#nested-hero-grid button {
+  width: 100%;
+}
+#nested-hero-grid button a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #F5F1E8;
+}
+
 .beverageFlavor:hover {
   cursor: pointer;
 }
@@ -761,6 +784,11 @@ th, td {
     column-gap: 10px;
   }
 }
+.full-width-grid-con {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+}
+
 .grid-con {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
