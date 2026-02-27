@@ -1257,5 +1257,15 @@ th, td {
     position: static;
   }
 }
+@media (min-width: 1400px) {
+  .links-bkg-box {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
