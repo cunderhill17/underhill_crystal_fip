@@ -15,11 +15,10 @@ const productData = {
     description: 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.rition will go here',
     ingredients: 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
     images: [
-      'images/preview-bergamot-label-bottle.png',
-      'images/preview-bergamot-back-label-bottle.png',
-      'images/preview-bergamot-back-label-img.jpg',
-      'images/preview-bergamot-label-closeup.png',
-      'images/preview-bergamot-label-bottle.png',
+      'images/preview-bergamot-label-bottle',
+      'images/preview-bergamot-back-label-bottle',
+      'images/preview-bergamot-back-label-img',
+      'images/preview-bergamot-label-closeup',
     ],
     otherFlavors: [
       { 
@@ -46,11 +45,10 @@ const productData = {
     description: 'A deep garnet dark cherry liqueur layered with ripe, velvety fruit flavors and a subtle sweetness that lingers with a hint of warmth.',
     ingredients: 'Water, Alcohol, Sugar, Dark Cherry Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
     images: [
-      'images/preview-d-cherry-label-bottle.png',
-      'images/preview-d-cherry-back-label-bottle.png',
-      'images/preview-d-cherry-back-label-img.png',
-      'images/preview-d-cherry-label-closeup.png',
-      'images/preview-d-cherry-label-bottle.png',
+      'images/preview-d-cherry-label-bottle',
+      'images/preview-d-cherry-back-label-bottle',
+      'images/preview-d-cherry-back-label-img',
+      'images/preview-d-cherry-label-closeup',
     ],
     otherFlavors: [
       { 
@@ -77,11 +75,10 @@ const productData = {
     description: 'A radiant, sunset-hued blood orange liqueur alive with juicy citrus intensity, gently tempered by soft sweetness and a whisper of bittersweet zest.',
     ingredients: 'Water, Alcohol, Sugar, Blood Orange Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
     images: [
-      'images/preview-b-orange-label-bottle.png',
-      'images/preview-b-orange-back-label-bottle.png',
-      'images/preview-b-orange-back-label-img.jpg',
-      'images/preview-b-orange-label-closeup.png',
-      'images/preview-b-orange-label-bottle.png',
+      'images/preview-b-orange-label-bottle',
+      'images/preview-b-orange-back-label-bottle',
+      'images/preview-b-orange-back-label-img',
+      'images/preview-b-orange-label-closeup',
     ],
     otherFlavors: [
       { 
@@ -108,11 +105,10 @@ const productData = {
     description: 'A vibrant, jewel-toned pomegranate liqueur bursting with tangy-sweet arils and a crisp, refreshing finish.',
     ingredients: 'Water, Alcohol, Sugar, Pomegranate Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
     images: [
-      'images/preview-pomegranate-label-bottle.png',
-      'images/preview-pomegranate-back-label-bottle.png',
-      'images/preview-pomegranate-back-label-img.jpg',
-      'images/preview-pomegranate-label-closeup.png',
-      'images/preview-pomegranate-label-bottle.png',
+      'images/preview-pomegranate-label-bottle',
+      'images/preview-pomegranate-back-label-bottle',
+      'images/preview-pomegranate-back-label-img',
+      'images/preview-pomegranate-label-closeup',
     ],
     otherFlavors: [
       { 
@@ -139,11 +135,10 @@ const productData = {
     description: 'A bright, ruby-hued red currant aperitif with lively tart berry flavors balanced by gentle sweetness.',
     ingredients: 'Water, Alcohol, Sugar, Red Currant Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
     images: [
-      'images/preview-r-currant-label-bottle.png',
-      'images/preview-r-currant-back-label-bottle.png',
-      'images/preview-r-currant-back-label-img.jpg',
-      'images/preview-r-currant-label-closeup.png',
-      'images/preview-r-currant-label-bottle.png',
+      'images/preview-r-currant-label-bottle',
+      'images/preview-r-currant-back-label-bottle',
+      'images/preview-r-currant-back-label-img',
+      'images/preview-r-currant-label-closeup',
     ],
     otherFlavors: [
       { 
@@ -325,21 +320,21 @@ function displayCard() {
         <h3 class="hidden">Product Images and Purchase Information</h3>
         <div class="img-previews">
             <div>
-                <img src="${productData[id].images[0]}">
+                <img src="${productData[id].images[0]}-170.png">
             </div>
             <div>
-                <img src="${productData[id].images[1]}">
+                <img src="${productData[id].images[1]}-170.png">
             </div>
             <div>
-                <img src="${productData[id].images[2]}">
+                <img src="${productData[id].images[2]}-170.jpg">
             </div>
             <div>
-                <img src="${productData[id].images[3]}">
+                <img src="${productData[id].images[3]}-170.png">
             </div>
         </div>
 
         <div class="img-full">
-            <img src="${productData[id].images[4]}">
+            <img src="${productData[id].images[0]}-325.png">
         </div>
 
         <div class="product-info">
@@ -381,7 +376,12 @@ function displayCard() {
 
 function changePreview(e) {
   const url = e.target.src;
-  const imgPath = url.substring(url.indexOf("images/"));
+
+  //Only selects the path of the URL string from 'images' onwards
+  let imgPath = url.substring(url.indexOf("images/"));
+  
+  // separates the number & extension at the end of the path, replaces the number and then readds the extension back to make the correct image path
+  imgPath = imgPath.replace(/(\d+)(\.\w+)$/, `325$2`);
 
   const lgImage = document.querySelector('.img-full');
 
