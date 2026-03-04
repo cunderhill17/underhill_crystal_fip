@@ -170,6 +170,22 @@ div:has(article.product-card-con) {
                 }
             }
 
+            .quantity-con {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+
+                button {
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #800020;
+                    color: #E2D8CE;
+                    cursor: pointer;
+                    padding: 5px 10px;
+                }
+            }
+
             @media screen and (min-width: 768px) {
                 width: 225px;
             }
