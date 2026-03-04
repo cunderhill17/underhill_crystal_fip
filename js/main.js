@@ -346,7 +346,7 @@ function displayCard() {
             <p class="paragraph">20% ABV</p>
             <p class="paragraph">750 ml</p>
             <h4 class="heading-4 brand-red">Quantity</h4>
-            <div>
+            <div class="quantity-con">
               <button> - </button>
               <p class="beverage-quantity">1</p>
               <button> + </button>

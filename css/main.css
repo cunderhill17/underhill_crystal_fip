@@ -732,6 +732,20 @@ div:has(article.product-card-con) {
 .product-card-con .card-top .product-info .product-flavours div img:hover {
   cursor: pointer;
 }
+.product-card-con .card-top .product-info .quantity-con {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.product-card-con .card-top .product-info .quantity-con button {
+  border: none;
+  border-radius: 5px;
+  background-color: #800020;
+  color: #E2D8CE;
+  cursor: pointer;
+  padding: 5px 10px;
+}
 @media screen and (min-width: 768px) {
   .product-card-con .card-top .product-info {
     width: 225px;
