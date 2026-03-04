@@ -224,6 +224,11 @@ footer .legal-text {
   padding: 20px;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  footer .legal-text {
+    text-align: left;
+  }
+}
 footer .footer-logo {
   display: flex;
   flex-direction: column;
@@ -235,6 +240,14 @@ footer .footer-logo > * {
 }
 footer .footer-logo img {
   width: 75%;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-logo {
+    align-items: flex-start;
+  }
+  footer .footer-logo > * {
+    text-align: left;
+  }
 }
 footer .media-icons {
   display: flex;

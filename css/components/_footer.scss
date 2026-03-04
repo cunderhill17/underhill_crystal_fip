@@ -39,6 +39,10 @@ footer {
     .legal-text {
         padding: 20px;
         text-align: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     .footer-logo {
@@ -53,6 +57,14 @@ footer {
 
         img {
             width: 75%;
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: flex-start;
+
+            >* {
+                text-align: left;
+            }
         }
     }
 
