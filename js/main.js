@@ -343,8 +343,14 @@ function displayCard() {
             <h4 class="heading-4 brand-red">Ingredients</h4>
             <p class="paragraph">${productData[id].ingredients}</p>
             <p class="paragraph">$50.99 CAD</p>
+            <p class="paragraph">20% ABV</p>
+            <p class="paragraph">750 ml</p>
             <h4 class="heading-4 brand-red">Quantity</h4>
-            <p class="paragraph">-1+</p>
+            <div>
+              <button> - </button>
+              <p class="beverage-quantity">1</p>
+              <button> + </button>
+            </div>
             <button class="paragraph brand-btn">Add To Cart</button>
 
             <section class="product-flavours">
