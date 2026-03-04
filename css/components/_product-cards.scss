@@ -1,5 +1,69 @@
+.beverageFlavor {
+    position: relative;
+    z-index: 2;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+.beverageFlavor + h2 {
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;   
+}
+
+.pos-relative:has(.beverageFlavor):nth-of-type(odd) h2 {
+    bottom: 70px;
+    left: 45%;
+
+    @media screen and (min-width: 768px) {
+        bottom: 125px;
+        font-size: 36px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        bottom: 115px;            
+        left: 90%;               
+        transform: translateX(-50%) rotate(-90deg); 
+        transform-origin: left bottom; 
+        white-space: nowrap;     
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #bergamot + h2 {
+        left: 80%;
+    }
+}
+
+.pos-relative:has(.beverageFlavor):nth-of-type(even) h2 {
+    bottom: 70px;
+    left: 55%;
+
+    @media screen and (min-width: 768px) {
+        bottom: 125px;
+        font-size: 36px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        bottom: 115px;            
+        left: 90%;               
+        transform: translateX(-50%) rotate(-90deg);
+        transform-origin: left bottom;
+        white-space: nowrap;     
+        font-size: 45px;
+    }
+}
+
+//When the user holds their finger down on the bottle it'll show the name below 
+// As there's no hover state on mobile 
+.beverageFlavor:active {
+    opacity: 0.4;
+}
+
 .beverageFlavor:hover {
     cursor: pointer;
+    opacity: 0.4;
 }
 
 div:has(article.product-card-con) {
