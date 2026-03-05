@@ -550,6 +550,9 @@ header#admin-header {
   }
 }
 #nested-hero-grid .call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #800020;
   border-radius: 10px;
   border: none;
