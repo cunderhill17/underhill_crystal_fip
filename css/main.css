@@ -792,6 +792,128 @@ div:has(article.product-card-con) {
   display: block;
 }
 
+/* Product Card Styling for Admin Products Page */
+.admin-product-card-con {
+  width: 345px;
+  border: 1px solid #6B5B4C;
+  padding: 10px;
+  background-color: #F5F1E8;
+  filter: drop-shadow(5px 5px 4px #6B5B4C);
+}
+.admin-product-card-con .card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.admin-product-card-con .card-top .img-previews {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.admin-product-card-con .card-top .img-previews div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 90px;
+  border: 1px solid #6B5B4C;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.admin-product-card-con .card-top .img-previews div img {
+  height: 85px;
+}
+.admin-product-card-con .card-top .img-previews div img:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .admin-product-card-con .card-top .img-previews {
+    display: block;
+    margin-top: 0px;
+  }
+}
+.admin-product-card-con .card-top .img-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-product-card-con .card-top .img-full img {
+  max-height: 95%;
+}
+@media screen and (min-width: 768px) {
+  .admin-product-card-con .card-top .img-full {
+    width: 175px;
+  }
+}
+.admin-product-card-con .card-top .product-info {
+  order: 3;
+  width: 100%;
+  margin-left: 10px;
+}
+.admin-product-card-con .card-top .product-info * {
+  margin-bottom: 10px;
+}
+.admin-product-card-con .card-top .product-info .product-flavours div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.admin-product-card-con .card-top .product-info .product-flavours div img {
+  width: 30px;
+  margin-right: 10px;
+}
+.admin-product-card-con .card-top .product-info .product-flavours div img:hover {
+  cursor: pointer;
+}
+.admin-product-card-con .card-top .product-info .quantity-con {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.admin-product-card-con .card-top .product-info .quantity-con button {
+  border: none;
+  border-radius: 5px;
+  background-color: #800020;
+  color: #E2D8CE;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+@media screen and (min-width: 768px) {
+  .admin-product-card-con .card-top .product-info {
+    width: 225px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .admin-product-card-con .card-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .admin-product-card-con .card-top .img-previews {
+    order: 1;
+    margin-left: 5px;
+  }
+  .admin-product-card-con .card-top .img-full {
+    order: 2;
+  }
+  .admin-product-card-con .card-top .product-info {
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .admin-product-card-con {
+    width: 535px;
+  }
+}
+
 table {
   width: 100%;
   margin-top: 15px;
