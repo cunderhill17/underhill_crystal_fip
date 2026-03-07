@@ -12,7 +12,7 @@ const productCard = document.querySelector('.product-card-con');
 const productData = {
   bergamot: {
     flavor: 'Bergamot Liqueur',
-    description: 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.rition will go here',
+    description: 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.',
     ingredients: 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
     images: [
       'images/preview-bergamot-label-bottle',
