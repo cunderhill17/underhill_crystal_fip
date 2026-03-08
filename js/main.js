@@ -7,6 +7,7 @@ const mainNav = document.querySelector('header nav');
 //Product Card Variables
 const flavors = document.querySelectorAll('.beverageFlavor');
 const productCard = document.querySelector('.product-card-con');
+const productContainer = document.querySelector('#product-container');
 
 //using an object to hold product information so the information can be acccessed by name rather than index 
 const productData = {
@@ -470,6 +471,7 @@ async function getProducts() {
         const productKey = product.id;
 
         productInfo[productKey] = {
+            id: product.product_id,
             flavor: product.product_name,
             description: product.product_description,
             ingredients: product.product_ingredients,
@@ -479,23 +481,23 @@ async function getProducts() {
             images: [
                 { 
                   alt: product.product_image_alt,
-                  image: `images/${product.product_image}`,
+                  image: `php/uploads/${product.product_image}`,
                 },
                 {
                   alt: product.product_pre_1_alt,
-                  image:`images/${product.product_pre_1}`,
+                  image:`php/uploads/${product.product_pre_1}`,
                 },
                 {
                   alt: product.product_pre_2_alt,
-                  image:`images/${product.product_pre_2}`,
+                  image:`php/uploads/${product.product_pre_2}`,
                 },
                 {
                   alt: product.product_pre_3_alt,
-                  image:`images/${product.product_pre_3}`,
+                  image:`php/uploads/${product.product_pre_3}`,
                 },
                 {
                   alt: product.product_pre_4_alt,
-                  image:`images/${product.product_pre_4}`,
+                  image:`php/uploads/${product.product_pre_4}`,
                 },
               ],
             otherFlavors: [
@@ -525,7 +527,31 @@ async function getProducts() {
 
 }
 
-getProducts();
+function addProductImages() {
+  productContainer.innerHTML = '';
+
+  productContainer.innerHTML = `<h2 class="heading-1 center-text col-span-full">Products</h2>`
+
+  console.log(productInfo) //used to check that productInfo is available in scope, and that it's filled out properly
+
+  Object.entries(productInfo).forEach(([key, product]) => {
+    console.log('Inserting:', key, product.flavor);
+    let html = `
+      <div class="pos-relative col-span-full md:col-span-full lg:col-span-4">
+        <picture id="${key}" class="beverageFlavor">
+          <source srcset="${product.images[0].image}-desktop.png" media="(min-width: 1200px)">
+          <source srcset="${product.images[0].image}-tablet.png" media="(min-width: 768px)">
+          <img src="${product.images[0].image}-mobile.png" alt="${product.images[0].alt}">
+        </picture>
+        <h2 class="brand-mocha">${product.flavor}</h2>
+      </div>
+    `;
+    console.log('HTML to insert:', html);
+    productContainer.insertAdjacentHTML('beforeend', html);
+  });
+
+
+};
 
 
 
@@ -573,3 +599,15 @@ if (viewProductsTab) {
 }
 
 
+
+
+//Functions to Call on page load
+async function init() {
+    await getProducts(); //needs to finish loading before other function can be called
+    
+    if (productContainer) {
+      addProductImages();
+    }
+}
+
+init();
