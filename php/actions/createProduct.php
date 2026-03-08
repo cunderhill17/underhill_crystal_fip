@@ -295,6 +295,12 @@
 
             $pdo->commit(); // Everything worked → save permanently
 
+            foreach ($uploadedFilenames as $fileInfo) {
+                if (isset($fileInfo['originalPath']) && file_exists($fileInfo['originalPath'])) {
+                    unlink($fileInfo['originalPath']); // delete the original file
+                }
+            }
+
             header("Location: ../../admin-products.html?status=success");
             exit;
 
