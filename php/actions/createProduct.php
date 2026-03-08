@@ -24,6 +24,7 @@
         // Array of images
         $images = [
             'product_image' => $_FILES['product_image'],
+            'product_image_horizontal' => $_FILES['product_image_horizontal'], //have to add to the form
             'product_pre_1' => $_FILES['product_pre_1'],
             'product_pre_2' => $_FILES['product_pre_2'],
             'product_pre_3' => $_FILES['product_pre_3'],
@@ -57,13 +58,73 @@
             $product_id = $pdo->lastInsertId();
 
 
-            //Resizing Function to keep image ratio
+            //Resizing Function by width to keep image ratio
             function resizeImageKeepRatio($sourcePath, $destinationPath, $newWidth) {
                 list($width, $height, $type) = getimagesize($sourcePath);
 
                 // calculate proportional height
                 $ratio = $height / $width;
                 $newHeight = $newWidth * $ratio;
+
+                $newImage = imagecreatetruecolor($newWidth, $newHeight);
+
+                switch ($type) {
+                    case IMAGETYPE_JPEG:
+                        $source = imagecreatefromjpeg($sourcePath);
+                        break;
+                    case IMAGETYPE_PNG:
+                        $source = imagecreatefrompng($sourcePath);
+
+                        // preserve transparency
+                        imagealphablending($newImage, false);
+                        imagesavealpha($newImage, true);
+
+                        // fill with transparent color
+                        $transparent = imagecolorallocatealpha($newImage, 0, 0, 0, 127);
+                        imagefill($newImage, 0, 0, $transparent);
+                        break;
+                    case IMAGETYPE_WEBP:
+                        $source = imagecreatefromwebp($sourcePath);
+                        break;
+                    default:
+                        return false; // unsupported type
+                }
+
+                // copy & resize the image
+                imagecopyresampled(
+                    $newImage,
+                    $source,
+                    0, 0, 0, 0,
+                    $newWidth, $newHeight,
+                    $width, $height
+                );
+
+                // save in same format as original
+                switch ($type) {
+                    case IMAGETYPE_JPEG:
+                        imagejpeg($newImage, $destinationPath, 90);
+                        break;
+                    case IMAGETYPE_PNG:
+                        imagepng($newImage, $destinationPath);
+                        break;
+                    case IMAGETYPE_WEBP:
+                        imagewebp($newImage, $destinationPath);
+                        break;
+                }
+
+                imagedestroy($source);
+                imagedestroy($newImage);
+
+                return true;
+            }
+
+            //Resizing Function by height to keep image ratio
+            function resizeImageKeepRatioByHeight($sourcePath, $destinationPath, $newHeight) {
+                list($width, $height, $type) = getimagesize($sourcePath);
+
+                // calculate proportional width
+                $ratio = $width / $height;
+                $newWidth = $newHeight * $ratio;
 
                 $newImage = imagecreatetruecolor($newWidth, $newHeight);
 
@@ -145,8 +206,19 @@
                 }
             }
 
-            $mainImageSizes = [800, 400, 200];  // main image widths
-            $previewSizes   = [300, 150];       // preview image widths
+            $mainImageSizes = [
+                ['type' => 'width', 'size' => 400, 'suffix' => 'desktop']
+            ];
+
+            $horizontalImageSizes = [
+                ['type' => 'width',  'size' => 412, 'suffix' => 'mobile'],
+                ['type' => 'width',  'size' => 800, 'suffix' => 'tablet']
+            ];
+
+            $previewSizes = [
+                ['type' => 'width',  'size' => 325, 'suffix' => 'medium'],
+                ['type' => 'height', 'size' => 170, 'suffix' => 'small']
+            ];
 
             //Resize main product image
             if (isset($uploadedFilenames['product_image'])) {
@@ -154,10 +226,27 @@
                 $baseName = $uploadedFilenames['product_image']['baseName'];
                 $extension = $uploadedFilenames['product_image']['extension'];
 
-                foreach ($mainImageSizes as $width) {
+                foreach ($mainImageSizes as $resizeRule) {
                     // Save resized image using the base name + width + extension
-                    $resizedPath = $uploadDirectory . $baseName . '_' . $width . '.' . $extension;
-                    resizeImageKeepRatio($originalPath, $resizedPath, $width);
+                    $resizedPath = $uploadDirectory . $baseName . '_' . $resizeRule['suffix'] . '.' . $extension;
+                    resizeImageKeepRatio($originalPath, $resizedPath, $resizeRule['size']);
+
+                }
+            }
+
+            //resize horizontal product image
+            if (isset($uploadedFilenames['product_image_horizontal'])) {
+                $originalPath = $uploadedFilenames['product_image_horizontal']['originalPath'];
+                $extension = $uploadedFilenames['product_image_horizontal']['extension'];
+
+                //vertical name reference so horiziontal and vertical images have same name
+                $verticalBaseName = $uploadedFilenames['product_image']['baseName'];
+
+                foreach ($horizontalImageSizes as $resizeRule) {
+                    // Save resized image using the base name + width + extension
+                    $resizedPath = $uploadDirectory . $verticalBaseName . '_' . $resizeRule['suffix'] . '.' . $extension;
+                    resizeImageKeepRatio($originalPath, $resizedPath, $resizeRule['size']);
+
                 }
             }
 
@@ -170,10 +259,15 @@
                     $baseName = $uploadedFilenames[$key]['baseName'];
                     $extension = $uploadedFilenames[$key]['extension'];
 
-                    foreach ($previewSizes as $width) {
+                    foreach ($previewSizes as $resizeRule) {
                         // Save resized preview using baseName + width + extension
-                        $resizedPath = $uploadDirectory . $baseName . '_' . $width . '.' . $extension;
-                        resizeImageKeepRatio($originalPath, $resizedPath, $width);
+                        $resizedPath = $uploadDirectory . $baseName . '_' . $resizeRule['suffix'] . '.' . $extension;
+                        
+                        if ($resizeRule['type'] === 'width') {
+                            resizeImageKeepRatio($originalPath, $resizedPath, $resizeRule['size']);
+                        } else {
+                            resizeImageKeepRatioByHeight($originalPath, $resizedPath, $resizeRule['size']);
+                        }
                     }
                 }
             }
