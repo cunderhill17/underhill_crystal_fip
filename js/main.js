@@ -535,7 +535,7 @@ function addProductImages() {
   console.log(productInfo) //used to check that productInfo is available in scope, and that it's filled out properly
 
   Object.entries(productInfo).forEach(([key, product]) => {
-    console.log('Inserting:', key, product.flavor);
+    // console.log('Inserting:', key, product.flavor);
     let html = `
       <div class="pos-relative col-span-full md:col-span-full lg:col-span-4">
         <picture id="${key}" class="beverageFlavor">
@@ -546,7 +546,7 @@ function addProductImages() {
         <h2 class="brand-mocha">${product.flavor}</h2>
       </div>
     `;
-    console.log('HTML to insert:', html);
+    // console.log('HTML to insert:', html);
     productContainer.insertAdjacentHTML('beforeend', html);
   });
 

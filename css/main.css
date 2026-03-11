@@ -608,11 +608,6 @@ header#admin-header {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  #bergamot + h2 {
-    left: 80%;
-  }
-}
 .pos-relative:has(.beverageFlavor):nth-of-type(even) h2 {
   bottom: 70px;
   left: 55%;
@@ -634,6 +629,11 @@ header#admin-header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  #product-container div:first-of-type.pos-relative:has(.beverageFlavor) h2 {
+    left: 80%;
+  }
+}
 .beverageFlavor:active {
   opacity: 0.4;
 }
@@ -792,7 +792,7 @@ div:has(article.product-card-con) {
   display: block;
 }
 
-/* Product Card Styling for Admin Products Page */
+/* Product Card Styling for Admin Products Page - Similar to the regular product card, but changed to fit needs of admin page */
 .admin-product-card-con {
   width: 345px;
   border: 1px solid #6B5B4C;
