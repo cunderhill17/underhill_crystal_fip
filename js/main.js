@@ -5,162 +5,162 @@ const menuBtn = document.querySelector('header .menu img#hamburger-menu');
 const mainNav = document.querySelector('header nav');
 
 //Product Card Variables
-const flavors = document.querySelectorAll('.beverageFlavor');
+// const flavors = document.querySelectorAll('.beverageFlavor');
 const productCard = document.querySelector('.product-card-con');
 const productContainer = document.querySelector('#product-container');
 
 //using an object to hold product information so the information can be acccessed by name rather than index 
-const productData = {
-  bergamot: {
-    flavor: 'Bergamot Liqueur',
-    description: 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.',
-    ingredients: 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
-    images: [
-      'images/preview-bergamot-label-bottle',
-      'images/preview-bergamot-back-label-bottle',
-      'images/preview-bergamot-back-label-img',
-      'images/preview-bergamot-label-closeup',
-    ],
-    otherFlavors: [
-      { 
-        id: 'fruit-redCurrent',
-        image:'images/fruit-red-currant.svg',
-      },
-      {
-        id: 'fruit-darkCherry',
-        image:'images/fruit-cherries.svg',
-      },
-      {
-        id: 'fruit-bloodOrange',
-        image:'images/fruit-orange-slice.svg',
-      },
-      {
-        id: 'fruit-pomegranate',
-        image:'images/fruit-pomegranate.svg',
-      },
-    ]
-  },
+// const productData = {
+//   bergamot: {
+//     flavor: 'Bergamot Liqueur',
+//     description: 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.',
+//     ingredients: 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+//     images: [
+//       'images/preview-bergamot-label-bottle',
+//       'images/preview-bergamot-back-label-bottle',
+//       'images/preview-bergamot-back-label-img',
+//       'images/preview-bergamot-label-closeup',
+//     ],
+//     otherFlavors: [
+//       { 
+//         id: 'fruit-redCurrent',
+//         image:'images/fruit-red-currant.svg',
+//       },
+//       {
+//         id: 'fruit-darkCherry',
+//         image:'images/fruit-cherries.svg',
+//       },
+//       {
+//         id: 'fruit-bloodOrange',
+//         image:'images/fruit-orange-slice.svg',
+//       },
+//       {
+//         id: 'fruit-pomegranate',
+//         image:'images/fruit-pomegranate.svg',
+//       },
+//     ]
+//   },
 
-  darkCherry: {
-    flavor: 'Dark Cherry Liqueur',
-    description: 'A deep garnet dark cherry liqueur layered with ripe, velvety fruit flavors and a subtle sweetness that lingers with a hint of warmth.',
-    ingredients: 'Water, Alcohol, Sugar, Dark Cherry Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
-    images: [
-      'images/preview-d-cherry-label-bottle',
-      'images/preview-d-cherry-back-label-bottle',
-      'images/preview-d-cherry-back-label-img',
-      'images/preview-d-cherry-label-closeup',
-    ],
-    otherFlavors: [
-      { 
-        id: 'fruit-redCurrent',
-        image:'images/fruit-red-currant.svg',
-      },
-      {
-        id: 'fruit-bergamot',
-        image:'images/fruit-bergamot.svg',
-      },
-      {
-        id: 'fruit-bloodOrange',
-        image:'images/fruit-orange-slice.svg',
-      },
-      {
-        id: 'fruit-pomegranate',
-        image:'images/fruit-pomegranate.svg',
-      },
-    ]
-  }, 
+//   darkCherry: {
+//     flavor: 'Dark Cherry Liqueur',
+//     description: 'A deep garnet dark cherry liqueur layered with ripe, velvety fruit flavors and a subtle sweetness that lingers with a hint of warmth.',
+//     ingredients: 'Water, Alcohol, Sugar, Dark Cherry Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+//     images: [
+//       'images/preview-d-cherry-label-bottle',
+//       'images/preview-d-cherry-back-label-bottle',
+//       'images/preview-d-cherry-back-label-img',
+//       'images/preview-d-cherry-label-closeup',
+//     ],
+//     otherFlavors: [
+//       { 
+//         id: 'fruit-redCurrent',
+//         image:'images/fruit-red-currant.svg',
+//       },
+//       {
+//         id: 'fruit-bergamot',
+//         image:'images/fruit-bergamot.svg',
+//       },
+//       {
+//         id: 'fruit-bloodOrange',
+//         image:'images/fruit-orange-slice.svg',
+//       },
+//       {
+//         id: 'fruit-pomegranate',
+//         image:'images/fruit-pomegranate.svg',
+//       },
+//     ]
+//   }, 
 
-  bloodOrange: {
-    flavor: 'Blood Orange Liqueur',
-    description: 'A radiant, sunset-hued blood orange liqueur alive with juicy citrus intensity, gently tempered by soft sweetness and a whisper of bittersweet zest.',
-    ingredients: 'Water, Alcohol, Sugar, Blood Orange Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
-    images: [
-      'images/preview-b-orange-label-bottle',
-      'images/preview-b-orange-back-label-bottle',
-      'images/preview-b-orange-back-label-img',
-      'images/preview-b-orange-label-closeup',
-    ],
-    otherFlavors: [
-      { 
-        id: 'fruit-redCurrent',
-        image:'images/fruit-red-currant.svg',
-      },
-      {
-        id: 'fruit-darkCherry',
-        image:'images/fruit-cherries.svg',
-      },
-      {
-        id: 'fruit-bergamot',
-        image:'images/fruit-bergamot.svg',
-      },
-      {
-        id: 'fruit-pomegranate',
-        image:'images/fruit-pomegranate.svg',
-      },
-    ]
-  }, 
+//   bloodOrange: {
+//     flavor: 'Blood Orange Liqueur',
+//     description: 'A radiant, sunset-hued blood orange liqueur alive with juicy citrus intensity, gently tempered by soft sweetness and a whisper of bittersweet zest.',
+//     ingredients: 'Water, Alcohol, Sugar, Blood Orange Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+//     images: [
+//       'images/preview-b-orange-label-bottle',
+//       'images/preview-b-orange-back-label-bottle',
+//       'images/preview-b-orange-back-label-img',
+//       'images/preview-b-orange-label-closeup',
+//     ],
+//     otherFlavors: [
+//       { 
+//         id: 'fruit-redCurrent',
+//         image:'images/fruit-red-currant.svg',
+//       },
+//       {
+//         id: 'fruit-darkCherry',
+//         image:'images/fruit-cherries.svg',
+//       },
+//       {
+//         id: 'fruit-bergamot',
+//         image:'images/fruit-bergamot.svg',
+//       },
+//       {
+//         id: 'fruit-pomegranate',
+//         image:'images/fruit-pomegranate.svg',
+//       },
+//     ]
+//   }, 
 
-  pomegranate: {
-    flavor: 'Pomegranate Liqueur',
-    description: 'A vibrant, jewel-toned pomegranate liqueur bursting with tangy-sweet arils and a crisp, refreshing finish.',
-    ingredients: 'Water, Alcohol, Sugar, Pomegranate Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
-    images: [
-      'images/preview-pomegranate-label-bottle',
-      'images/preview-pomegranate-back-label-bottle',
-      'images/preview-pomegranate-back-label-img',
-      'images/preview-pomegranate-label-closeup',
-    ],
-    otherFlavors: [
-      { 
-        id: 'fruit-redCurrent',
-        image:'images/fruit-red-currant.svg',
-      },
-      {
-        id: 'fruit-darkCherry',
-        image:'images/fruit-cherries.svg',
-      },
-      {
-        id: 'fruit-bloodOrange',
-        image:'images/fruit-orange-slice.svg',
-      },
-      {
-        id: 'fruit-bergamot',
-        image:'images/fruit-bergamot.svg',
-      },
-    ]
-  }, 
+//   pomegranate: {
+//     flavor: 'Pomegranate Liqueur',
+//     description: 'A vibrant, jewel-toned pomegranate liqueur bursting with tangy-sweet arils and a crisp, refreshing finish.',
+//     ingredients: 'Water, Alcohol, Sugar, Pomegranate Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+//     images: [
+//       'images/preview-pomegranate-label-bottle',
+//       'images/preview-pomegranate-back-label-bottle',
+//       'images/preview-pomegranate-back-label-img',
+//       'images/preview-pomegranate-label-closeup',
+//     ],
+//     otherFlavors: [
+//       { 
+//         id: 'fruit-redCurrent',
+//         image:'images/fruit-red-currant.svg',
+//       },
+//       {
+//         id: 'fruit-darkCherry',
+//         image:'images/fruit-cherries.svg',
+//       },
+//       {
+//         id: 'fruit-bloodOrange',
+//         image:'images/fruit-orange-slice.svg',
+//       },
+//       {
+//         id: 'fruit-bergamot',
+//         image:'images/fruit-bergamot.svg',
+//       },
+//     ]
+//   }, 
 
-  redCurrent: {
-    flavor: 'Red Currant Liqueur',
-    description: 'A bright, ruby-hued red currant aperitif with lively tart berry flavors balanced by gentle sweetness.',
-    ingredients: 'Water, Alcohol, Sugar, Red Currant Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
-    images: [
-      'images/preview-r-currant-label-bottle',
-      'images/preview-r-currant-back-label-bottle',
-      'images/preview-r-currant-back-label-img',
-      'images/preview-r-currant-label-closeup',
-    ],
-    otherFlavors: [
-      { 
-        id: 'fruit-bergamot',
-        image:'images/fruit-bergamot.svg',
-      },
-      {
-        id: 'fruit-darkCherry',
-        image:'images/fruit-cherries.svg',
-      },
-      {
-        id: 'fruit-bloodOrange',
-        image:'images/fruit-orange-slice.svg',
-      },
-      {
-        id: 'fruit-pomegranate',
-        image:'images/fruit-pomegranate.svg',
-      },
-    ]
-  }
-};
+//   redCurrent: {
+//     flavor: 'Red Currant Liqueur',
+//     description: 'A bright, ruby-hued red currant aperitif with lively tart berry flavors balanced by gentle sweetness.',
+//     ingredients: 'Water, Alcohol, Sugar, Red Currant Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)',
+//     images: [
+//       'images/preview-r-currant-label-bottle',
+//       'images/preview-r-currant-back-label-bottle',
+//       'images/preview-r-currant-back-label-img',
+//       'images/preview-r-currant-label-closeup',
+//     ],
+//     otherFlavors: [
+//       { 
+//         id: 'fruit-bergamot',
+//         image:'images/fruit-bergamot.svg',
+//       },
+//       {
+//         id: 'fruit-darkCherry',
+//         image:'images/fruit-cherries.svg',
+//       },
+//       {
+//         id: 'fruit-bloodOrange',
+//         image:'images/fruit-orange-slice.svg',
+//       },
+//       {
+//         id: 'fruit-pomegranate',
+//         image:'images/fruit-pomegranate.svg',
+//       },
+//     ]
+//   }
+// };
 
 //Object that will hold data gathered from the database
 let productInfo = {};
@@ -309,15 +309,8 @@ async function handleAddressSearch() {
 
 //Function to display product information
 function displayCard() {
-  let id;
-
-  if (this.id.includes('fruit')) {
-    id = this.id.replace('fruit-', '');
-  } else {
-    id = this.id;
-  }
-
-  let productCard = document.querySelector('.product-card-con');
+  const id = this.id;
+  //let productCard = document.querySelector('.product-card-con');
 
   productCard.innerHTML = `
 
@@ -326,29 +319,29 @@ function displayCard() {
         <h3 class="hidden">Product Images and Purchase Information</h3>
         <div class="img-previews">
             <div>
-                <img src="${productData[id].images[0]}-170.png">
+                <img src="${productInfo[id].images[1].image}-small.png" alt="${productInfo[id].images[1].alt}">
             </div>
             <div>
-                <img src="${productData[id].images[1]}-170.png">
+                <img src="${productInfo[id].images[2].image}-small.png" alt="${productInfo[id].images[2].alt}">
             </div>
             <div>
-                <img src="${productData[id].images[2]}-170.jpg">
+                <img src="${productInfo[id].images[3].image}-small.jpg" alt="${productInfo[id].images[3].alt}">
             </div>
             <div>
-                <img src="${productData[id].images[3]}-170.png">
+                <img src="${productInfo[id].images[4].image}-small.png" alt="${productInfo[id].images[4].alt}">
             </div>
         </div>
 
         <div class="img-full">
-            <img src="${productData[id].images[0]}-325.png">
+            <img src="${productInfo[id].images[1].image}-medium.png" alt="${productInfo[id].images[1].alt}">
         </div>
 
         <div class="product-info">
-            <h4 class="heading-4 brand-red">${productData[id].flavor}</h4>
-            <p class="paragraph">${productData[id].description}</p>
+            <h4 class="heading-4 brand-red">${productInfo[id].flavor} Liquer</h4>
+            <p class="paragraph">${productInfo[id].description}</p>
             <h4 class="heading-4 brand-red">Ingredients</h4>
-            <p class="paragraph">${productData[id].ingredients}</p>
-            <p class="paragraph">$50.99 CAD</p>
+            <p class="paragraph">${productInfo[id].ingredients}</p>
+            <p class="paragraph">$${productInfo[id].price} CAD</p>
             <p class="paragraph">20% ABV</p>
             <p class="paragraph">750 ml</p>
             <h4 class="heading-4 brand-red">Quantity</h4>
@@ -362,10 +355,11 @@ function displayCard() {
             <section class="product-flavours">
                 <h4 class="heading-4 brand-red">Other Flavors Available</h4>
                 <div>
-                    <img src="${productData[id].otherFlavors[0].image}" id="${productData[id].otherFlavors[0].id}">
-                    <img src="${productData[id].otherFlavors[1].image}" id="${productData[id].otherFlavors[1].id}">
-                    <img src="${productData[id].otherFlavors[2].image}" id="${productData[id].otherFlavors[2].id}">
-                    <img src="${productData[id].otherFlavors[3].image}" id="${productData[id].otherFlavors[3].id}">
+                    <img src="${productInfo[id].otherFlavors[0].image}" alt="${productInfo[id].otherFlavors[0].id} Icon">
+                    <img src="${productInfo[id].otherFlavors[1].image}" alt="${productInfo[id].otherFlavors[1].id} Icon">
+                    <img src="${productInfo[id].otherFlavors[2].image}" alt="${productInfo[id].otherFlavors[2].id} Icon">
+                    <img src="${productInfo[id].otherFlavors[3].image}" alt="${productInfo[id].otherFlavors[3].id} Icon">
+                    <img src="${productInfo[id].otherFlavors[4].image}" alt="${productInfo[id].otherFlavors[4].id} Icon">
                 </div>
             </section>
         </div>
@@ -373,18 +367,18 @@ function displayCard() {
 
   `;
 
+}
+
   //Adds a click event to the product card close button - need to move to proper sections
-  const closeCard = document.querySelector('.card-btn');
-  closeCard.addEventListener('click', closeProductCard);
+  // const closeCard = document.querySelector('.card-btn');
+  // closeCard.addEventListener('click', closeProductCard);
 
   //Updates the product card contents based on the flavor selected - need to move to proper sections
-  const flavorImages = document.querySelectorAll('.product-flavours img');
-  flavorImages.forEach(flavor => flavor.addEventListener('click', displayCard));
+  // const flavorImages = document.querySelectorAll('.product-flavours img');
+  // flavorImages.forEach(flavor => flavor.addEventListener('click', displayCard));
 
-  const imgPreviews = document.querySelectorAll('.img-previews img');
-  imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
-
-}
+  // const imgPreviews = document.querySelectorAll('.img-previews img');
+  // imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
 
 function changePreview(e) {
   const url = e.target.src;
@@ -535,7 +529,6 @@ function addProductImages() {
   console.log(productInfo) //used to check that productInfo is available in scope, and that it's filled out properly
 
   Object.entries(productInfo).forEach(([key, product]) => {
-    // console.log('Inserting:', key, product.flavor);
     let html = `
       <div class="pos-relative col-span-full md:col-span-full lg:col-span-4">
         <picture id="${key}" class="beverageFlavor">
@@ -546,10 +539,8 @@ function addProductImages() {
         <h2 class="brand-mocha">${product.flavor}</h2>
       </div>
     `;
-    // console.log('HTML to insert:', html);
     productContainer.insertAdjacentHTML('beforeend', html);
   });
-
 
 };
 
@@ -566,13 +557,6 @@ function addProductImages() {
 //Hamburger Menu Event Handler
 if (menuBtn) {
   menuBtn.addEventListener('click', toggleNav);
-}
-
-//Product Card Event Handler
-
-if (flavors) {
-    flavors.forEach(flavor => flavor.addEventListener('click', openProductCard));
-    flavors.forEach(flavor => flavor.addEventListener('click', displayCard));
 }
 
 //Contact Map Event Handler
@@ -604,10 +588,18 @@ if (viewProductsTab) {
 //Functions to Call on page load
 async function init() {
     await getProducts(); //needs to finish loading before other function can be called
-    
+
     if (productContainer) {
       addProductImages();
     }
+
+    //Product Card Event Handler
+    const flavors = document.querySelectorAll('.beverageFlavor');
+    if (flavors) {
+        flavors.forEach(flavor => flavor.addEventListener('click', openProductCard));
+        flavors.forEach(flavor => flavor.addEventListener('click', displayCard));
+    }
+    
 }
 
 init();
