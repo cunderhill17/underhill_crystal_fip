@@ -163,6 +163,7 @@ const productContainer = document.querySelector('#product-container');
 // };
 
 //Object that will hold data gathered from the database
+
 let productInfo = {};
 
 // Admin Vertical Nav variables
@@ -367,31 +368,36 @@ function displayCard() {
 
   `;
 
-}
-
   //Adds a click event to the product card close button - need to move to proper sections
-  // const closeCard = document.querySelector('.card-btn');
-  // closeCard.addEventListener('click', closeProductCard);
+  const closeCard = document.querySelector('.card-btn');
+  closeCard.addEventListener('click', closeProductCard);
+
+  const imgPreviews = document.querySelectorAll('.img-previews img');
+  imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
 
   //Updates the product card contents based on the flavor selected - need to move to proper sections
   // const flavorImages = document.querySelectorAll('.product-flavours img');
   // flavorImages.forEach(flavor => flavor.addEventListener('click', displayCard));
 
-  // const imgPreviews = document.querySelectorAll('.img-previews img');
-  // imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
+}
 
+
+
+
+//Changes the 'full' image in the product card based on the selected image preview
 function changePreview(e) {
   const url = e.target.src;
+  const alt = e.target.alt;
 
-  //Only selects the path of the URL string from 'images' onwards
-  let imgPath = url.substring(url.indexOf("images/"));
+  //Only selects the path of the URL string from 'php' onwards
+  let imgPath = url.substring(url.indexOf("php/"));
   
   // separates the number & extension at the end of the path, replaces the number and then readds the extension back to make the correct image path
-  imgPath = imgPath.replace(/(\d+)(\.\w+)$/, `325$2`);
+  imgPath = imgPath.replace("small", "medium");
 
   const lgImage = document.querySelector('.img-full');
 
-  lgImage.innerHTML = `<img src="${imgPath}">`;
+  lgImage.innerHTML = `<img src="${imgPath}" alt="${alt}">`;
 }
 
 //Functions to open and close the vertical nav bar on admin pages
@@ -521,12 +527,11 @@ async function getProducts() {
 
 }
 
+//Function to add the product images to the products.html page
 function addProductImages() {
   productContainer.innerHTML = '';
 
   productContainer.innerHTML = `<h2 class="heading-1 center-text col-span-full">Products</h2>`
-
-  console.log(productInfo) //used to check that productInfo is available in scope, and that it's filled out properly
 
   Object.entries(productInfo).forEach(([key, product]) => {
     let html = `
