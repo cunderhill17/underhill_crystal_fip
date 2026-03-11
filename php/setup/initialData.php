@@ -5,7 +5,7 @@
         try {
 
             $sql1 = "INSERT INTO product_info (product_name, product_description, product_ingredients, product_price, product_sale_price, product_on_sale, product_stock)
-                VALUES ('Bergamot Liqueur', 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.', 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
+                VALUES ('Bergamot', 'A luminous, citrus-kissed bergamot liqueur with fragrant floral notes and a refined balance of bright zest and delicate sweetness.', 'Water, Alcohol, Sugar, Bergamot Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
                 ";
 
             $pdo->exec($sql1);
@@ -21,7 +21,7 @@
             $pdo->exec($sql2);
 
             $sql3 = "INSERT INTO product_info (product_name, product_description, product_ingredients, product_price, product_sale_price, product_on_sale, product_stock)
-                VALUES ('Dark Cherry Liqueur', 'A deep garnet dark cherry liqueur layered with ripe, velvety fruit flavors and a subtle sweetness that lingers with a hint of warmth.', 'Water, Alcohol, Sugar, Dark Cherry Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
+                VALUES ('Blood Orange', 'A radiant, sunset-hued blood orange liqueur alive with juicy citrus intensity, gently tempered by soft sweetness and a whisper of bittersweet zest.', 'Water, Alcohol, Sugar, Blood Orange Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
                 ";
 
             $pdo->exec($sql3);
@@ -31,13 +31,13 @@
 
             $sql4 = "INSERT INTO product_images (product_id, product_image, product_image_alt, product_pre_1, product_pre_1_alt, product_pre_2, product_pre_2_alt, product_pre_3,   
             product_pre_3_alt, product_pre_4, product_pre_4_alt)
-            VALUES (" . $product_id . ", 'full-size-dark-cherry', 'Dark Cherry Liqueur', 'preview-dark-cherry-label-bottle', 'Front of Liqueur Bottle', 'preview-dark-cherry-back-label-bottle', 'Back of Liqueur Bottle', 'preview-dark-cherry-back-label-img', 'Full Dark Cherry Back Label', 'preview-dark-cherry-label-closeup', 'Close up of Dark Cherry Front Label');            
+            VALUES (" . $product_id . ", 'full-size-blood-orange', 'Blood Orange Liqueur', 'preview-blood-orange-label-bottle', 'Front of Liqueur Bottle', 'preview-blood-orange-back-label-bottle', 'Back of Liqueur Bottle', 'preview-blood-orange-back-label-img', 'Full Blood Orange Back Label', 'preview-blood-orange-label-closeup', 'Close up of Blood Orange Front Label');            
             ";
 
             $pdo->exec($sql4);
 
             $sql5 = "INSERT INTO product_info (product_name, product_description, product_ingredients, product_price, product_sale_price, product_on_sale, product_stock)
-                VALUES ('Blood Orange Liqueur', 'A radiant, sunset-hued blood orange liqueur alive with juicy citrus intensity, gently tempered by soft sweetness and a whisper of bittersweet zest.', 'Water, Alcohol, Sugar, Blood Orange Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
+                VALUES ('Dark Cherry', 'A deep garnet dark cherry liqueur layered with ripe, velvety fruit flavors and a subtle sweetness that lingers with a hint of warmth.', 'Water, Alcohol, Sugar, Dark Cherry Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
                 ";
 
             $pdo->exec($sql5);
@@ -47,13 +47,14 @@
 
             $sql6 = "INSERT INTO product_images (product_id, product_image, product_image_alt, product_pre_1, product_pre_1_alt, product_pre_2, product_pre_2_alt, product_pre_3,   
             product_pre_3_alt, product_pre_4, product_pre_4_alt)
-            VALUES (" . $product_id . ", 'full-size-blood-orange', 'Blood Orange Liqueur', 'preview-blood-orange-label-bottle', 'Front of Liqueur Bottle', 'preview-blood-orange-back-label-bottle', 'Back of Liqueur Bottle', 'preview-blood-orange-back-label-img', 'Full Blood Orange Back Label', 'preview-blood-orange-label-closeup', 'Close up of Blood Orange Front Label');            
+            VALUES (" . $product_id . ", 'full-size-dark-cherry', 'Dark Cherry Liqueur', 'preview-dark-cherry-label-bottle', 'Front of Liqueur Bottle', 'preview-dark-cherry-back-label-bottle', 'Back of Liqueur Bottle', 'preview-dark-cherry-back-label-img', 'Full Dark Cherry Back Label', 'preview-dark-cherry-label-closeup', 'Close up of Dark Cherry Front Label');            
             ";
 
             $pdo->exec($sql6);
+            
 
             $sql7 = "INSERT INTO product_info (product_name, product_description, product_ingredients, product_price, product_sale_price, product_on_sale, product_stock)
-                VALUES ('Pomegranate Liqueur', 'A vibrant, jewel-toned pomegranate liqueur bursting with tangy-sweet arils and a crisp, refreshing finish.', 'Water, Alcohol, Sugar, Pomegranate Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
+                VALUES ('Pomegranate', 'A vibrant, jewel-toned pomegranate liqueur bursting with tangy-sweet arils and a crisp, refreshing finish.', 'Water, Alcohol, Sugar, Pomegranate Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
                 ";
 
             $pdo->exec($sql7);
@@ -69,7 +70,7 @@
             $pdo->exec($sql8);
 
             $sql9 = "INSERT INTO product_info (product_name, product_description, product_ingredients, product_price, product_sale_price, product_on_sale, product_stock)
-                VALUES ('Red Currant Liqueur', 'A bright, ruby-hued red currant aperitif with lively tart berry flavors balanced by gentle sweetness.', 'Water, Alcohol, Sugar, Red Currant Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
+                VALUES ('Red Currant', 'A bright, ruby-hued red currant aperitif with lively tart berry flavors balanced by gentle sweetness.', 'Water, Alcohol, Sugar, Red Currant Juice / Extract, Natural flavours, herbal extracts, Citric Acid, Anthocyanics (E16)', 50.00, 45.98, 1, 12);
                 ";
 
             $pdo->exec($sql9);
