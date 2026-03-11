@@ -30,12 +30,6 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
-    #bergamot + h2 {
-        left: 80%;
-    }
-}
-
 .pos-relative:has(.beverageFlavor):nth-of-type(even) h2 {
     bottom: 70px;
     left: 55%;
@@ -52,6 +46,12 @@
         transform-origin: left bottom;
         white-space: nowrap;     
         font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #product-container div:first-of-type.pos-relative:has(.beverageFlavor) h2 {
+        left: 80%;
     }
 }
 
