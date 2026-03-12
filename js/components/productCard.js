@@ -4,7 +4,7 @@ import { productInfo } from '../api/productsAPI.js';
 
 //Product Card Variables
 const productCard = document.querySelector('.product-card-con');
-const productContainer = document.querySelector('#product-container');
+export const productContainer = document.querySelector('#product-container');
 
 
 /* ---FUNCTIONS--- */
