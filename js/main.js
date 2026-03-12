@@ -11,6 +11,7 @@ import { getContactInfo } from './api/contactInfoAPI.js';
 import { addProductImages, openProductCard, displayCard } from './components/productCard.js';
 import { productContainer } from './components/productCard.js';
 import { setFooterContact, address } from './components/footer.js';
+import { setContactDetails, sales } from './components/contactDetails.js';
 
 //called on page load
 async function init() {
@@ -23,6 +24,10 @@ async function init() {
 
     if (address) {
         setFooterContact();
+    }
+
+    if (sales) {
+        setContactDetails();
     }
 
     //Product Card Event Handler
