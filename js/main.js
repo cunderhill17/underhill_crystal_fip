@@ -10,6 +10,7 @@ import { getProducts } from './api/productsAPI.js';
 import { getContactInfo } from './api/contactInfoAPI.js';
 import { addProductImages, openProductCard, displayCard } from './components/productCard.js';
 import { productContainer } from './components/productCard.js';
+import { setFooterContact, address } from './components/footer.js';
 
 //called on page load
 async function init() {
@@ -18,6 +19,10 @@ async function init() {
 
     if (productContainer) {
       addProductImages();
+    }
+
+    if (address) {
+        setFooterContact();
     }
 
     //Product Card Event Handler
