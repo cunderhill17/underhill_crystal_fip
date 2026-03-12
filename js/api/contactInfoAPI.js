@@ -1,5 +1,5 @@
 /* ---VARIABLES--- */
-let contactInfo = {};
+export let contactInfo = {};
 
 
 
@@ -14,7 +14,7 @@ export async function getContactInfo() {
 
         const contactKey = detail.id;
         
-        contactInfo[contactKey] = {
+        contactInfo[0] = {
             id: detail.id,
             sales_email: detail.sales_email,
             marketing_email: detail.marketing_email,
