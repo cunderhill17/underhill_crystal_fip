@@ -7,6 +7,7 @@ import './components/productCard.js';
 
 import { getProducts } from './api/productsAPI.js';
 import { addProductImages, openProductCard, displayCard } from './components/productCard.js';
+import { productContainer } from './components/productCard.js';
 
 //called on page load
 async function init() {
