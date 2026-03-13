@@ -1,4 +1,5 @@
 import { productInfo } from '../api/productsAPI.js';
+import { addProductQuantity, minusProductQuantity} from './shoppingCart.js';
 
 /* ---VARIABLES--- */
 
@@ -58,9 +59,9 @@ export function displayCard() {
             <p class="paragraph">750 ml</p>
             <h4 class="heading-4 brand-red">Quantity</h4>
             <div class="quantity-con">
-              <button> - </button>
+              <button id="minusQuantity" data-product-id="${productInfo[id].id}" data-min="1"> - </button>
               <p class="beverage-quantity">1</p>
-              <button> + </button>
+              <button id="addQuantity" data-product-id="${productInfo[id].id}" data-max="${productInfo[id].stock}"> + </button>
             </div>
             <button class="paragraph brand-btn">Add To Cart</button>
 
@@ -85,6 +86,13 @@ export function displayCard() {
 
   const imgPreviews = document.querySelectorAll('.img-previews img');
   imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
+
+  const addQuantity = document.querySelector('#addQuantity');
+  addQuantity.addEventListener('click', addProductQuantity);
+
+  const minusQuantity = document.querySelector('#minusQuantity');
+  minusQuantity.addEventListener('click', minusProductQuantity);
+
 
   //Updates the product card contents based on the flavor selected - need to move to proper sections
   // const flavorImages = document.querySelectorAll('.product-flavours img');
