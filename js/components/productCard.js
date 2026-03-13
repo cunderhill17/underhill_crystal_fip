@@ -1,5 +1,5 @@
 import { productInfo } from '../api/productsAPI.js';
-import { addProductQuantity, minusProductQuantity} from './shoppingCart.js';
+import { addProductQuantity, minusProductQuantity, addProductToCart} from './shoppingCart.js';
 
 /* ---VARIABLES--- */
 
@@ -63,7 +63,7 @@ export function displayCard() {
               <p class="beverage-quantity">1</p>
               <button id="addQuantity" data-product-id="${productInfo[id].id}" data-max="${productInfo[id].stock}"> + </button>
             </div>
-            <button class="paragraph brand-btn">Add To Cart</button>
+            <button id="addToCart" class="paragraph brand-btn" data-product-id="${productInfo[id].id}">Add To Cart</button>
 
             <section class="product-flavours">
                 <h4 class="heading-4 brand-red">Other Flavors Available</h4>
@@ -84,15 +84,19 @@ export function displayCard() {
   const closeCard = document.querySelector('.card-btn');
   closeCard.addEventListener('click', closeProductCard);
 
+  //Adds a click event to the image previews in the product card in order to change the 'main image'
   const imgPreviews = document.querySelectorAll('.img-previews img');
   imgPreviews.forEach(preview => preview.addEventListener('click', changePreview));
 
+  //Adds a click event to the quantity '+' and '-' buttons 
   const addQuantity = document.querySelector('#addQuantity');
   addQuantity.addEventListener('click', addProductQuantity);
 
   const minusQuantity = document.querySelector('#minusQuantity');
   minusQuantity.addEventListener('click', minusProductQuantity);
 
+  const addToCart = document.querySelector('#addToCart');
+  addToCart.addEventListener('click', addProductToCart);
 
   //Updates the product card contents based on the flavor selected - need to move to proper sections
   // const flavorImages = document.querySelectorAll('.product-flavours img');
