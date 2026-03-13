@@ -1,7 +1,8 @@
-import { productInfo } from '../api/productsAPI.js';
+//import { productInfo } from '../api/productsAPI.js';
 
 /* ---VARIABLES--- */
 
+let shoppingCart = [];
 
 
 
@@ -11,7 +12,6 @@ import { productInfo } from '../api/productsAPI.js';
 
 export function addProductQuantity() {
     let beverageQuantity = document.querySelector('.beverage-quantity');
-
     let newQuantity = Number(beverageQuantity.innerText);
 
     //console.log(beverageQuantity);
@@ -25,7 +25,6 @@ export function addProductQuantity() {
 
 export function minusProductQuantity() {
     let beverageQuantity = document.querySelector('.beverage-quantity');
-
     let newQuantity = Number(beverageQuantity.innerText);
     
     //console.log(beverageQuantity);
@@ -35,6 +34,17 @@ export function minusProductQuantity() {
 
         beverageQuantity.innerText = `${newQuantity}`;
     }
+}
+
+export function addProductToCart() {
+    let beverageQuantity = document.querySelector('.beverage-quantity');
+    let newQuantity = Number(beverageQuantity.innerText);
+
+    let item = {id: this.dataset.productId, quantity: newQuantity};
+
+    shoppingCart.push(item);
+
+    console.log(shoppingCart);
 }
 
 
