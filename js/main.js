@@ -12,6 +12,7 @@ import { addProductImages, openProductCard, displayCard } from './components/pro
 import { productContainer } from './components/productCard.js';
 import { setFooterContact, address } from './components/footer.js';
 import { setContactDetails, sales } from './components/contactDetails.js';
+import { productList, updateAdminProducts } from './components/adminProducts.js';
 
 //called on page load
 async function init() {
@@ -28,6 +29,10 @@ async function init() {
 
     if (sales) {
         setContactDetails();
+    }
+
+    if (productList) {
+        updateAdminProducts();
     }
 
     //Product Card Event Handler
