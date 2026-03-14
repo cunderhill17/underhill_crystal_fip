@@ -66,5 +66,4 @@ export function displayViewSingleProduct() {
 if (viewProductsTab) {
     viewProductsTab.addEventListener('click', displayViewProducts);
     createProductTab.addEventListener('click', displayCreateProduct);
-    // viewSingleProductBtns.forEach(viewBtn => viewBtn.addEventListener('click', displayViewSingleProduct));
 }
