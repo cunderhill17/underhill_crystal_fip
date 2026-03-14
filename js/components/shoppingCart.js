@@ -105,4 +105,7 @@ function toggleShoppingCart() {
 
 
 /* ---EVENT LISTENERS--- */
-shoppingCartIcon.addEventListener('click', toggleShoppingCart);
+if (shoppingCartIcon) {
+    shoppingCartIcon.addEventListener('click', toggleShoppingCart);
+}
+

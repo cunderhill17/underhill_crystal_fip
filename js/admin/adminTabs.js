@@ -7,7 +7,7 @@ const individualProduct = document.querySelector('#individualProduct');
 
 const viewProductsTab = document.querySelector('#viewProductsTab');
 const createProductTab = document.querySelector('#createProductTab');
-const viewSingleProductBtns = document.querySelectorAll('.viewProduct'); //I feel like this is probably going to change
+// const viewSingleProductBtns = document.querySelectorAll('.viewProduct');
 
 
 
@@ -44,7 +44,7 @@ function displayViewProducts() {
     }
 }
 
-function displayViewSingleProduct() {
+export function displayViewSingleProduct() {
     if (!createProduct.classList.contains('hidden')) {
         createProduct.classList.add('hidden');
     }
@@ -66,5 +66,5 @@ function displayViewSingleProduct() {
 if (viewProductsTab) {
     viewProductsTab.addEventListener('click', displayViewProducts);
     createProductTab.addEventListener('click', displayCreateProduct);
-    viewSingleProductBtns.forEach(viewBtn => viewBtn.addEventListener('click', displayViewSingleProduct));
+    // viewSingleProductBtns.forEach(viewBtn => viewBtn.addEventListener('click', displayViewSingleProduct));
 }
