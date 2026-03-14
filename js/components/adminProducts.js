@@ -4,7 +4,7 @@ import { displayViewSingleProduct } from '../admin/adminTabs.js';
 /* ---VARIABLES--- */
 
 export const productList = document.querySelector('#admin-product-list');
-
+const individualProduct = document.querySelector('.admin-product-card-con');
 
 
 
@@ -26,11 +26,58 @@ export function updateAdminProducts() {
 
     const viewSingleProductBtns = document.querySelectorAll('.viewProduct');
     viewSingleProductBtns.forEach(viewBtn => viewBtn.addEventListener('click', displayViewSingleProduct));
-
+    viewSingleProductBtns.forEach(viewBtn => viewBtn.addEventListener('click', viewSingleProduct));
+    
 }
 
+export function viewSingleProduct() {
+    const id = this.dataset.productId;
 
+    individualProduct.innerHTML = `
+    
+        <section class="card-top">
+            <h3 class="hidden">Product Images and Purchase Information</h3>
+            <div class="img-previews">
+                <div>
+                    <img src="${productInfo[id].images[1].image}-small.png" alt="${productInfo[id].images[1].alt}">
+                </div>
+                <div>
+                    <img src="${productInfo[id].images[2].image}-small.png" alt="${productInfo[id].images[2].alt}">
+                </div>
+                <div>
+                    <img src="${productInfo[id].images[3].image}-small.jpg" alt="${productInfo[id].images[3].alt}">
+                </div>
+                <div>
+                    <img src="${productInfo[id].images[4].image}-small.png" alt="${productInfo[id].images[4].alt}">
+                </div>
+            </div>
 
+            <div class="img-full">
+                <img src="${productInfo[id].images[1].image}-medium.png" alt="${productInfo[id].images[1].alt}">
+            </div>
+
+            <div class="product-info">
+                <h4 class="heading-4 brand-red">${productInfo[id].flavor} Liqueur</h4>
+                <p class="paragraph">${productInfo[id].description}</p>
+                <h4 class="heading-4 brand-red">Ingredients</h4>
+                <p class="paragraph">${productInfo[id].ingredients}</p>
+                <p class="paragraph">$${productInfo[id].price} CAD</p>
+                <p class="paragraph">20% ABV</p>
+                <p class="paragraph">750 ml</p>
+                <h4 class="heading-4 brand-red">Quantity</h4>
+                <div class="quantity-con">
+                    <p class="beverage-quantity">${productInfo[id].stock}</p>
+                </div>
+                <button class="paragraph brand-btn" data-product-id="${id}">Edit</button>
+                <button class="paragraph brand-btn" data-product-id="${id}">Delete</button>
+            </div>
+        </section>
+    
+    `;
+
+    
+
+}
 
 
 /* ---EVENT LISTENERS--- */
