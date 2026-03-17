@@ -456,6 +456,12 @@ header .cart img {
   width: 40px;
 }
 
+#sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
 /* ADMIN SITE TOP NAV */
 header#admin-header {
   background-color: transparent;
