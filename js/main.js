@@ -5,6 +5,7 @@ import './api/contactInfoAPI.js';
 import './components/map.js';
 import './components/navigation.js';
 import './components/productCard.js';
+// import './components/editProduct.js';
 
 import { getProducts } from './api/productsAPI.js';
 import { getContactInfo } from './api/contactInfoAPI.js';
@@ -12,6 +13,7 @@ import { addProductImages, openProductCard, displayCard } from './components/pro
 import { productContainer } from './components/productCard.js';
 import { setFooterContact, address } from './components/footer.js';
 import { setContactDetails, sales } from './components/contactDetails.js';
+import { setFormValues, id, productName} from './components/editProduct.js';
 import { productList, updateAdminProducts } from './components/adminProducts.js';
 
 //called on page load
@@ -33,6 +35,13 @@ async function init() {
 
     if (productList) {
         updateAdminProducts();
+    }
+
+    if (id) {
+        setFormValues();
+    } else if (productName) {
+        alert('Product not found');
+        window.location.href = 'admin-products.html';
     }
 
     //Product Card Event Handler
