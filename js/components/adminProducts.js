@@ -68,7 +68,7 @@ export function viewSingleProduct() {
                 <div class="quantity-con">
                     <p class="beverage-quantity">${productInfo[id].stock}</p>
                 </div>
-                <button class="paragraph brand-btn" data-product-id="${id}">Edit</button>
+                <a href="admin-edit-product.html?id=${id}" class="paragraph brand-btn">Edit</a>
                 <button class="paragraph brand-btn" data-product-id="${id}">Delete</button>
             </div>
         </section>
