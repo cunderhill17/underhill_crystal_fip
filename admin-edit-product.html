@@ -80,7 +80,9 @@
                     <section id="updateProduct" class="admin-card col-span-full md:col-span-6 lg:col-span-9">
                         <h2 class="brand-red">Edit Product</h2>
 
-                        <form action="#" method="post" enctype="multipart/form-data">
+                        <form action="php/actions/updateProduct.php" method="post" enctype="multipart/form-data">
+
+                            <input type="hidden" name="item_id" id="hiddenInput">
 
                             <fieldset>
                                 <legend>Product Details</legend>
@@ -95,10 +97,10 @@
                                 <input type="text" id="product_ingredients" name="product_ingredients">
 
                                 <label for="product_image">Product Image: Vertical Orientation</label>
-                                <input type="file" id="product_image" name="product_image" accept="image/*" required>
+                                <input type="file" id="product_image" name="product_image" accept="image/*">
 
                                 <label for="product_image_horizontal">Product Image: Horizontal Orientation</label>
-                                <input type="file" id="product_image_horizontal" name="product_image_horizontal" accept="image/*" required>
+                                <input type="file" id="product_image_horizontal" name="product_image_horizontal" accept="image/*">
 
                                 <label for="product_image_alt">Product Image Alternate Text</label>
                                 <input type="text" id="product_image_alt" name="product_image_alt">

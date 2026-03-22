@@ -24,7 +24,7 @@
         // Array of images
         $images = [
             'product_image' => $_FILES['product_image'],
-            'product_image_horizontal' => $_FILES['product_image_horizontal'], //have to add to the form
+            'product_image_horizontal' => $_FILES['product_image_horizontal'], 
             'product_pre_1' => $_FILES['product_pre_1'],
             'product_pre_2' => $_FILES['product_pre_2'],
             'product_pre_3' => $_FILES['product_pre_3'],
