@@ -13,6 +13,7 @@ const productPre1Alt = document.querySelector('#product_pre_1_alt');
 const productPre2Alt = document.querySelector('#product_pre_2_alt');
 const productPre3Alt = document.querySelector('#product_pre_3_alt');
 const productPre4Alt = document.querySelector('#product_pre_4_alt');
+const formId = document.querySelector('#hiddenInput');
 
 const params = new URLSearchParams(window.location.search);
 export const id = params.get('id');
@@ -32,6 +33,7 @@ export function setFormValues() {
     productPre2Alt.value = productInfo[id].images[2].alt;
     productPre3Alt.value = productInfo[id].images[3].alt;
     productPre4Alt.value = productInfo[id].images[4].alt;
+    formId.value = `${id}`;
 
 }
 
