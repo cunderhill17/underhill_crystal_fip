@@ -11,8 +11,6 @@ export async function getContactInfo() {
     const contactDetails = await response.json();
 
     contactDetails.forEach(detail => {
-
-        const contactKey = detail.id;
         
         contactInfo[0] = {
             id: detail.id,
