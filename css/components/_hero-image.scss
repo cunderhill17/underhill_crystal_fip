@@ -4,15 +4,21 @@
 }
 
 #nested-hero-grid {
-    // grid-column: 2/3;
-    // grid-row: 1;
     position: absolute;
     top: 35%;      // adjust to match visual placement
     left: 8%;      // adjust to match visual placement
     transform: translateY(-50%);
     overflow: hidden;
 
-    h2, h3 {
+    h2 {
+        color: #F5F1E8;
+        display: block;
+        font-size: 30px;
+        font-weight: normal;
+        margin-top: 10px;
+    }
+
+    h3 {
         display: none;
         color: #F5F1E8;
         margin-bottom: 10px;
@@ -21,8 +27,8 @@
 
     @media screen and (min-width: 768px) {
         h2 {
-            display: block;
             font-size: 55px;
+            margin-bottom: 10px;
         }
 
         h3 {
@@ -52,7 +58,7 @@
         width: 186px;
         height: 56px;
         font-size: 16px;
-        margin-top: 80px;
+        margin-top: 40px;
 
         a {
             text-decoration: none;
