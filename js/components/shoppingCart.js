@@ -1,4 +1,5 @@
 import { productInfo } from '../api/productsAPI.js';
+import { closeProductCard } from './productCard.js';
 
 /* ---VARIABLES--- */
 
@@ -49,6 +50,7 @@ export function addProductToCart() {
     console.log(shoppingCart);
 
     updateShoppingCart();
+    closeProductCard();
 }
 
 //Updates the contents of the shopping cart list

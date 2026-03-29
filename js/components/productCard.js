@@ -16,7 +16,7 @@ export function openProductCard() {
     productCard.classList.add('slide-toggle');
 }
 
-function closeProductCard() {
+export function closeProductCard() {
     productCard.classList.remove('slide-toggle');
 }
 
@@ -97,10 +97,6 @@ export function displayCard() {
 
   const addToCart = document.querySelector('#addToCart');
   addToCart.addEventListener('click', addProductToCart);
-
-  //Updates the product card contents based on the flavor selected - need to move to proper sections
-  // const flavorImages = document.querySelectorAll('.product-flavours img');
-  // flavorImages.forEach(flavor => flavor.addEventListener('click', displayCard));
 
 }
 
