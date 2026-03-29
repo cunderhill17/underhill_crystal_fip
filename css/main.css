@@ -454,6 +454,7 @@ header .cart {
 }
 header .cart img {
   width: 40px;
+  cursor: pointer;
 }
 
 #sticky-nav {
