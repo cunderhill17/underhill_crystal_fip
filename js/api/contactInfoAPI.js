@@ -24,7 +24,6 @@ export async function getContactInfo() {
 
     })
 
-    // console.log(contactInfo);
 }
 
 
