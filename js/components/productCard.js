@@ -80,7 +80,7 @@ export function displayCard() {
 
   `;
 
-  //Adds a click event to the product card close button - need to move to proper sections
+  //Adds a click event to the product card close button
   const closeCard = document.querySelector('.card-btn');
   closeCard.addEventListener('click', closeProductCard);
 
@@ -109,7 +109,7 @@ function changePreview(e) {
   //Only selects the path of the URL string from 'php' onwards
   let imgPath = url.substring(url.indexOf("php/"));
   
-  // separates the number & extension at the end of the path, replaces the number and then readds the extension back to make the correct image path
+  //replaces the part of the path that is labelled as small, with 'medium' in order to show the larger sized photo
   imgPath = imgPath.replace("small", "medium");
 
   const lgImage = document.querySelector('.img-full');
