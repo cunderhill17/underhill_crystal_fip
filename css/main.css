@@ -25,7 +25,13 @@ img, video {
 }
 
 video {
+  display: none;
   margin: 25px 0px;
+}
+@media screen and (min-width: 768px) {
+  video {
+    display: block;
+  }
 }
 
 /* Utility Classes */
