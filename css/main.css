@@ -20,8 +20,12 @@ button, a, p, li, input, textarea, label {
   font-family: "Albert Sans", sans-serif;
 }
 
-img {
+img, video {
   max-width: 100%;
+}
+
+video {
+  margin: 25px 0px;
 }
 
 /* Utility Classes */
