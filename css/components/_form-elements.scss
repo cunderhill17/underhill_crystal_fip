@@ -63,10 +63,14 @@
     border-radius: 5px;
     background-color: #800020;
     color: #F5F1E8;
+    transition: all .3s ease-in-out;
 }
 
 button:hover {
     cursor: pointer;
+    border: 1px solid #800020;
+    background-color: #E2D8CE;
+    color: #800020;
 }
 
 //Input Styling

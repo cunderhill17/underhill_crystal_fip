@@ -59,6 +59,7 @@
         height: 56px;
         font-size: 16px;
         margin-top: 40px;
+        transition: all .3s ease-in-out;
 
         a {
             text-decoration: none;
@@ -71,6 +72,16 @@
             height: 68px;
             font-size: 24px;
 
+        }
+
+        &:hover {
+            background-color: #F5F1E8;
+            border: 1px solid #800020;
+            cursor: pointer;
+            
+            a {
+                color: #800020;
+            }
         }
 
     }
