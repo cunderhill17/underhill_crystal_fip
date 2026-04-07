@@ -515,6 +515,9 @@ header#admin-header {
   transform: translateY(-50%);
   overflow: hidden;
 }
+#nested-hero-grid div {
+  margin-top: 25px;
+}
 #nested-hero-grid h2 {
   color: #F5F1E8;
   display: block;
@@ -556,20 +559,22 @@ header#admin-header {
   border: none;
   width: 186px;
   height: 56px;
-  font-size: 16px;
-  margin-top: 40px;
+  margin-top: 10px;
   transition: all 0.3s ease-in-out;
 }
 #nested-hero-grid .call-to-action a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   color: #F5F1E8;
 }
 @media screen and (min-width: 768px) {
   #nested-hero-grid .call-to-action {
     width: 274px;
     height: 68px;
-    font-size: 24px;
+    margin-top: 40px;
+  }
+  #nested-hero-grid .call-to-action a {
+    font-size: 20px;
   }
 }
 #nested-hero-grid .call-to-action:hover {

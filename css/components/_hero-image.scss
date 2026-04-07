@@ -10,6 +10,10 @@
     transform: translateY(-50%);
     overflow: hidden;
 
+    div {
+        margin-top: 25px;
+    }
+
     h2 {
         color: #F5F1E8;
         display: block;
@@ -57,21 +61,23 @@
         border: none;
         width: 186px;
         height: 56px;
-        font-size: 16px;
-        margin-top: 40px;
+        margin-top: 10px;
         transition: all .3s ease-in-out;
 
         a {
             text-decoration: none;
-            font-size: 20px;
+            font-size: 16px;
             color: #F5F1E8;
         }
 
         @media screen and (min-width: 768px) {
             width: 274px;
             height: 68px;
-            font-size: 24px;
+            margin-top: 40px;
 
+            a {
+                font-size: 20px;
+            }
         }
 
         &:hover {
