@@ -1559,13 +1559,17 @@ th, td {
   align-items: center;
   padding: 10px 0px;
 }
-.links-box p {
+.links-box a {
   padding: 15px 0px;
   padding-left: 15px;
   color: #6B5B4C;
+  text-decoration: none;
+}
+.links-box a:hover {
+  color: #800020;
 }
 @media screen and (min-width: 768px) {
-  .links-box p {
+  .links-box a {
     padding: 15px 0px;
   }
 }
