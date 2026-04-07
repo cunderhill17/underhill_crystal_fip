@@ -189,6 +189,9 @@ footer nav ul li a {
   color: #6B5B4C;
   text-decoration: none;
 }
+footer nav ul li a:hover {
+  color: #800020;
+}
 @media screen and (min-width: 1200px) {
   footer nav ul {
     padding: 0px;

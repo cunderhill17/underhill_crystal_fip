@@ -24,6 +24,10 @@ footer {
                 a {
                     color: #6B5B4C;
                     text-decoration: none;
+
+                    &:hover {
+                        color: #800020;
+                    }
                 }
             }
 
