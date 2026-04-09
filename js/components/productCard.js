@@ -50,7 +50,7 @@ export function displayCard() {
         </div>
 
         <div class="product-info">
-            <h4 class="heading-4 brand-red">${productInfo[id].flavor} Liquer</h4>
+            <h4 class="heading-4 brand-red">${productInfo[id].flavor} Liqueur</h4>
             <p class="paragraph">${productInfo[id].description}</p>
             <h4 class="heading-4 brand-red">Ingredients</h4>
             <p class="paragraph">${productInfo[id].ingredients}</p>
