@@ -1525,6 +1525,9 @@ th, td {
   align-items: center;
   text-align: center;
 }
+.contact-details h3, .contact-details p {
+  color: #6B5B4C;
+}
 .contact-details * {
   margin: 10px 0px;
 }
