@@ -52,11 +52,12 @@
     a {
         padding: 15px 0px;
         padding-left: 15px;
-        color: #6B5B4C;
+        color: #F5F1E8;
         text-decoration: none;
 
         &:hover {
             color: #800020;
+            font-weight: 600;
         }
 
         @media screen and (min-width: 768px) {
@@ -78,6 +79,7 @@
     width: 150px;
     height: 150px;
     border-radius: 75px;
+    border: 5px solid #F5F1E8;
 }
 
 .links-bkg-box {
@@ -85,7 +87,7 @@
     height: 525px;
     position: absolute;
     z-index: -1;
-    background-color: #E2D8CE;
+    background-color: #6B5B4C;
 
     @media screen and (min-width: 768px) {
         height: 200px;
