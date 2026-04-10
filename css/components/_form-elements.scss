@@ -6,6 +6,7 @@
     font-family: "Albert Sans", sans-serif;
     padding: 20px;
     border: 1px dotted black;
+    margin-top: 25px;
 
     > * {
         display: block;
@@ -92,13 +93,10 @@ textarea {
     margin: 10px;
     background-color: transparent;
     border: 1px solid #6B5B4C;
+    color: #6B5B4C;
 }
 
 //Labels use the subheading-2 and brand-red classes 
-
-input:focus, textarea:focus {
-    outline: none;
-}
 
 label, input, textarea {
     font-family: inherit;
