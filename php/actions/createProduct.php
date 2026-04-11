@@ -37,7 +37,8 @@
 
         try {
 
-            $pdo->beginTransaction(); // Start transaction
+            // Start transaction
+            $pdo->beginTransaction(); 
 
             $sql = "INSERT INTO product_info (product_name, product_description, product_ingredients, product_price, product_sale_price, product_on_sale, product_stock)
             VALUES (:product_name, :product_description, :product_ingredients, :product_price, :product_sale_price, :product_on_sale, :product_stock);
@@ -54,7 +55,7 @@
                 ':product_stock' => $product_stock,
             ]);
 
-            // Get the ID of the inserted product
+            // Get the ID of the last inserted product
             $product_id = $pdo->lastInsertId();
 
 
@@ -62,10 +63,11 @@
             function resizeImageKeepRatio($sourcePath, $destinationPath, $newWidth) {
                 list($width, $height, $type) = getimagesize($sourcePath);
 
-                // calculate proportional height
+                // calculate height proportional to the 'newWidth' passed as a parameter
                 $ratio = $height / $width;
                 $newHeight = $newWidth * $ratio;
 
+                //Creates a blank image resource using the GD graphics library with the dimensions of the new image
                 $newImage = imagecreatetruecolor($newWidth, $newHeight);
 
                 switch ($type) {
@@ -82,9 +84,6 @@
                         // fill with transparent color
                         $transparent = imagecolorallocatealpha($newImage, 0, 0, 0, 127);
                         imagefill($newImage, 0, 0, $transparent);
-                        break;
-                    case IMAGETYPE_WEBP:
-                        $source = imagecreatefromwebp($sourcePath);
                         break;
                     default:
                         return false; // unsupported type
@@ -106,9 +105,6 @@
                         break;
                     case IMAGETYPE_PNG:
                         imagepng($newImage, $destinationPath);
-                        break;
-                    case IMAGETYPE_WEBP:
-                        imagewebp($newImage, $destinationPath);
                         break;
                 }
 
@@ -143,9 +139,6 @@
                         $transparent = imagecolorallocatealpha($newImage, 0, 0, 0, 127);
                         imagefill($newImage, 0, 0, $transparent);
                         break;
-                    case IMAGETYPE_WEBP:
-                        $source = imagecreatefromwebp($sourcePath);
-                        break;
                     default:
                         return false; // unsupported type
                 }
@@ -166,9 +159,6 @@
                         break;
                     case IMAGETYPE_PNG:
                         imagepng($newImage, $destinationPath);
-                        break;
-                    case IMAGETYPE_WEBP:
-                        imagewebp($newImage, $destinationPath);
                         break;
                 }
 
@@ -230,7 +220,6 @@
                     // Save resized image using the base name + width + extension
                     $resizedPath = $uploadDirectory . $baseName . '_' . $resizeRule['suffix'] . '.' . $extension;
                     resizeImageKeepRatio($originalPath, $resizedPath, $resizeRule['size']);
-
                 }
             }
 

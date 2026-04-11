@@ -87,9 +87,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $transparent = imagecolorallocatealpha($newImage, 0, 0, 0, 127);
                     imagefill($newImage, 0, 0, $transparent);
                     break;
-                case IMAGETYPE_WEBP:
-                    $source = imagecreatefromwebp($sourcePath);
-                    break;
                 default:
                     return false;
             }
@@ -105,9 +102,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     break;
                 case IMAGETYPE_PNG:
                     imagepng($newImage, $destinationPath);
-                    break;
-                case IMAGETYPE_WEBP:
-                    imagewebp($newImage, $destinationPath);
                     break;
             }
 
@@ -135,9 +129,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $transparent = imagecolorallocatealpha($newImage, 0, 0, 0, 127);
                     imagefill($newImage, 0, 0, $transparent);
                     break;
-                case IMAGETYPE_WEBP:
-                    $source = imagecreatefromwebp($sourcePath);
-                    break;
                 default:
                     return false;
             }
@@ -153,9 +144,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     break;
                 case IMAGETYPE_PNG:
                     imagepng($newImage, $destinationPath);
-                    break;
-                case IMAGETYPE_WEBP:
-                    imagewebp($newImage, $destinationPath);
                     break;
             }
 
