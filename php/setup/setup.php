@@ -15,7 +15,7 @@ try {
     // Select database
     $pdo->exec("USE quattro_db");
 
-    // Create table if not exists
+    // Create table if it doesn't exist
     $sql1 = "
     CREATE TABLE IF NOT EXISTS contact_info (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -68,8 +68,6 @@ try {
     $pdo->exec($sql1);
     $pdo->exec($sql2);
     $pdo->exec($sql3);
-
-    // echo "Database and Tables Created Successfully.";
 
 
 } catch (PDOException $e) {
