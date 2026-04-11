@@ -10,6 +10,8 @@ const phoneNumber = document.querySelector('#contact-corporate-number');
 
 /* ---FUNCTIONS--- */
 
+//keeps the contact information up to date in the section next to the contact form on the contact.html page
+//Information comes from the variable 'contactInfo' which was imported from the 'contactInfoAPI.js' page
 export function setContactDetails() {
     sales.textContent = `${contactInfo[0].sales_email}`;
     marketing.textContent = `${contactInfo[0].marketing_email}`;

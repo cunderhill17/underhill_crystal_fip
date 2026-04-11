@@ -12,7 +12,8 @@ export const productContainer = document.querySelector('#product-container');
 
 //Product Card Functions
 export function openProductCard() {
-    productCard.style.top = `${window.scrollY + 35}px`; //helps to position card when it appears on screen
+    //finds the height that the user has scrolled to, adds 35px and makes that the 'top' value for positioning the product card
+    productCard.style.top = `${window.scrollY + 35}px`; 
     productCard.classList.add('slide-toggle');
 }
 
@@ -20,10 +21,9 @@ export function closeProductCard() {
     productCard.classList.remove('slide-toggle');
 }
 
-//Function to display product information
+//Function to display product information within the product card popup 
 export function displayCard() {
   const id = this.id;
-  //let productCard = document.querySelector('.product-card-con');
 
   productCard.innerHTML = `
 
@@ -122,6 +122,7 @@ function changePreview(e) {
 export function addProductImages() {
   productContainer.innerHTML = '';
 
+  //This ensures that the section has a heading for accessibility purposes
   productContainer.innerHTML = `<h2 class="heading-1 center-text col-span-full">Products</h2>`
 
   Object.entries(productInfo).forEach(([key, product]) => {

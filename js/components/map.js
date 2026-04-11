@@ -51,6 +51,7 @@ async function handleAddressSearch() {
   const userLat = parseFloat(data[0].lat);
   const userLon = parseFloat(data[0].lon);
 
+  //removes the previous marker/line so there is only ever one one the map
   if (userMarker) {
     map.removeLayer(userMarker);
   }
@@ -74,7 +75,7 @@ async function handleAddressSearch() {
   // Fit map to show both points
   map.fitBounds(userLine.getBounds());
 
-  // Calculate distance
+  // Calculates the distance betweeen the users address and the fixed location
   const distance = haversine(userLat, userLon, lcbo.lat, lcbo.lon);
 
   distanceOutput.textContent = `Distance to LCBO: ${distance.toFixed(2)} km`;
