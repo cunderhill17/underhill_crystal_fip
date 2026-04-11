@@ -22,6 +22,7 @@ export const id = params.get('id');
 
 export function setFormValues() {
 
+    //assigns values to the form inputs so that the user knows what the old values were before they change anything 
     productName.value = productInfo[id].flavor;
     productDescription.value = productInfo[id].description;
     productIngredients.value = productInfo[id].ingredients;

@@ -6,6 +6,7 @@ export let contactInfo = {};
 
 /* ---FUNCTIONS--- */
 
+//Async function that retrieves contact information from the server end-point using the fetch API and saves it to the variable 'contactInfo'
 export async function getContactInfo() {
     const response = await fetch('php/actions/viewContactInfo.php');
     const contactDetails = await response.json();

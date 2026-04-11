@@ -7,7 +7,6 @@ const individualProduct = document.querySelector('#individualProduct');
 
 const viewProductsTab = document.querySelector('#viewProductsTab');
 const createProductTab = document.querySelector('#createProductTab');
-// const viewSingleProductBtns = document.querySelectorAll('.viewProduct');
 
 
 

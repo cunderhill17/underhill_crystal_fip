@@ -11,6 +11,7 @@ const individualProduct = document.querySelector('.admin-product-card-con');
 
 /* ---FUNCTIONS--- */
 
+//Updates the list of products on the admin page within the mini CMS
 export function updateAdminProducts() {
 
     Object.entries(productInfo).forEach(([key, product]) => {
@@ -30,6 +31,8 @@ export function updateAdminProducts() {
     
 }
 
+//Allows the user to view a single product in more detail on the admin side
+//Information comes from the variable 'productInfo' which was imported from the 'productsAPI.js' page
 export function viewSingleProduct() {
     const id = this.dataset.productId;
 

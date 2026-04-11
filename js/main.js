@@ -5,7 +5,7 @@ import './api/contactInfoAPI.js';
 import './components/map.js';
 import './components/navigation.js';
 import './components/productCard.js';
-// import './components/editProduct.js';
+
 
 import { getProducts } from './api/productsAPI.js';
 import { getContactInfo } from './api/contactInfoAPI.js';
@@ -18,9 +18,11 @@ import { productList, updateAdminProducts } from './components/adminProducts.js'
 
 //called on page load
 async function init() {
-    await getProducts(); //needs to finish loading before other function can be called
+    //Ensure data is loaded before continuing
+    await getProducts(); 
     await getContactInfo();
 
+    //Conditional statements to ensure that content is loaded on specific pages 
     if (productContainer) {
       addProductImages();
     }
@@ -45,6 +47,7 @@ async function init() {
     }
 
     //Product Card Event Handler
+    //Included after the getProducts to ensure that the images will already be loaded before the event listener is added 
     const flavors = document.querySelectorAll('.beverageFlavor');
     if (flavors) {
         flavors.forEach(flavor => flavor.addEventListener('click', openProductCard));

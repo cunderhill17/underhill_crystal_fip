@@ -13,11 +13,10 @@ const cartItems = document.querySelector('#cart-list-items');
 
 /* ---FUNCTIONS--- */
 
+//Adds 1 to the newQuantity 'counter', displaying that number back in the DOM in the product card
 export function addProductQuantity() {
     let beverageQuantity = document.querySelector('.beverage-quantity');
     let newQuantity = Number(beverageQuantity.innerText);
-
-    //console.log(beverageQuantity);
 
     if (newQuantity < this.dataset.max) {
         newQuantity++
@@ -26,11 +25,10 @@ export function addProductQuantity() {
     }
 }
 
+//Removes 1 from the newQuantity 'counter', displaying that number back in the DOM in the product card
 export function minusProductQuantity() {
     let beverageQuantity = document.querySelector('.beverage-quantity');
     let newQuantity = Number(beverageQuantity.innerText);
-    
-    //console.log(beverageQuantity);
 
     if (newQuantity > this.dataset.min) {
         newQuantity--;
@@ -39,6 +37,8 @@ export function minusProductQuantity() {
     }
 }
 
+//Adds item to the shopping card when a user clicks 'add to card' on the product card 
+//saves the product 1 & quantity added to an object and pushes that object to the array 'shoppingCart'
 export function addProductToCart() {
     let beverageQuantity = document.querySelector('.beverage-quantity');
     let newQuantity = Number(beverageQuantity.innerText);
@@ -46,8 +46,6 @@ export function addProductToCart() {
     let item = {id: this.dataset.productId, quantity: newQuantity};
 
     shoppingCart.push(item);
-
-    console.log(shoppingCart);
 
     updateShoppingCart();
     closeProductCard();
@@ -83,7 +81,6 @@ function updateShoppingCart() {
         cartQuantity.innerText = `${total}`;
     }
 
-    //console.log(total);
 }
 
 //Deletes items in the shopping cart
@@ -100,6 +97,7 @@ function deleteCardItem() {
     updateShoppingCart();
 }
 
+//Opens and closes the shopping cart
 function toggleShoppingCart() {
     shoppingCartCon.classList.toggle('open');
 }

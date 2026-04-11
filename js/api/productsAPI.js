@@ -8,7 +8,7 @@ export let productInfo = {};
 
 /* ---FUNCTIONS--- */
 
-//Function to get data returned from php script -- PRODUCTS
+//Async function that retrieves product information from the server end-point using the fetch API and saves it to the variable 'productInfo'
 export async function getProducts() {
     const response = await fetch('php/actions/viewProducts.php');
     const products = await response.json();
