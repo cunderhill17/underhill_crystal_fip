@@ -1,5 +1,3 @@
-import './admin/adminTabs.js';
-import './admin/verticalNav.js';
 import './api/productsAPI.js';
 import './api/contactInfoAPI.js';
 import './components/map.js';
@@ -13,8 +11,7 @@ import { addProductImages, openProductCard, displayCard } from './components/pro
 import { productContainer } from './components/productCard.js';
 import { setFooterContact, address } from './components/footer.js';
 import { setContactDetails, sales } from './components/contactDetails.js';
-import { setFormValues, id, productName} from './components/editProduct.js';
-import { productList, updateAdminProducts } from './components/adminProducts.js';
+
 
 //called on page load
 async function init() {
@@ -35,17 +32,7 @@ async function init() {
         setContactDetails();
     }
 
-    if (productList) {
-        updateAdminProducts();
-    }
-
-    if (id) {
-        setFormValues();
-    } else if (productName) {
-        alert('Product not found');
-        window.location.href = 'admin-products.html';
-    }
-
+    
     //Product Card Event Handler
     //Included after the getProducts to ensure that the images will already be loaded before the event listener is added 
     const flavors = document.querySelectorAll('.beverageFlavor');
