@@ -13,7 +13,7 @@ export const productContainer = document.querySelector('#product-container');
 //Product Card Functions
 export function openProductCard() {
     //finds the height that the user has scrolled to, adds 35px and makes that the 'top' value for positioning the product card
-    productCard.style.top = `${window.scrollY + 35}px`; 
+    productCard.style.top = `${window.scrollY + 125}px`; 
     productCard.classList.add('slide-toggle');
 }
 
