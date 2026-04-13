@@ -71,6 +71,10 @@ video {
   background-color: #E2D8CE;
 }
 
+span {
+  word-wrap: break-word;
+}
+
 /*Box Class is Used to layout elements in grid - would be removed once content is added*/
 .box {
     display: flex;
@@ -90,6 +94,7 @@ video {
 
 .heading-1 {
   font-size: clamp(2.1875rem, 1.74rem + 0.14vw, 3.75rem);
+  letter-spacing: 5px;
   color: #6B5B4C;
   margin: 15px 0px;
 }
